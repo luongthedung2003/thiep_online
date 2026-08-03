@@ -14,7 +14,7 @@
 				<form role="search">
 					<label for="search" class="hidden text-gray-800 font-medium mb-2 invisible">Search</label>
 					<input
-						class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+						class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
 						type="search"
 						placeholder="Search"
 						aria-label="Search"
@@ -25,7 +25,7 @@
 			<div>
 				<ul class="list-unstyled flex items-center gap-2">
 					<li class="dropdown-center">
-						<a class="relative btn text-gray-600 hover:bg-gray-100 hover:text-green-600 h-12 w-12 p-0 rounded-full" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a class="relative btn text-gray-600 hover:bg-gray-100 hover:text-rose-500 h-12 w-12 p-0 rounded-full" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -54,7 +54,7 @@
 								<a href="#!" class="text-gray-500">
 									<a
 										href="#"
-										class="btn text-gray-600 hover:bg-gray-100 hover:text-green-600 h-10 w-10 p-0 rounded-full"
+										class="btn text-gray-600 hover:bg-gray-100 hover:text-rose-500 h-10 w-10 p-0 rounded-full"
 										data-bs-toggle="tooltip"
 										data-bs-placement="bottom"
 										data-bs-title="Mark all as read"

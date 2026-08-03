@@ -16,10 +16,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-dairy-bread-eggs.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-book text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Truyền Thống</div>
                                     </div>
                                 </div>
@@ -28,10 +27,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-snack-munchies.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-layout-board text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Tối Giản</div>
                                     </div>
                                 </div>
@@ -40,10 +38,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-bakery-biscuits.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-flower text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Hoa Lá</div>
                                     </div>
                                 </div>
@@ -52,10 +49,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-instant-food.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-diamond text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Sang Trọng</div>
                                     </div>
                                 </div>
@@ -64,10 +60,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-tea-coffee-drinks.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-camera text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Vintage</div>
                                     </div>
                                 </div>
@@ -76,10 +71,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-atta-rice-dal.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-box-transparent text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Acrylic</div>
                                     </div>
                                 </div>
@@ -89,10 +83,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-baby-care.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-package text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Kraft</div>
                                     </div>
                                 </div>
@@ -101,10 +94,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-chicken-meat-fish.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-stars text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Ép Kim</div>
                                     </div>
                                 </div>
@@ -113,10 +105,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-cleaning-essentials.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-cut text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Cắt Laser</div>
                                     </div>
                                 </div>
@@ -125,10 +116,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{asset('assets/images/')}}/category/category-pet-care.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-gift text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Phụ Kiện Thiệp</div>
                                     </div>
                                 </div>
@@ -156,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:gap-4 xl:grid-cols-5">
+                <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:gap-4 xl:grid-cols-5 mobile-grid-2">
                     @forelse($templates as $item)
                     <div class="relative rounded-lg break-words border border-gray-200 overflow-hidden" style="background:transparent;">
                         <!-- Full card iframe preview with glassmorphism info overlay -->
@@ -165,7 +155,7 @@
                                 <span style="display:inline-block; padding:2px 6px; font-weight:600; font-size:12px; border-radius:4px; background:#dc2626; color:white;">Sale</span>
                             </div>
                             <div class="preview-scale-wrap" style="position:absolute; top:0; left:0; width:480px; height:2000px; transform-origin:0 0; transform:scale(0.5);">
-                                <iframe src="{{ url('/mau-thiep/'.$item->id.'/preview') }}" style="width:480px; height:2000px; border:none; pointer-events:none;" loading="lazy" tabindex="-1"></iframe>
+                                <iframe src="{{ url('/mau-thiep/'.$item->id.'/preview') }}" style="width:100%; height:100%; border:none; pointer-events:none; overflow:hidden;" scrolling="no" loading="lazy" tabindex="-1"></iframe>
                             </div>
                             <div class="card-product-action" style="position:absolute; top:40%; left:50%; transform:translate(-50%,-50%); z-index:25; opacity:0; visibility:hidden; display:flex; gap:8px; transition: all 0.3s ease;">
                                 <button type="button" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-name="{{ $item->name }}" data-category="{{ $item->category->name ?? 'Thiep Mau' }}" data-image="{{ asset($item->thumbnail) }}" data-id="{{ $item->id }}" data-code="MT-{{ str_pad($item->id, 5, '0', STR_PAD_LEFT) }}" title="Quick View">
@@ -179,14 +169,17 @@
                                 </a>
                             </div>
                             <div class="card-gradient-overlay" style="position:absolute; bottom:0; left:0; right:0; z-index:20; padding:30px 12px 12px; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); pointer-events:none; transition: all 0.3s ease;">
-                                <div style="font-size:11px; color:#e5e7eb; margin-bottom:2px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">{{ $item->category->name ?? 'Mau Thiep' }}</div>
-                                <div style="font-size:14px; font-weight:600; color:#ffffff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:6px; text-shadow:0 1px 3px rgba(0,0,0,0.8);">{{ $item->name }}</div>
-                                <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <div class="overlay-category" style="font-size:11px; color:#e5e7eb; margin-bottom:2px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">{{ $item->category->name ?? 'Mau Thiep' }}</div>
+                                <div class="overlay-title" style="font-size:14px; font-weight:600; color:#ffffff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:6px; text-shadow:0 1px 3px rgba(0,0,0,0.8);">{{ $item->name }}</div>
+                                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
                                     <div style="display:flex; align-items:center; gap:3px;">
-                                        <span style="color:#fbbf24; font-size:13px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">&#9733;&#9733;&#9733;&#9733;<span style="opacity:.5">&#9733;</span></span>
-                                        <span style="color:#d1d5db; font-size:11px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">(149)</span>
+                                        <span class="overlay-stars" style="color:#fbbf24; font-size:13px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">&#9733;&#9733;&#9733;&#9733;<span style="opacity:.5">&#9733;</span></span>
+                                        <span class="overlay-reviews" style="color:#d1d5db; font-size:11px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">(149)</span>
                                     </div>
-                                    <a href="{{ url('/mau-thiep/'.$item->id.'/edit') }}" style="background:#16a34a; color:white; padding:4px 12px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3);">+ Chọn</a>
+                                    <div class="action-buttons-wrap" style="display:flex; gap:6px;">
+                                        <a href="javascript:void(0)" onclick="openDemo('{{ url('/mau-thiep/'.$item->id.'/preview') }}')" class="overlay-btn" style="background:#4b5563; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#374151'" onmouseout="this.style.background='#4b5563'">Xem demo</a>
+                                        <a href="{{ url('/mau-thiep/'.$item->id.'/edit') }}" class="overlay-btn" style="background:#f43f5e; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#e11d48'" onmouseout="this.style.background='#f43f5e'">+ Chọn</a>
+                                    </div>
                                 </div>
                             </div>
                             <a href="{{ url('/mau-thiep/'.$item->id.'/edit') }}" style="position:absolute; inset:0; z-index:15;"></a>
@@ -220,7 +213,7 @@
                                     </div>
                                     <div>
                                         <a href="#!"
-                                            class="btn inline-flex items-center gap-x-2 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                            class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                             <span>Shop Now</span>
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +244,7 @@
                                         <div
                                             class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                                 <span data-bs-toggle="modal" data-bs-target="#quickViewModal" 
       data-name="Mẫu Tĩnh" 
@@ -271,7 +264,7 @@
                                                 </span>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -283,7 +276,7 @@
                                                 </svg>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
@@ -369,7 +362,7 @@
                                         </div>
                                         <div class="grid">
                                             <button type="button"
-                                                class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                                class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                     viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -400,7 +393,7 @@
                                         <div
                                             class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                                 <span data-bs-toggle="modal" data-bs-target="#quickViewModal" 
       data-name="Mẫu Tĩnh" 
@@ -420,7 +413,7 @@
                                                 </span>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -432,7 +425,7 @@
                                                 </svg>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
@@ -518,7 +511,7 @@
                                         </div>
                                         <div class="grid">
                                             <button type="button"
-                                                class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                                class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                     viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -549,7 +542,7 @@
                                         <div
                                             class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                                 <span data-bs-toggle="modal" data-bs-target="#quickViewModal" 
       data-name="Mẫu Tĩnh" 
@@ -569,7 +562,7 @@
                                                 </span>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -581,7 +574,7 @@
                                                 </svg>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
@@ -666,7 +659,7 @@
                                             </div>
                                             <div class="grid">
                                                 <button type="button"
-                                                    class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                                    class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
                                                         class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                         viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -735,7 +728,7 @@
                                     Not satisfied with a product? Return it at the doorstep & get a refund within hours.
                                     No questions
                                     asked
-                                    <a href="#!" class="text-green-600">policy</a>
+                                    <a href="#!" class="text-rose-500">policy</a>
                                     .
                                 </p>
                             </div>
@@ -745,6 +738,48 @@
             </div>
         </section>
     
+<!-- Full Screen Demo Modal -->
+<div id="demoModal" style="display:none; position:fixed; inset:0; z-index:99999; background:#fff;">
+    <button onclick="closeDemo()" style="position:absolute; top:20px; right:20px; z-index:100000; background:rgba(255,255,255,0.9); color:#333; border:1px solid rgba(0,0,0,0.1); padding:8px 16px; border-radius:30px; cursor:pointer; font-weight:600; font-size:14px; display:flex; align-items:center; gap:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); backdrop-filter:blur(10px); transition:all 0.3s ease;" onmouseover="this.style.background='#fff'; this.style.transform='scale(1.05)';" onmouseout="this.style.background='rgba(255,255,255,0.9)'; this.style.transform='scale(1)';">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>
+        Đóng
+    </button>
+    <div id="demoIframeContainer" style="width:100%; height:100%;"></div>
+</div>
+
+<script>
+function actualCloseModal() {
+    document.getElementById('demoModal').style.display = 'none';
+    document.getElementById('demoIframeContainer').innerHTML = '';
+    document.body.style.overflow = '';
+}
+
+function openDemo(url) {
+    if (window.location.hash !== '#demo') {
+        history.pushState({demoOpen: true}, null, window.location.pathname + window.location.search + "#demo");
+    }
+    
+    document.getElementById('demoIframeContainer').innerHTML = '<iframe src="' + url + '" style="width:100%; height:100%; border:none;"></iframe>';
+    
+    document.getElementById('demoModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDemo() {
+    if (window.location.hash === '#demo') {
+        history.back();
+    } else {
+        actualCloseModal();
+    }
+}
+
+window.addEventListener('popstate', function(event) {
+    if (window.location.hash !== '#demo') {
+        actualCloseModal();
+    }
+});
+</script>
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.user', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -764,7 +799,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update title & category
             var modalTitle = quickViewModal.querySelector('h1');
-            var modalCategory = quickViewModal.querySelector('a.block.text-green-600');
+            var modalCategory = quickViewModal.querySelector('a.block.text-rose-500');
             if(modalTitle) modalTitle.textContent = name;
             if(modalCategory) modalCategory.textContent = category;
             
@@ -772,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var priceSpan = quickViewModal.querySelector('.text-gray-900.font-semibold');
             if(priceSpan) {
                 priceSpan.textContent = 'Miễn phí';
-                priceSpan.classList.add('text-green-600');
+                priceSpan.classList.add('text-rose-500');
             }
             var oldPriceSpan = quickViewModal.querySelector('.line-through');
             if(oldPriceSpan) oldPriceSpan.style.display = 'none';
@@ -800,15 +835,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Update Add to cart button to link
-            var addToCartBtn = quickViewModal.querySelector('button.btn.bg-green-600');
+            var addToCartBtn = quickViewModal.querySelector('button.btn.bg-rose-500');
             if(addToCartBtn) {
                 var editLink = document.createElement('a');
                 editLink.href = '/mau-thiep/' + id + '/edit';
-                editLink.className = 'btn bg-green-600 text-white border-green-600 hover:bg-green-700 hover:border-green-700 justify-center w-full';
+                editLink.className = 'btn bg-rose-500 text-white border-rose-500 hover:bg-rose-600 hover:border-rose-600 justify-center w-full';
                 editLink.innerHTML = 'Chỉnh sửa ngay';
                 addToCartBtn.parentNode.replaceChild(editLink, addToCartBtn);
             } else {
-                var existingLink = quickViewModal.querySelector('a.btn.bg-green-600');
+                var existingLink = quickViewModal.querySelector('a.btn.bg-rose-500');
                 if(existingLink) {
                     existingLink.href = '/mau-thiep/' + id + '/edit';
                 }
@@ -859,8 +894,40 @@ setTimeout(resizeIframes, 600);
     visibility: visible !important;
 }
 .hover-bg-green:hover {
-    background: #16a34a !important;
+    background: #f43f5e !important;
     color: white !important;
+}
+
+@media (min-width: 768px) {
+    .action-buttons-wrap {
+        width: 100% !important;
+        margin-top: 4px !important;
+    }
+    .action-buttons-wrap .overlay-btn {
+        flex: 1 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-grid-2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+    }
+    .card-gradient-overlay {
+        padding: 20px 8px 8px !important;
+    }
+    .overlay-category { font-size: 9px !important; margin-bottom: 1px !important; }
+    .overlay-title { font-size: 11px !important; margin-bottom: 2px !important; }
+    .overlay-stars { font-size: 9px !important; }
+    .overlay-reviews { font-size: 9px !important; }
+    .overlay-btn { 
+        padding: 2px 6px !important; 
+        font-size: 9px !important; 
+        border-radius: 4px !important; 
+        white-space: nowrap !important;
+    }
+
 }
 </style>
 

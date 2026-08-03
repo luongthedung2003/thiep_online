@@ -104,7 +104,7 @@
                             <div class="relative">
                                 <label for="searchProducts" class="invisible hidden">Search</label>
                                 <input
-                                    class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+                                    class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
                                     type="search" placeholder="Tìm kiếm mẫu thiệp cưới..." id="searchProducts" />
                                 <button class="absolute right-0 top-0 p-3" type="button">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
@@ -153,7 +153,7 @@
                                             d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
                                     </svg>
                                     <span
-                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-green-600 text-white text-center font-semibold text-sm">
+                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-rose-500 text-white text-center font-semibold text-sm">
                                         5
                                         <span class="invisible">unread messages</span>
                                     </span>
@@ -184,7 +184,7 @@
                                         <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
                                     </svg>
                                     <span id="cartCount"
-                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-3 bg-green-600 text-white text-center font-semibold text-sm">
+                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-3 bg-rose-500 text-white text-center font-semibold text-sm">
                                         0
                                         <span class="invisible">unread messages</span>
                                     </span>
@@ -234,7 +234,7 @@
                                 <div class="relative">
                                     <label for="searhNavbar" class="invisible hidden">Search</label>
                                     <input
-                                        class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+                                        class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
                                         type="search" placeholder="Tìm kiếm mẫu thiệp cưới..." id="searhNavbar" />
                                     <button class="absolute right-0 top-0 p-3" type="button">
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +250,7 @@
                             </form>
                         </div>
                         <div class="block lg:hidden mb-4">
-                            <a class="btn inline-flex items-center gap-x-2 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 justify-center"
+                            <a class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 justify-center"
                                 data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
                                 aria-controls="collapseExample">
                                 <span class="mr-2">
@@ -287,7 +287,7 @@
                         </div>
                         <div class="dropdown hidden lg:block">
                             <button
-                                class="mr-4 btn inline-flex items-center gap-x-2 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300"
+                                class="mr-4 btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300"
                                 type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -320,15 +320,15 @@
                         <div>
                             <ul class="navbar-nav lg:flex gap-3 lg:items-center">
                                 <li class="nav-item dropdown w-full lg:w-auto">
-                                    <a class="nav-link {{ request()->is('/') ? 'active text-green-600 font-bold' : 'text-gray-800' }}" style="{{ request()->is('/') ? 'color: #0aad0a !important;' : '' }}" href="/" role="button">Trang chủ</a>
+                                    <a class="nav-link {{ request()->is('/') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('/') ? 'color: #f43f5e !important;' : '' }}" href="/" role="button">Trang chủ</a>
 
                                 </li>
                                 <li class="nav-item w-full lg:w-auto">
-                                    <a class="nav-link {{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'active text-green-600 font-bold' : 'text-gray-800' }}" style="{{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'color: #0aad0a !important;' : '' }}" href="/mau-thiep">Mẫu thiệp</a>
+                                    <a class="nav-link {{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'color: #f43f5e !important;' : '' }}" href="/mau-thiep">Mẫu thiệp</a>
                                 </li>
 
                                 <li class="nav-item dropdown w-full lg:w-auto dropdown-fullwidth">
-                                    <a class="nav-link {{ request()->is('danh-gia*') ? 'active text-green-600 font-bold' : 'text-gray-800' }}" style="{{ request()->is('danh-gia*') ? 'color: #0aad0a !important;' : '' }}" href="#!">
+                                    <a class="nav-link {{ request()->is('danh-gia*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('danh-gia*') ? 'color: #f43f5e !important;' : '' }}" href="#!">
                                         Đánh giá
                                     </a>
 
@@ -336,7 +336,7 @@
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link {{ request()->is('bang-dieu-khien*') ? 'active text-green-600 font-bold' : 'text-gray-800' }}" style="{{ request()->is('bang-dieu-khien*') ? 'color: #0aad0a !important;' : '' }}" href="#!">Bảng điều khiển</a>
+                                    <a class="nav-link {{ request()->is('bang-dieu-khien*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('bang-dieu-khien*') ? 'color: #f43f5e !important;' : '' }}" href="#!">Bảng điều khiển</a>
                                 </li>
 
 
@@ -370,40 +370,40 @@
                     <div class="mb-3">
                         <label for="fullName" class="mb-2 block text-gray-800">Name</label>
                         <input type="text"
-                            class="form-control border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+                            class="form-control border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
                             id="fullName" placeholder="Enter Your Name" required />
                         <div class="invalid-feedback">Please enter name.</div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="mb-2 block text-gray-800">Email address</label>
                         <input type="email"
-                            class="form-control border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+                            class="form-control border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
                             id="email" placeholder="Enter Email address" autocomplete="email" required />
                         <div class="invalid-feedback">Please enter email.</div>
                     </div>
                     <div class="mb-5">
                         <label for="password" class="mb-2 block text-gray-800">Password</label>
                         <input type="password"
-                            class="form-control border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+                            class="form-control border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
                             id="password" placeholder="Enter Password" required />
                         <div class="invalid-feedback">Please enter password.</div>
                         <span class="block mt-1 text-sm text-gray-500">
                             By Signup, you agree to our
-                            <a href="#!" class="text-green-600">Terms of Service</a>
+                            <a href="#!" class="text-rose-500">Terms of Service</a>
                             &
-                            <a href="#!" class="text-green-600">Privacy Policy</a>
+                            <a href="#!" class="text-rose-500">Privacy Policy</a>
                         </span>
                     </div>
 
                     <button type="submit"
-                        class="btn inline-flex items-center gap-x-2 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 justify-center">
+                        class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 justify-center">
                         Sign Up
                     </button>
                 </form>
             </div>
             <div class="modal-footer flex border-0 justify-center mt-3">
                 Already have an account?
-                <a href="#" class="text-green-600 ml-1">Sign in</a>
+                <a href="#" class="text-rose-500 ml-1">Sign in</a>
             </div>
         </div>
     </div>
@@ -450,7 +450,7 @@
                                     <span><small class="text-gray-500">.98 / lb</small></span>
                                     <!-- text -->
                                     <div class="mt-2 small leading-none">
-                                        <a href="#!" class="text-green-600 flex items-center">
+                                        <a href="#!" class="text-rose-500 flex items-center">
                                             <span class="mr-1 align-text-bottom">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="14" height="14"
@@ -504,7 +504,7 @@
                                     <span><small class="text-gray-500">250g</small></span>
                                     <!-- text -->
                                     <div class="mt-2 small leading-none">
-                                        <a href="#!" class="text-green-600 flex items-center">
+                                        <a href="#!" class="text-rose-500 flex items-center">
                                             <span class="mr-1 align-text-bottom">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="14" height="14"
@@ -561,7 +561,7 @@
                                     <span><small class="text-gray-500">1 kg</small></span>
                                     <!-- text -->
                                     <div class="mt-2 small leading-none">
-                                        <a href="#!" class="text-green-600 flex items-center">
+                                        <a href="#!" class="text-rose-500 flex items-center">
                                             <span class="mr-1 align-text-bottom">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="14" height="14"
@@ -619,7 +619,7 @@
                                     <span><small class="text-gray-500">250g</small></span>
                                     <!-- text -->
                                     <div class="mt-2 small leading-none">
-                                        <a href="#!" class="text-green-600 flex items-center">
+                                        <a href="#!" class="text-rose-500 flex items-center">
                                             <span class="mr-1 align-text-bottom">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="14" height="14"
@@ -676,7 +676,7 @@
                                     <span><small class="text-gray-500">100g</small></span>
                                     <!-- text -->
                                     <div class="mt-2 small leading-none">
-                                        <a href="#!" class="text-green-600 flex items-center">
+                                        <a href="#!" class="text-rose-500 flex items-center">
                                             <span class="mr-1 align-text-bottom">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-trash" width="14" height="14"
@@ -722,7 +722,7 @@
             <!-- btn -->
             <div class="flex justify-between mt-4">
                 <a href="#!"
-                    class="btn inline-flex items-center gap-x-2 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                    class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                     Quay lại
                 </a>
                 <a href="#!"
@@ -757,7 +757,7 @@
                 <div class="my-5">
                     <label for="searhNavbarSecond" class="invisible hidden">Search</label>
                     <input
-                        class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(10,173,10,.25)] focus:ring-green-600 focus:ring-0 focus:border-green-600 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
+                        class="border border-gray-300 text-gray-900 rounded-lg focus:shadow-[0_0_0_.25rem_rgba(244,63,94,.25)] focus:ring-rose-500 focus:ring-0 focus:border-rose-500 block p-2 px-3 disabled:opacity-50 disabled:pointer-events-none w-full text-base"
                         type="search" placeholder="Tìm kiếm mẫu thiệp cưới..." id="searhNavbarSecond" />
                 </div>
                 <div class="flex justify-between items-center mb-2">

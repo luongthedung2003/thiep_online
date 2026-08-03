@@ -1,4 +1,4 @@
-<div class="birthday-card bg-blue-50 border-4 border-dashed border-blue-200 p-8 text-center max-w-md mx-auto my-8 shadow-lg rounded-3xl relative">
+<div class="birthday-card bg-blue-50 border-4 border-dashed border-blue-200 p-8 text-center w-full mx-auto my-8 shadow-lg rounded-3xl relative">
     
     <div class="party-decoration mb-6 flex justify-center">
         <span class="text-6xl">🎉🎂🎈</span>

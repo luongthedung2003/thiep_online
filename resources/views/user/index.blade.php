@@ -41,7 +41,7 @@
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Miễn Phí In Ấn & Giao Hàng Toàn Quốc</span>
                                 <div class="my-7 flex flex-col gap-2">
                                     <h2 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">
-                                        Miễn Phí In Ấn<br />đơn từ<span class="text-green-600">500 thiệp</span>
+                                        Miễn Phí In Ấn<br />đơn từ<span class="text-rose-500">500 thiệp</span>
                                     </h2>
                                     <p class="text-md font-light">Áp dụng cho đơn hàng từ 500 thiệp trở lên trong mùa cưới này.</p>
                                 </div>
@@ -69,7 +69,7 @@
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Phong Cách Mới Nhất</span>
                                 <div class="my-7 flex flex-col gap-2">
                                     <h2 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">
-                                        Bộ Sưu Tập<br />Thiệp Cưới <span class="text-green-600">Cao Cấp</span>
+                                        Bộ Sưu Tập<br />Thiệp Cưới <span class="text-rose-500">Cao Cấp</span>
                                     </h2>
                                     <p class="text-md font-light">Tạo ấn tượng khó quên với những mẫu thiệp thiết kế độc quyền.</p>
                                 </div>
@@ -114,10 +114,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-dairy-bread-eggs.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-book text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Truyền Thống</div>
                                     </div>
                                 </div>
@@ -126,10 +125,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-snack-munchies.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-layout-board text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Tối Giản</div>
                                     </div>
                                 </div>
@@ -138,10 +136,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-bakery-biscuits.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-flower text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Hoa Lá</div>
                                     </div>
                                 </div>
@@ -150,10 +147,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-instant-food.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-diamond text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Sang Trọng</div>
                                     </div>
                                 </div>
@@ -162,10 +158,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-tea-coffee-drinks.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-camera text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Vintage</div>
                                     </div>
                                 </div>
@@ -174,10 +169,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-atta-rice-dal.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-box-transparent text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Acrylic</div>
                                     </div>
                                 </div>
@@ -187,10 +181,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-baby-care.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-package text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Kraft</div>
                                     </div>
                                 </div>
@@ -199,10 +192,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-chicken-meat-fish.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-stars text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Ép Kim</div>
                                     </div>
                                 </div>
@@ -211,10 +203,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-cleaning-essentials.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-cut text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Thiệp Cắt Laser</div>
                                     </div>
                                 </div>
@@ -223,10 +214,9 @@
                         <div class="swiper-slide">
                             <a href="#!">
                                 <div
-                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-green-600 hover:shadow-md">
+                                    class="relative rounded-lg break-words border bg-white border-gray-300 transition duration-75 hover:transition hover:duration-500 ease-in-out hover:border-rose-500 hover:shadow-md">
                                     <div class="py-8 text-center">
-                                        <img src="{{ asset('assets/images/') }}/category/category-pet-care.jpg"
-                                            alt="Grocery Ecommerce Template" class="mb-3 m-auto" />
+                                        <i class="ti ti-gift text-rose-500 mb-4 inline-block" style="font-size: 64px;"></i>
                                         <div class="text-base">Phụ Kiện Thiệp</div>
                                     </div>
                                 </div>
@@ -319,7 +309,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -334,7 +324,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -346,7 +336,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -432,7 +422,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -453,14 +443,14 @@
                             <div class="text-center relative flex justify-center">
                                 <div class="absolute top-0 left-0">
                                     <span
-                                        class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-green-600 text-white">14%</span>
+                                        class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-rose-500 text-white">14%</span>
                                 </div>
                                 <a href="#!"><img src="{{ asset('assets/images/') }}/products/product-img-2.jpg"
                                         alt="Grocery Ecommerce Template" class="w-full h-auto" /></a>
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -475,7 +465,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -487,7 +477,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -572,7 +562,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -596,7 +586,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -611,7 +601,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -623,7 +613,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -709,7 +699,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -736,7 +726,7 @@
                                 </div>
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -751,7 +741,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -763,7 +753,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -847,7 +837,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -871,7 +861,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -886,7 +876,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -898,7 +888,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -983,7 +973,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -1010,7 +1000,7 @@
                                 </div>
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1025,7 +1015,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1037,7 +1027,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -1123,7 +1113,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -1147,7 +1137,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1162,7 +1152,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1174,7 +1164,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -1259,7 +1249,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -1283,7 +1273,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1298,7 +1288,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1310,7 +1300,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -1395,7 +1385,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -1419,7 +1409,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1434,7 +1424,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1446,7 +1436,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -1532,7 +1522,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -1556,7 +1546,7 @@
 
                                 <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                         <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1571,7 +1561,7 @@
                                         </span>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1583,7 +1573,7 @@
                                         </svg>
                                     </a>
                                     <a href="#!"
-                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                        class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                         data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16"
@@ -1669,7 +1659,7 @@
                                     </div>
                                     <div>
                                         <button type="button"
-                                            class="btn inline-flex items-center gap-x-1 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 btn-sm">
+                                            class="btn inline-flex items-center gap-x-1 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                 viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none"
@@ -1709,7 +1699,7 @@
                                     </div>
                                     <div>
                                         <a href="#!"
-                                            class="btn inline-flex items-center gap-x-2 bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                            class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                             <span>Shop Now</span>
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -1740,7 +1730,7 @@
                                         <div
                                             class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                                 <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -1755,7 +1745,7 @@
                                                 </span>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1767,7 +1757,7 @@
                                                 </svg>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
@@ -1853,7 +1843,7 @@
                                         </div>
                                         <div class="grid">
                                             <button type="button"
-                                                class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                                class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                     viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -1884,7 +1874,7 @@
                                         <div
                                             class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                                 <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -1899,7 +1889,7 @@
                                                 </span>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -1911,7 +1901,7 @@
                                                 </svg>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
@@ -1997,7 +1987,7 @@
                                         </div>
                                         <div class="grid">
                                             <button type="button"
-                                                class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                                class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                     viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -2028,7 +2018,7 @@
                                         <div
                                             class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
                                                 <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -2043,7 +2033,7 @@
                                                 </span>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-heart" width="16" height="16"
@@ -2055,7 +2045,7 @@
                                                 </svg>
                                             </a>
                                             <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-green-600 hover:text-white"
+                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
                                                 data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
@@ -2140,7 +2130,7 @@
                                             </div>
                                             <div class="grid">
                                                 <button type="button"
-                                                    class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                                    class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
                                                         class="icon icon-tabler icon-tabler-plus" width="14" height="14"
                                                         viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -2209,7 +2199,7 @@
                                     Not satisfied with a product? Return it at the doorstep & get a refund within hours.
                                     No questions
                                     asked
-                                    <a href="#!" class="text-green-600">policy</a>
+                                    <a href="#!" class="text-rose-500">policy</a>
                                     .
                                 </p>
                             </div>

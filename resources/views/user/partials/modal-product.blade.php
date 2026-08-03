@@ -65,7 +65,7 @@
 						<div class="lg:pl-10 mt-6 md:mt-0">
 							<div class="flex flex-col gap-4">
 								<!-- content -->
-								<a href="#!" class="block text-green-600">Bakery Biscuits</a>
+								<a href="#!" class="block text-rose-500">Bakery Biscuits</a>
 								<!-- heading -->
 								<h1>Napolitanke Ljesnjak</h1>
 								<div class="flex flex-col gap-2">
@@ -169,7 +169,7 @@
 												></path>
 											</svg>
 										</small>
-										<a href="#" class="text-green-600">(30 reviews)</a>
+										<a href="#" class="text-rose-500">(30 reviews)</a>
 									</div>
 									<div class="text-md">
 										<span class="text-gray-900 font-semibold">$18</span>
@@ -209,7 +209,7 @@
 											<!-- btn -->
 											<button
 												type="button"
-												class="btn bg-green-600 text-white border-green-600 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-green-700 hover:border-green-700 active:bg-green-700 active:border-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 justify-center w-full"
+												class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300 justify-center w-full"
 											>
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +288,7 @@
 										</tr>
 										<tr>
 											<td class="px-6 py-3 text-gray-500 font-medium">Trạng thái:</td>
-											<td class="px-6 py-3"><span class="text-green-600 font-semibold">✓ Có thể sử dụng ngay</span></td>
+											<td class="px-6 py-3"><span class="text-rose-500 font-semibold">✓ Có thể sử dụng ngay</span></td>
 										</tr>
 										<tr>
 											<td class="px-6 py-3 text-gray-500 font-medium">Thể loại:</td>
@@ -296,7 +296,7 @@
 										</tr>
 										<tr>
 											<td class="px-6 py-3 text-gray-500 font-medium">Nhận thiệp:</td>
-											<td class="px-6 py-3"><span class="text-green-600">Ngay lập tức sau khi tạo</span></td>
+											<td class="px-6 py-3"><span class="text-rose-500">Ngay lập tức sau khi tạo</span></td>
 										</tr>
 									</tbody>
 								</table>

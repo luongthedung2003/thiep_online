@@ -8,29 +8,29 @@
                     <div class="w-1/2">
                         <!-- list -->
                         <ul class="flex flex-col gap-2">
-                            <li><a href="#!" class="inline-block hover:text-green-600">Vegetables & Fruits</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Breakfast & instant food</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Thiệp Hoa Lá</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Atta, rice & dal</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Sauces & spreads</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Organic & gourmet</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Baby care</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Cleaning essentials</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Personal care</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Vegetables & Fruits</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Breakfast & instant food</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Hoa Lá</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Atta, rice & dal</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Sauces & spreads</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Organic & gourmet</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Baby care</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Cleaning essentials</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Personal care</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2">
                         <!-- list -->
                         <ul class="flex flex-col gap-2">
-                            <li><a href="#!" class="inline-block hover:text-green-600">Dairy, bread & eggs</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Cold drinks & juices</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Tea, coffee & drinks</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Masala, oil & more</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Chicken, meat & fish</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Paan corner</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Pharma & wellness</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Home & office</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Pet care</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Dairy, bread & eggs</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Cold drinks & juices</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Tea, coffee & drinks</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Masala, oil & more</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Chicken, meat & fish</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Paan corner</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Pharma & wellness</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Home & office</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Pet care</a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,21 +41,21 @@
                         <h6>Về Chúng Tôi</h6>
                         <!-- list -->
                         <ul class="flex flex-col gap-2">
-                            <li><a href="#!" class="inline-block hover:text-green-600">Company</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">About</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Company</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">About</a></li>
                             <li><a href="#!" class="inline-block">Blog</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Help Center</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Our Value</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Help Center</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Our Value</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2 sm:w-1/2 md:w-1/4 flex flex-col gap-4 mb-6">
                         <h6>Dịch Vụ Khách Hàng</h6>
                         <ul class="flex flex-col gap-2">
                             <!-- list -->
-                            <li><a href="#!" class="inline-block hover:text-green-600">Payments</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Shipping</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Product Returns</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">FAQ</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Payments</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Shipping</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Product Returns</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">FAQ</a></li>
                             <li><a href="#!" class="inline-block">Shop Checkout</a></li>
                         </ul>
                     </div>
@@ -63,22 +63,22 @@
                         <h6>Đại Lý Phân Phối</h6>
                         <ul class="flex flex-col gap-2">
                             <!-- list -->
-                            <li><a href="#!" class="inline-block hover:text-green-600">Shopper Opportunities</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Đại Lý Phân Phối</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Earnings</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Ideas & Guides</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">New Retailers</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Shopper Opportunities</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Đại Lý Phân Phối</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Earnings</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Ideas & Guides</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">New Retailers</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2 sm:w-1/2 md:w-1/4 flex flex-col gap-4">
                         <h6>WeddingCard programs</h6>
                         <ul class="flex flex-col gap-2">
                             <!-- list -->
-                            <li><a href="#!" class="inline-block hover:text-green-600">WeddingCard programs</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Gift Cards</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Promos & Coupons</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">WeddingCard Ads</a></li>
-                            <li><a href="#!" class="inline-block hover:text-green-600">Careers</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">WeddingCard programs</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Gift Cards</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Promos & Coupons</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">WeddingCard Ads</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Careers</a></li>
                         </ul>
                     </div>
                 </div>
@@ -139,10 +139,10 @@
                             </script>
                         </span>
                         FreshCart TailwindCSS eCommerce HTML Template. Powered by
-                        <a href="https://codescandy.com/" target="_blank" class="text-green-600">Codescandy</a>
+                        <a href="https://codescandy.com/" target="_blank" class="text-rose-500">Codescandy</a>
                         <span class="text-nowrap">~ Distributed by
                             <a href="https://ThemeWagon.com/" target="_blank"
-                                class="text-green-600">ThemeWagon</a></span>
+                                class="text-rose-500">ThemeWagon</a></span>
                         .
                     </span>
                 </div>
@@ -152,7 +152,7 @@
                         <ul class="flex items-center justify-end text-sm gap-1">
                             <li>
                                 <a href="#!"
-                                    class="inline-flex justify-center items-center align-middle text-center select-none border font-normal whitespace-no-wrap rounded leading-normal no-underline h-8 w-8 border-gray-300 hover:border-green-600 hover:text-green-600 transition ease-in-out">
+                                    class="inline-flex justify-center items-center align-middle text-center select-none border font-normal whitespace-no-wrap rounded leading-normal no-underline h-8 w-8 border-gray-300 hover:border-rose-500 hover:text-rose-500 transition ease-in-out">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-brand-facebook" width="16" height="16"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
@@ -165,7 +165,7 @@
                             </li>
                             <li>
                                 <a href="#!"
-                                    class="inline-flex justify-center items-center align-middle text-center select-none border font-normal whitespace-no-wrap rounded leading-normal no-underline h-8 w-8 border-gray-300 hover:border-green-600 hover:text-green-600 transition ease-in-out">
+                                    class="inline-flex justify-center items-center align-middle text-center select-none border font-normal whitespace-no-wrap rounded leading-normal no-underline h-8 w-8 border-gray-300 hover:border-rose-500 hover:text-rose-500 transition ease-in-out">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x"
                                         width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5"
                                         stroke="currentColor" fill="none" stroke-linecap="round"
@@ -178,7 +178,7 @@
                             </li>
                             <li>
                                 <a href="#!"
-                                    class="inline-flex justify-center items-center align-middle text-center select-none border font-normal whitespace-no-wrap rounded leading-normal no-underline h-8 w-8 border-gray-300 hover:border-green-600 hover:text-green-600 transition ease-in-out">
+                                    class="inline-flex justify-center items-center align-middle text-center select-none border font-normal whitespace-no-wrap rounded leading-normal no-underline h-8 w-8 border-gray-300 hover:border-rose-500 hover:text-rose-500 transition ease-in-out">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-brand-instagram" width="16" height="16"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"

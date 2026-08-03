@@ -3,7 +3,7 @@
 
 .wedding-card-wrap {
     background: #f9f5ef;
-    max-width: 480px;
+    width: 100%; max-width: 100%;
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
     color: #1a2a4a;
