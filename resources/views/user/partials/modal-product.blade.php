@@ -181,7 +181,7 @@
 								<!-- hr -->
 								<div class="flex flex-col gap-6">
 									<hr />
-									<div>
+									<div class="hidden md:block">
 										<button
 											type="button"
 											class="btn inline-flex items-center gap-x-2 bg-white text-gray-800 border-gray-300 border disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-700 hover:border-gray-700 active:bg-gray-700 active:border-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300"
