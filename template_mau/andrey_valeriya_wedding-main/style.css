@@ -1,0 +1,515 @@
+@font-face {
+  font-family: "Allegretto";
+  src: url("fonts/ofont.ru_Allegretto Script Two.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VeraHumana";
+  src: url("fonts/ofont.ru_Vera Humana 95.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #ECECEC;
+  color: #333333;
+  font-family: "VeraHumana", sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.envelope-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  transition: visibility 0.6s ease;
+}
+
+.envelope-overlay.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.envelope-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  z-index: 10;
+  width: 100%;
+  color: #333333;
+  font-family: "Allegretto", sans-serif;
+  font-size: 38px;
+  letter-spacing: 1px;
+  transform: translateX(-50%);
+  transition: opacity 0.4s ease;
+}
+
+.envelope-overlay.opening .envelope-text {
+  opacity: 0;
+}
+
+.envelope-top,
+.envelope-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1),
+  opacity 1.2s ease;
+}
+
+.envelope-top {
+  top: 0;
+  z-index: 3;
+  height: 60%;
+  background-image: url("images/envelope_top.png");
+  background-position: bottom 10px  center ;
+  background-repeat: no-repeat;
+  transform-origin: top center;
+}
+
+.envelope-bottom {
+  bottom: 0;
+  z-index: 2;
+  height: 80%;
+  background-image: url("images/envelope_bottom.png");
+  background-position: bottom center;
+  transform-origin: bottom center;
+}
+
+.envelope-overlay.opening .envelope-top {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.envelope-overlay.opening .envelope-bottom {
+  transform: translateY(100%);
+  opacity: 0;
+  transition-delay: 0.15s;
+}
+
+.envelope-seal {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  z-index: 5;
+  width: 145px;
+  height: 150px;
+  border: none;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: transparent;
+  background-image: url("images/seal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:  center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate(-50%, -50%);
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1),
+  opacity 1s ease;
+}
+
+.envelope-seal:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.envelope-overlay.opening .envelope-seal {
+  transform: translate(-50%, -50%) translateY(-140%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main {
+  position: relative;
+  height: 720px;
+  padding-top: 40px;
+  background-image: url("images/main.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 205px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0));
+  pointer-events: none;
+}
+
+.title-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px 40px;
+  color:  white;
+}
+
+.pearls {
+  position: absolute;
+}
+
+.top-pearls {
+  top: 0;
+  left: 8%;
+  width: 23px;
+}
+
+.bottom-pearls {
+  right: 8%;
+  bottom: 0;
+  width: 23px;
+  rotate: 180deg;
+}
+
+.date-title {
+  font-size: 22px;
+}
+
+.main-title {
+  font-family: "Allegretto", sans-serif;
+  font-size: 54px;
+}
+
+.name-title {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.invitation {
+  margin-top: 25px;
+}
+
+.invitation-text-wrapper {
+  padding-inline: 15px;
+}
+
+.subtitle {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.invitation-title {
+  margin-bottom: 25px;
+}
+
+.invitation-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-inline: 35px;
+  line-height: 20px;
+}
+
+.invitation-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.silk {
+  position: relative;
+  z-index: 3;
+  display: block;
+}
+
+.invitation-silk {
+  top: 135px;
+  left: 5%;
+  width: 160%;
+  height: 270px;
+  transform: translateX(-30%);
+  rotate: 7deg;
+}
+
+.flower {
+  position: absolute;
+}
+
+.invitation-flower-left {
+  top: -30px;
+  left: -90px;
+  z-index: 4;
+  width: 255px;
+  rotate: 35deg;
+}
+
+.invitation-flower-right {
+  top: 0;
+  right: -100px;
+  z-index: 4;
+  width: 250px;
+  rotate: 320deg;
+}
+
+.invitation-pearls-top {
+  top: 85px;
+  left: 46%;
+  width: 47px;
+  rotate:  340deg;
+}
+
+.invitation-pearls-bottom {
+  bottom: 8px;
+  right: 12%;
+  width: 23px;
+  rotate:  95deg;
+}
+
+.calendar {
+  margin-top: 10px;
+}
+
+.calendar-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
+}
+
+.calendar-img {
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+}
+
+.calendar-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.calendar-silk {
+  top: 70px;
+  left: -200px;
+  width: 160%;
+  height: 300px;
+  rotate: 185deg;
+}
+
+.calendar-flower {
+  bottom: -200px;
+  left: 26%;
+  width: 245px;
+  rotate: 35deg;
+  transform: scaleX(-1);
+}
+
+.calendar-pearls {
+  bottom: 30px;
+  left: 40px;
+  width: 32px;
+}
+
+.place {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.place-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-inline: 15px;
+  line-height: 20px;
+}
+
+.place-title {
+  width: 60%;
+  margin-inline: auto;
+  line-height: 37px;
+}
+
+.place-link {
+  height: auto;
+  padding: 10px 47px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  color: #333333;
+  text-decoration:  none;
+}
+
+.place-link:hover {
+  text-decoration: underline;
+}
+
+.place-img {
+  width: 120%;
+  max-height: 450px;
+  min-height: 350px;
+  margin: 45px -10% 29px;
+}
+
+.place-rsvp-wrapper {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow: hidden;
+}
+
+.place-rsvp-text {
+  line-height: 20px;
+}
+
+.place-silk {
+  top: 20px;
+  left: -35%;
+  width: 180%;
+  height: 360px;
+  transform: translateX(-20%);
+  rotate: 21deg;
+}
+
+.place-pearls {
+  top: 140px;
+  left: 38%;
+  width: 32px;
+  rotate: 180deg;
+}
+
+.place-flower {
+  top: 90px;
+  right: -20px;
+  width: 180px;
+  rotate: 322deg;
+}
+
+.footer {
+  margin-top: 25px;
+}
+
+.footer-title-container {
+  position: relative;
+  padding: 20px 15px 10px;
+}
+
+.footer-top-pearls {
+  top: -5px;
+  right: 5%;
+  width: 20px;
+}
+
+.footer-bottom-pearls {
+  left: 6%;
+  bottom: 30px;
+  width: 20px;
+  rotate: 70deg;
+}
+
+.footer-subtitle {
+  max-width: 80%;
+  margin: 0 auto 25px;
+}
+
+.footer-text {
+  line-height: 20px;
+}
+
+.footer-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  background-image: url("images/footer_image.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.footer-silk {
+  top: 35px;
+  left: -33%;
+  width: 190%;
+  height: 338px;
+  transform: scaleX(-1);
+  rotate:  337deg;
+}
+
+.footer-flower {
+  top: -12px;
+  left: -10px;
+  width: 250px;
+  rotate: 30deg;
+}
+
+.sound-toggle {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  z-index: 500;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFFD8;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.4s ease;
+}
+
+.sound-toggle.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sound-toggle:active {
+  transform: scale(0.9);
+}
+
+.sound-toggle svg {
+  width: 45px;
+  height: 45px;
+  fill: #AAAAAA;
+}
+
+.icon-sound-off {
+  display: none;
+}
+
+.sound-toggle.muted .icon-sound-on {
+  display: none;
+}
+
+.sound-toggle.muted .icon-sound-off {
+  display: block;
+}

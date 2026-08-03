@@ -328,7 +328,7 @@
                                 </li>
 
                                 <li class="nav-item dropdown w-full lg:w-auto dropdown-fullwidth">
-                                    <a class="nav-link {{ request()->is('danh-gia*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('danh-gia*') ? 'color: #f43f5e !important;' : '' }}" href="#!">
+                                    <a class="nav-link {{ request()->is('danh-gia*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('danh-gia*') ? 'color: #f43f5e !important;' : '' }}" href="/danh-gia">
                                         Đánh giá
                                     </a>
 
@@ -338,7 +338,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link {{ request()->is('bang-dieu-khien*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('bang-dieu-khien*') ? 'color: #f43f5e !important;' : '' }}" href="#!">Bảng điều khiển</a>
                                 </li>
-
+                                
+                                <li class="nav-item dropdown w-full lg:w-auto flex items-center">
+                                    <a class="nav-link {{ request()->is('lien-he') ? 'active text-rose-500 font-bold' : 'text-gray-800 font-bold' }}" style="{{ request()->is('lien-he') ? 'color: #f43f5e !important;' : '' }}" href="{{ route('contact') }}">
+                                        Liên hệ cho tôi
+                                    </a>
+                                    <a href="#" class="dropdown-toggle text-gray-500 hover:text-gray-800 p-2 ml-[-10px] hidden lg:block" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu shadow-lg rounded-xl border-0 mt-2">
+                                        <li><a class="dropdown-item flex items-center gap-3 py-2 font-semibold text-gray-700 hover:text-rose-500 hover:bg-rose-50 transition-colors cursor-pointer" onclick="openSocialModal('facebook')"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" class="w-5 h-5"> Facebook</a></li>
+                                        <li><a class="dropdown-item flex items-center gap-3 py-2 font-semibold text-gray-700 hover:text-rose-500 hover:bg-rose-50 transition-colors cursor-pointer" onclick="openSocialModal('zalo')"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" class="w-5 h-5"> Zalo</a></li>
+                                        <li><a class="dropdown-item flex items-center gap-3 py-2 font-semibold text-gray-700 hover:text-rose-500 hover:bg-rose-50 transition-colors cursor-pointer" onclick="openSocialModal('tiktok')"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" class="w-5 h-5"> Tiktok</a></li>
+                                        <li><a class="dropdown-item flex items-center gap-3 py-2 font-semibold text-gray-700 hover:text-rose-500 hover:bg-rose-50 transition-colors cursor-pointer" onclick="openSocialModal('instagram')"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" class="w-5 h-5"> Instagram</a></li>
+                                    </ul>
+                                </li>
 
                             </ul>
                         </div>
@@ -408,6 +420,126 @@
         </div>
     </div>
 </div>
+
+<!-- Social Contact Modal -->
+<div class="modal fade" id="socialContactModal" tabindex="-1" aria-labelledby="socialContactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 460px;">
+        <div class="modal-content border-0 shadow-2xl" style="border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);">
+            
+            <!-- Dynamic Header Background -->
+            <div id="socialModalHeader" class="px-8 py-8 relative transition-colors duration-300" style="background-color: #1877F2; color: white;">
+                <!-- Close Button -->
+                <button type="button" class="absolute w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-colors" style="top: 15px; right: 15px;" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+
+                <div class="flex items-center gap-4 mb-6">
+                    <div id="socialModalIcon" class="flex items-center justify-center text-white" style="width: 64px; height: 64px; background-color: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.4); border-radius: 18px; flex-shrink: 0;">
+                        <!-- Icon will be injected -->
+                    </div>
+                    <div>
+                        <h4 id="socialModalTitle" class="font-bold m-0 leading-tight" style="font-size: 28px; color: white;">Facebook</h4>
+                        <span id="socialModalSubtitle" class="block" style="font-size: 14px; color: rgba(255,255,255,0.9);">facebook.com</span>
+                    </div>
+                </div>
+
+                <ul id="socialModalBullets" class="list-none p-0 m-0 space-y-2">
+                    <li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>5,000+ Followers</li>
+                    <li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>Cập nhật hàng ngày</li>
+                    <li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>Phân tích thị trường</li>
+                </ul>
+            </div>
+
+            <div class="bg-white px-8 pb-8 pt-0 relative text-left">
+                <!-- Portrait Image overlapping -->
+                <div class="flex justify-center -mt-24 mb-4 relative z-10 pointer-events-none">
+                    <!-- Note: Users will need to replace this with their actual transparent portrait image -->
+                    <img id="socialModalPortrait" src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Portrait" class="h-44 object-contain filter drop-shadow-xl" style="height: 180px;">
+                </div>
+                
+                <p id="socialModalDesc" class="text-[#4b5563] text-[15px] leading-relaxed mb-6 text-justify">
+                    Theo dõi trang Facebook cá nhân của chúng tôi để cập nhật những dự án bất động sản nghỉ dưỡng mới nhất, phân tích thị trường chuyên sâu và những câu chuyện thực tế từ hành trình làm nghề. Nơi chia sẻ kiến thức và kết nối cộng đồng nhà đầu tư.
+                </p>
+
+                <a id="socialModalBtn" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 rounded-xl text-white font-bold transition-all hover:-translate-y-1" style="background-color: #1877F2; box-shadow: 0 10px 20px rgba(24,119,242,0.2); padding: 16px 0;">
+                    <span id="socialModalBtnText">Truy cập trang Facebook</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+const socialData = {
+    'facebook': {
+        name: 'Facebook',
+        subtitle: 'facebook.com',
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>',
+        color: '#1877F2',
+        bullets: ['5,000+ Followers', 'Cập nhật hàng ngày', 'Phân tích thị trường'],
+        portrait: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png', // Transparent avatar placeholder
+        desc: 'Theo dõi trang Facebook cá nhân của chúng tôi để cập nhật những dự án mới nhất, phân tích thị trường chuyên sâu và những câu chuyện thực tế từ hành trình làm nghề. Nơi chia sẻ kiến thức và kết nối cộng đồng nhà đầu tư.',
+        link: '#'
+    },
+    'zalo': {
+        name: 'Zalo',
+        subtitle: 'zalo.me',
+        icon: '<span class="font-black text-3xl">Z</span>',
+        color: '#0068FF',
+        bullets: ['Hỗ trợ khách hàng 24/7', 'Gửi mẫu thiết kế nhanh chóng', 'Tư vấn trực tiếp 1-1'],
+        portrait: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png',
+        desc: 'Kết nối qua Zalo Official để nhận được sự tư vấn nhanh chóng nhất từ đội ngũ thiết kế. Chúng tôi luôn sẵn sàng lắng nghe mọi yêu cầu và đồng hành cùng bạn tạo nên tấm thiệp cưới hoàn hảo.',
+        link: '#'
+    },
+    'tiktok': {
+        name: 'Tiktok',
+        subtitle: 'tiktok.com',
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>',
+        color: '#000000',
+        bullets: ['1M+ Lượt xem', 'Video review chân thực', 'Cập nhật xu hướng cưới'],
+        portrait: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png',
+        desc: 'Theo dõi kênh Tiktok của chúng tôi để không bỏ lỡ những video review sinh động, quá trình sản xuất thực tế và hàng loạt xu hướng thiệp cưới mới nhất đang thịnh hành trên thị trường.',
+        link: '#'
+    },
+    'instagram': {
+        name: 'Instagram',
+        subtitle: 'instagram.com',
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>',
+        color: '#E1306C',
+        bullets: ['Bộ sưu tập cao cấp', 'Hình ảnh thực tế', 'Phong cách hiện đại'],
+        portrait: 'https://cdn-icons-png.flaticon.com/512/4140/4140047.png',
+        desc: 'Khám phá không gian nghệ thuật qua các bộ sưu tập thiệp cưới siêu đẹp trên Instagram. Nguồn cảm hứng bất tận để bạn chọn lựa thiết kế hoàn mỹ cho ngày vui của mình.',
+        link: '#'
+    }
+};
+
+function openSocialModal(key) {
+    const data = socialData[key.toLowerCase()];
+    if(!data) return;
+
+    document.getElementById('socialModalHeader').style.backgroundColor = data.color;
+    document.getElementById('socialModalBtn').style.backgroundColor = data.color;
+    document.getElementById('socialModalBtn').style.boxShadow = `0 10px 20px ${data.color}40`;
+    
+    document.getElementById('socialModalIcon').innerHTML = data.icon;
+    document.getElementById('socialModalTitle').innerText = data.name;
+    document.getElementById('socialModalSubtitle').innerText = data.subtitle;
+    
+    const bulletsHtml = data.bullets.map(b => `<li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>${b}</li>`).join('');
+    document.getElementById('socialModalBullets').innerHTML = bulletsHtml;
+    
+    document.getElementById('socialModalPortrait').src = data.portrait;
+    document.getElementById('socialModalDesc').innerText = data.desc;
+    
+    document.getElementById('socialModalBtnText').innerText = `Truy cập trang ${data.name}`;
+    document.getElementById('socialModalBtn').href = data.link;
+
+    var myModal = new bootstrap.Modal(document.getElementById('socialContactModal'));
+    myModal.show();
+}
+</script>
 
 <!-- Mẫu Thiệp Cart -->
 

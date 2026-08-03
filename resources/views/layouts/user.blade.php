@@ -43,6 +43,7 @@
             --bs-primary-rgb: 244, 63, 94;
         }
     </style>
+    @yield('styles')
 </head>
 
 <body>
@@ -75,6 +76,7 @@
             }
         });
     </script>
+    @yield('scripts')
 </body>
 
 </html>

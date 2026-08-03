@@ -1,4 +1,6 @@
-<?php $__env->startSection('content'); ?>
+@extends('layouts.user')
+
+@section('content')
 
         <section class="mt-8">
             <div class="container">
@@ -780,10 +782,6 @@ window.addEventListener('popstate', function(event) {
 });
 </script>
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.user', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var quickViewModal = document.getElementById('quickViewModal');
@@ -884,6 +882,7 @@ setTimeout(resizeIframes, 100);
 setTimeout(resizeIframes, 600);
 </script>
 
+@verbatim
 <style>
 .preview-container:hover .card-gradient-overlay {
     padding-top: 80px !important;
@@ -930,6 +929,7 @@ setTimeout(resizeIframes, 600);
 
 }
 </style>
+@endverbatim
 
 <script>
 // Hover-to-scroll preview animation
@@ -960,3 +960,4 @@ function initHoverScroll() {
 document.addEventListener('DOMContentLoaded', initHoverScroll);
 setTimeout(initHoverScroll, 700);
 </script>
+@endsection
