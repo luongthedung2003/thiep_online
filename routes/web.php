@@ -90,6 +90,7 @@ Route::post('/danh-gia/post', function () {
     return redirect()->back()->with('success', 'Đã đăng bài viết (tính năng đang phát triển)');
 })->name('community.post');
 
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
+Route::get('/login', [\App\Http\Controllers\AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login'])->name('login.submit');
+Route::post('/register', [\App\Http\Controllers\AuthController::class, 'register'])->name('register.submit');
+Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');

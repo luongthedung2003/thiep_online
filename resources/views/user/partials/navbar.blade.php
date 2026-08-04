@@ -159,17 +159,46 @@
                                     </span>
                                 </a>
                             </div>
-                            <div>
-                                <a href="/login" class="text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user"
-                                        width="22" height="22" viewBox="0 0 24 24" stroke-width="2"
-                                        stroke="currentColor" fill="none" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                    </svg>
-                                </a>
+                            <div class="relative dropdown">
+                                @auth
+                                    <a href="#" class="text-gray-600 font-semibold flex items-center gap-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                           <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                                           <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+                                           <path d="M15 19l2 2l4 -4"></path>
+                                        </svg>
+                                        <span class="hidden lg:block" style="max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="{{ Auth::user()->name }}">{{ Auth::user()->name }}</span>
+                                    </a>
+                                    <ul class="dropdown-menu shadow-lg rounded-xl border-0 mt-2 p-2">
+                                        <li>
+                                            <a class="dropdown-item py-2 font-medium text-gray-700 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-colors" href="#">Tài khoản của tôi</a>
+                                        </li>
+                                        <li><hr class="dropdown-divider my-1"></li>
+                                        <li>
+                                            <a class="dropdown-item py-2 font-medium text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors flex items-center gap-2" href="{{ route('logout') }}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                   <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                                                   <path d="M9 12h12l-3 -3"></path>
+                                                   <path d="M18 15l3 -3"></path>
+                                                </svg>
+                                                Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
+                                @else
+                                    <a href="/login" class="text-gray-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user"
+                                            width="22" height="22" viewBox="0 0 24 24" stroke-width="2"
+                                            stroke="currentColor" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                        </svg>
+                                    </a>
+                                @endauth
                             </div>
                             <div>
                                 <button type="button" class="text-gray-600 relative" data-bs-toggle="offcanvas"

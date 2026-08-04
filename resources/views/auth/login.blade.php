@@ -18,7 +18,10 @@
         <div class="flex flex-col lg:flex-row rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.05)] border border-gray-100" style="min-height: 600px;">
     <!-- Left Column: Form -->
     <div class="flex-1 bg-white flex flex-col justify-start lg:justify-center items-center p-6 pt-10 lg:p-24">
-        <div class="w-full max-w-md flex flex-col" id="login-form">
+        @php
+            $showRegister = $errors->has('name') || $errors->has('password') || ($errors->has('email') && old('name'));
+        @endphp
+        <div class="w-full max-w-md flex flex-col {{ $showRegister ? 'hidden' : '' }}" id="login-form">
             <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Đăng Nhập</h2>
 
             <!-- Google Sign In -->
@@ -40,14 +43,25 @@
             </div>
 
             <!-- Form -->
-            <form action="#" method="POST" class="flex flex-col gap-5">
+            <form action="{{ route('login.submit') }}" method="POST" class="flex flex-col gap-5">
+                @csrf
+                @if(session('success'))
+                    <div class="bg-green-50 text-green-600 p-3 rounded-lg text-sm">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if($errors->any() && !$showRegister)
+                    <div class="bg-red-50 text-red-500 p-3 rounded-lg text-sm">
+                        {{ $errors->first() }}
+                    </div>
+                @endif
                 <div>
-                    <input type="email" placeholder="Email" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    <input type="email" name="email" value="{{ old('email') }}" placeholder="Email" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    <input type="password" name="password" placeholder="Password" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
                 </div>
-                <button type="button" class="w-full text-white bg-[#20C997] hover:bg-[#1BA87E] focus:ring-4 focus:ring-rose-300 font-bold rounded-lg text-lg px-5 py-3.5 mt-2 flex justify-center items-center gap-2 transition duration-200">
+                <button type="submit" class="w-full text-white bg-[#20C997] hover:bg-[#1BA87E] focus:ring-4 focus:ring-rose-300 font-bold rounded-lg text-lg px-5 py-3.5 mt-2 flex justify-center items-center gap-2 transition duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
@@ -69,7 +83,7 @@
             </p>
         </div>
 
-        <div class="w-full max-w-md flex flex-col hidden" id="register-form">
+        <div class="w-full max-w-md flex flex-col {{ $showRegister ? '' : 'hidden' }}" id="register-form">
             <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Đăng Ký</h2>
 
             <!-- Google Sign Up -->
@@ -91,17 +105,23 @@
             </div>
 
             <!-- Form -->
-            <form action="#" method="POST" class="flex flex-col gap-5">
+            <form action="{{ route('register.submit') }}" method="POST" class="flex flex-col gap-5">
+                @csrf
                 <div>
-                    <input type="text" placeholder="Họ và tên" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    <input type="text" name="name" value="{{ old('name') }}" placeholder="Họ và tên" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    @error('name') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
                 </div>
                 <div>
-                    <input type="email" placeholder="Email" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    <input type="email" name="email" value="{{ old('email') }}" placeholder="Email" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    @error('email') 
+                        @if($showRegister) <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @endif
+                    @enderror
                 </div>
                 <div>
-                    <input type="password" placeholder="Mật khẩu" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    <input type="password" name="password" placeholder="Mật khẩu" class="w-full bg-gray-50 border border-gray-100 text-gray-900 rounded-lg focus:ring-green-500 focus:border-green-500 block p-3.5 transition outline-none" required>
+                    @error('password') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
                 </div>
-                <button type="button" class="w-full text-white bg-[#20C997] hover:bg-[#1BA87E] focus:ring-4 focus:ring-rose-300 font-bold rounded-lg text-lg px-5 py-3.5 mt-2 flex justify-center items-center gap-2 transition duration-200">
+                <button type="submit" class="w-full text-white bg-[#20C997] hover:bg-[#1BA87E] focus:ring-4 focus:ring-rose-300 font-bold rounded-lg text-lg px-5 py-3.5 mt-2 flex justify-center items-center gap-2 transition duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />

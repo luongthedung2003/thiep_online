@@ -53,9 +53,8 @@ body {
 #create-post-card.show {
     max-height: 600px;
     opacity: 1;
-    margin-bottom: 2rem;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+    margin-bottom: 3rem !important;
+    padding: 1.5rem !important;
     border: 1px solid var(--border) !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
@@ -273,8 +272,9 @@ body {
         <div class="flex items-center justify-between mb-6 px-2 w-full">
             <!-- <h2 class="text-lg md:text-2xl font-black uppercase tracking-wider text-[var(--text-primary)]">Cộng đồng</h2> -->
             @auth
-            <button onclick="toggleCreatePostCard()" class="px-5 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-black uppercase text-[10px] tracking-widest rounded-2xl shadow-lg shadow-rose-500/20 active:scale-95 transition-all flex items-center gap-1.5 shrink-0">
-                <span class="material-symbols-outlined text-sm font-bold">add_circle</span> Đăng bài mới
+            <button onclick="toggleCreatePostCard()" class="px-5 py-3 bg-rose-500 hover:bg-rose-600 text-white font-black uppercase text-[11px] tracking-widest rounded-2xl shadow-lg shadow-rose-500/20 active:scale-95 transition-all flex items-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" style="margin-right: 6px;" width="18" height="18" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><line x1="9" y1="12" x2="15" y2="12" /><line x1="12" y1="9" x2="12" y2="15" /></svg>
+                Đăng bài mới
             </button>
             @endauth
         </div>
@@ -305,18 +305,18 @@ body {
                     <div>
                         <textarea name="content" rows="3" required
                             placeholder="Bạn đang nghĩ gì? Chia sẻ trải nghiệm Thiệp Cưới của bạn cùng cộng đồng..."
-                            class="w-full bg-[var(--bg-deep)] border border-[var(--border)] rounded-2xl px-4 py-3 text-[var(--text-primary)] text-sm outline-none focus:outline-none focus:ring-0 focus:border-[var(--border)] transition-colors resize-none placeholder:text-[var(--text-secondary)]/50 font-bold leading-relaxed"></textarea>
+                            class="w-full bg-transparent border-0 px-2 py-3 text-gray-800 text-sm outline-none focus:ring-0 resize-none placeholder-gray-400 font-medium"></textarea>
                     </div>
 
-                    <!-- Additional Media Inputs (Image File Upload and Video URL Input) -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Additional Media Inputs -->
+                    <div class="mt-2">
                         <!-- Image Upload -->
                         <div class="relative">
-                            <label class="block text-[10px] font-black uppercase tracking-widest text-[var(--text-secondary)] mb-2">Đính kèm ảnh</label>
-                            <div class="relative flex items-center justify-center border border-dashed border-[var(--border)] rounded-2xl p-3 bg-[var(--bg-deep)] cursor-pointer hover:border-rose-400 transition-colors">
+                            <label class="block text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Đính kèm ảnh</label>
+                            <div class="relative flex items-center justify-center border-0 rounded-xl p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors">
                                 <input type="file" name="image" accept="image/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="previewImage(this)">
-                                <div id="image-upload-placeholder" class="flex items-center gap-2 text-[var(--text-secondary)]">
-                                    <span class="material-symbols-outlined text-lg">image</span>
+                                <div id="image-upload-placeholder" class="flex items-center text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" style="margin-right: 8px;" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 8h.01" /><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" /><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg>
                                     <span class="text-[11px] font-extrabold uppercase tracking-wide">Chọn ảnh từ thiết bị</span>
                                 </div>
                                 <div id="image-upload-preview" class="hidden w-full h-24 rounded-xl overflow-hidden relative">
@@ -325,22 +325,13 @@ body {
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Video URL -->
-                        <div>
-                            <label class="block text-[10px] font-black uppercase tracking-widest text-[var(--text-secondary)] mb-2">Liên kết Video (YouTube)</label>
-                            <div class="relative flex items-center bg-[var(--bg-deep)] border border-[var(--border)] rounded-2xl px-3 py-2.5">
-                                <span class="material-symbols-outlined text-lg text-[var(--text-secondary)] mr-2">videocam</span>
-                                <input type="text" name="video_url" placeholder="https://youtube.com/watch?v=..."
-                                    class="w-full bg-transparent border-none p-0 text-xs font-bold text-[var(--text-primary)] outline-none placeholder:text-[var(--text-secondary)]/50">
-                            </div>
-                        </div>
                     </div>
 
                     <div class="flex justify-end pt-2">
                         <button type="submit"
-                            class="px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-black uppercase text-[11px] tracking-widest rounded-2xl shadow-lg shadow-rose-500/20 active:scale-95 transition-all flex items-center gap-2">
-                            <span class="material-symbols-outlined text-[14px]">send</span> Đăng bài viết
+                            class="px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white font-black uppercase text-[11px] tracking-widest rounded-xl shadow-lg shadow-rose-500/20 active:scale-95 transition-all flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" style="margin-right: 8px;" width="16" height="16" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 14l11 -11" /><path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" /></svg>
+                            Đăng bài viết
                         </button>
                     </div>
                 </form>
@@ -388,7 +379,7 @@ body {
                             <span class="post-time">{{ $post->created_at->diffForHumans() }}</span>
                         </div>
                     </div>
-                    @if(auth()->check() && auth()->id() == $post->user_id)
+                    @if(auth()->check() && auth()->id() == ($post->user_id ?? -1))
                     <div class="relative group" onclick="toggleDropdown({{ $post->id }}, event)">
                         <button class="post-more"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button>
                         <div id="dropdown-{{ $post->id }}" class="absolute right-0 mt-2 w-36 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl shadow-lg hidden z-50 overflow-hidden">

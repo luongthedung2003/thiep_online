@@ -26,7 +26,7 @@
                                 <div class="my-7 flex flex-col gap-2">
                                     <h1 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">Thiết Kế Thiệp Cưới Hiện Đại & Tinh Tế
                                     </h1>
-                                    <p class="text-md font-light">Mang đến những bộ sưu tập thiệp cưới đa dạng phong cách, giúp ngày trọng đại của bạn thêm phần hoàn hảo.</p>
+                                    <p class="text-md font-light">Mang đến những bộ sưu tập thiệp cưới đa dạng, giúp ngày trọng đại của bạn thêm phần hoàn hảo.</p>
                                 </div>
                                 <a href="#!"
                                     class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
@@ -363,7 +363,7 @@
                     <div class="xl:grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 flex-nowrap flex">
                         <div class="flex-0 block w-full md:w-auto">
                             <div class="pt-8 px-6 rounded-lg"
-                                style="background: url({{asset('assets/images/banner/banner_1.png')}}) no-repeat; background-size: cover; height: 470px">
+                                style="background: url({{asset('assets/images/banner/banner_2.png')}}) no-repeat; background-size: cover; height: 470px">
                                 <div class="flex flex-col gap-5">
                                     <div class="flex flex-col gap-2">
                                         <h3 class="text-lg text-white">Giảm 50% Cho Đơn Hàng Đầu Tiên.</h3>
@@ -390,443 +390,85 @@
                                 </div>
                             </div>
                         </div>
+@foreach($templates->take(3) as $template)
                         <div class="flex-0 block w-full md:w-auto">
-                            <div
-                                class="relative flex flex-col min-w-0 rounded-lg break-words border bg-white border-gray-300 card-product">
-                                <div class="flex-auto p-4">
-                                    <div class="text-center relative flex justify-center">
-                                        <a href="#!"><img src="{{ asset('assets/images/') }}/products/product-img-11.jpg"
-                                                alt="Grocery Ecommerce Template"
-                                                class="mb-3 m-auto max-w-full h-auto" /></a>
-
-                                        <div
-                                            class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
-                                                <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="icon icon-tabler icon-tabler-eye" width="16" height="16"
-                                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                                        <path
-                                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-heart" width="16" height="16"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
-                                                    height="16" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path d="M7 10h14l-4 -4" />
-                                                    <path d="M17 14h-14l4 4" />
-                                                </svg>
-                                            </a>
-                                        </div>
+                            <div class="relative flex flex-col min-w-0 rounded-lg break-words border bg-white border-gray-300 card-product">
+                                {{-- Preview iframe full width, no padding --}}
+                                <div class="preview-wrap" style="position:relative; overflow:hidden; width:100%; height:200px; background:#f9f5ef; border-radius:8px 8px 0 0;"
+                                     onmouseenter="var iw=this.querySelector('iframe').contentWindow; this._scrollInt = setInterval(function(){ try{ iw.scrollBy(0, 1); }catch(e){} }, 15);"
+                                     onmouseleave="clearInterval(this._scrollInt); var iw=this.querySelector('iframe').contentWindow; try{ iw.scrollTo(0,0); }catch(e){}">
+                                    <iframe src="{{ url('/mau-thiep/'.$template->id.'/preview') }}"
+                                            style="width:100%; height:100%; border:none; pointer-events:none; overflow:hidden;"
+                                            scrolling="no" loading="lazy"></iframe>
+                                    {{-- 3 nút overlay hiện khi hover --}}
+                                    <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action flex justify-center gap-2" style="pointer-events:auto; z-index:10;">
+                                        <a href="#!"
+                                            class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
+                                            data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
+                                            <span data-bs-toggle="modal" data-bs-target="#quickViewModal"
+                                                data-name="{{ $template->name }}"
+                                                data-category="{{ $template->category->name ?? 'Thiệp Cưới' }}"
+                                                data-image="{{ asset($template->thumbnail) }}"
+                                                data-id="{{ $template->id }}"
+                                                data-code="MT-{{ str_pad($template->id, 5, '0', STR_PAD_LEFT) }}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>
+                                            </span>
+                                        </a>
+                                        <a href="#!"
+                                            class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
+                                            data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/></svg>
+                                        </a>
+                                        <a href="#!"
+                                            class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
+                                            data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-exchange" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10h14l-4 -4"/><path d="M17 14h-14l4 4"/></svg>
+                                        </a>
                                     </div>
+                                </div>
+                                {{-- Card info --}}
+                                <div class="flex-auto p-4" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 0 0 8px 8px;">
                                     <div class="flex flex-col gap-3">
-                                        <a href="#!" class="text-decoration-none text-gray-500"><small>Tea, Coffee &
-                                                Drinks</small></a>
+                                        <a href="#!" class="text-decoration-none text-gray-500"><small>{{ $template->category->name ?? 'Thiệp Cưới' }}</small></a>
                                         <div class="flex flex-col gap-2">
-                                            <h3 class="text-base truncate"><a href="#!">Roast Ground Coffee</a></h3>
-
+                                            <h3 class="text-base truncate"><a href="#!">{{ $template->name }}</a></h3>
                                             <div class="flex justify-between items-center">
                                                 <div>
-                                                    <span class="text-gray-900 font-semibold">$13</span>
-                                                    <span class="line-through text-gray-500">$18</span>
+                                                    <span class="text-gray-900 font-semibold">Liên hệ</span>
                                                 </div>
-                                                <div>
-                                                    <div class="flex items-center">
-                                                        <small class="text-yellow-500 flex items-center">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-half-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M12 1a.993 .993 0 0 1 .823 .443l.067 .116l2.852 5.781l6.38 .925c.741 .108 1.08 .94 .703 1.526l-.07 .095l-.078 .086l-4.624 4.499l1.09 6.355a1.001 1.001 0 0 1 -1.249 1.135l-.101 -.035l-.101 -.046l-5.693 -3l-5.706 3c-.105 .055 -.212 .09 -.32 .106l-.106 .01a1.003 1.003 0 0 1 -1.038 -1.06l.013 -.11l1.09 -6.355l-4.623 -4.5a1.001 1.001 0 0 1 .328 -1.647l.113 -.036l.114 -.023l6.379 -.925l2.853 -5.78a.968 .968 0 0 1 .904 -.56zm0 3.274v12.476a1 1 0 0 1 .239 .029l.115 .036l.112 .05l4.363 2.299l-.836 -4.873a1 1 0 0 1 .136 -.696l.07 -.099l.082 -.09l3.546 -3.453l-4.891 -.708a1 1 0 0 1 -.62 -.344l-.073 -.097l-.06 -.106l-2.183 -4.424z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                        </small>
-                                                        <span class="text-gray-700 text-sm ml-2">4.5</span>
-                                                    </div>
+                                                <div class="flex items-center">
+                                                    <small class="text-yellow-500 flex items-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-half-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1a.993 .993 0 0 1 .823 .443l.067 .116l2.852 5.781l6.38 .925c.741 .108 1.08 .94 .703 1.526l-.07 .095l-.078 .086l-4.624 4.499l1.09 6.355a1.001 1.001 0 0 1 -1.249 1.135l-.101 -.035l-.101 -.046l-5.693 -3l-5.706 3c-.105 .055 -.212 .09 -.32 .106l-.106 .01a1.003 1.003 0 0 1 -1.038 -1.06l.013 -.11l1.09 -6.355l-4.623 -4.5a1.001 1.001 0 0 1 .328 -1.647l.113 -.036l.114 -.023l6.379 -.925l2.853 -5.78a.968 .968 0 0 1 .904 -.56zm0 3.274v12.476a1 1 0 0 1 .239 .029l.115 .036l.112 .05l4.363 2.299l-.836 -4.873a1 1 0 0 1 .136 -.696l.07 -.099l.082 -.09l3.546 -3.453l-4.891 -.708a1 1 0 0 1 -.62 -.344l-.073 -.097l-.06 -.106l-2.183 -4.424z" stroke-width="0" fill="currentColor"/></svg>
+                                                    </small>
+                                                    <span class="text-gray-700 text-sm ml-2">4.5</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="grid">
-                                            <button type="button"
+                                            <a href="{{ url('/mau-thiep/'.$template->id.'/edit') }}"
                                                 class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-plus" width="14" height="14"
-                                                    viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M12 5l0 14"></path>
-                                                    <path d="M5 12l14 0"></path>
-                                                </svg>
-                                                <span class="ml-1">Add to Cart</span>
-                                            </button>
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="14" height="14" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>
+                                                <span class="ml-1">Chọn Mẫu</span>
+                                            </a>
                                         </div>
                                         <div class="flex justify-start text-center">
-                                            <div class="deals-countdown w-full" data-countdown="2028/10/10 00:00:00">
-                                            </div>
+                                            <div class="deals-countdown w-full" data-countdown="2028/12/31 00:00:00"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-0 block w-full md:w-auto">
-                            <div
-                                class="relative flex flex-col min-w-0 rounded-lg break-words border bg-white border-gray-300 card-product">
-                                <div class="flex-auto p-4">
-                                    <div class="text-center relative flex justify-center">
-                                        <a href="#!"><img src="{{ asset('assets/images/') }}/products/product-img-12.jpg"
-                                                alt="Grocery Ecommerce Template"
-                                                class="mb-3 m-auto max-w-full h-auto" /></a>
-                                        <div
-                                            class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
-                                                <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="icon icon-tabler icon-tabler-eye" width="16" height="16"
-                                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                                        <path
-                                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-heart" width="16" height="16"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
-                                                    height="16" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path d="M7 10h14l-4 -4" />
-                                                    <path d="M17 14h-14l4 4" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col gap-3">
-                                        <a href="#!" class="text-decoration-none text-gray-500"><small>Fruits &
-                                                Vegetables</small></a>
-
-                                        <div class="flex flex-col gap-2">
-                                            <h3 class="text-base truncate"><a href="#!">Crushed Tomatoes</a></h3>
-                                            <div class="flex justify-between items-center">
-                                                <div>
-                                                    <span class="text-gray-900 font-semibold">$13</span>
-                                                    <span class="line-through text-gray-500">$18</span>
-                                                </div>
-                                                <div>
-                                                    <div class="flex items-center">
-                                                        <small class="text-yellow-500 flex items-center">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-half-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M12 1a.993 .993 0 0 1 .823 .443l.067 .116l2.852 5.781l6.38 .925c.741 .108 1.08 .94 .703 1.526l-.07 .095l-.078 .086l-4.624 4.499l1.09 6.355a1.001 1.001 0 0 1 -1.249 1.135l-.101 -.035l-.101 -.046l-5.693 -3l-5.706 3c-.105 .055 -.212 .09 -.32 .106l-.106 .01a1.003 1.003 0 0 1 -1.038 -1.06l.013 -.11l1.09 -6.355l-4.623 -4.5a1.001 1.001 0 0 1 .328 -1.647l.113 -.036l.114 -.023l6.379 -.925l2.853 -5.78a.968 .968 0 0 1 .904 -.56zm0 3.274v12.476a1 1 0 0 1 .239 .029l.115 .036l.112 .05l4.363 2.299l-.836 -4.873a1 1 0 0 1 .136 -.696l.07 -.099l.082 -.09l3.546 -3.453l-4.891 -.708a1 1 0 0 1 -.62 -.344l-.073 -.097l-.06 -.106l-2.183 -4.424z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                        </small>
-                                                        <span class="text-gray-700 text-sm ml-2">4.5</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid">
-                                            <button type="button"
-                                                class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-plus" width="14" height="14"
-                                                    viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M12 5l0 14"></path>
-                                                    <path d="M5 12l14 0"></path>
-                                                </svg>
-                                                <span class="ml-1">Add to Cart</span>
-                                            </button>
-                                        </div>
-                                        <div class="flex justify-start text-center w-full">
-                                            <div class="deals-countdown w-full" data-countdown="2028/12/9 00:00:00">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-0 block w-full md:w-auto">
-                            <div
-                                class="relative flex flex-col min-w-0 rounded-lg break-words border bg-white border-gray-300 card-product">
-                                <div class="flex-auto p-4">
-                                    <div class="text-center relative flex justify-center">
-                                        <a href="#!"><img src="{{ asset('assets/images/') }}/products/product-img-13.jpg"
-                                                alt="Grocery Ecommerce Template"
-                                                class="mb-3 m-auto max-w-full h-auto" /></a>
-                                        <div
-                                            class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action">
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
-                                                <span data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="icon icon-tabler icon-tabler-eye" width="16" height="16"
-                                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                                        <path
-                                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-heart" width="16" height="16"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path
-                                                        d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                                </svg>
-                                            </a>
-                                            <a href="#!"
-                                                class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                                data-bs-toggle="tooltip" data-bs-html="true" title="Compare">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-arrows-exchange" width="16"
-                                                    height="16" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                    <path d="M7 10h14l-4 -4" />
-                                                    <path d="M17 14h-14l4 4" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="flex flex-col gap-3">
-                                            <a href="#!" class="text-decoration-none text-gray-500"><small>Fruits &
-                                                    Vegetables</small></a>
-
-                                            <div class="flex flex-col gap-2">
-                                                <h3 class="text-base truncate"><a href="#!">Golden Pineapple</a></h3>
-                                                <div class="flex justify-between items-center">
-                                                    <div>
-                                                        <span class="text-gray-900 font-semibold">$13</span>
-                                                        <span class="line-through text-gray-500">$18</span>
-                                                    </div>
-                                                    <div class="flex items-center">
-                                                        <small class="text-yellow-500 flex items-center">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                class="icon icon-tabler icon-tabler-star-half-filled"
-                                                                width="14" height="14" viewBox="0 0 24 24"
-                                                                stroke-width="2" stroke="currentColor" fill="none"
-                                                                stroke-linecap="round" stroke-linejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                <path
-                                                                    d="M12 1a.993 .993 0 0 1 .823 .443l.067 .116l2.852 5.781l6.38 .925c.741 .108 1.08 .94 .703 1.526l-.07 .095l-.078 .086l-4.624 4.499l1.09 6.355a1.001 1.001 0 0 1 -1.249 1.135l-.101 -.035l-.101 -.046l-5.693 -3l-5.706 3c-.105 .055 -.212 .09 -.32 .106l-.106 .01a1.003 1.003 0 0 1 -1.038 -1.06l.013 -.11l1.09 -6.355l-4.623 -4.5a1.001 1.001 0 0 1 .328 -1.647l.113 -.036l.114 -.023l6.379 -.925l2.853 -5.78a.968 .968 0 0 1 .904 -.56zm0 3.274v12.476a1 1 0 0 1 .239 .029l.115 .036l.112 .05l4.363 2.299l-.836 -4.873a1 1 0 0 1 .136 -.696l.07 -.099l.082 -.09l3.546 -3.453l-4.891 -.708a1 1 0 0 1 -.62 -.344l-.073 -.097l-.06 -.106l-2.183 -4.424z"
-                                                                    stroke-width="0" fill="currentColor" />
-                                                            </svg>
-                                                        </small>
-                                                        <span class="text-gray-700 text-sm ml-2">4.5</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="grid">
-                                                <button type="button"
-                                                    class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="icon icon-tabler icon-tabler-plus" width="14" height="14"
-                                                        viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
-                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                        <path d="M12 5l0 14"></path>
-                                                        <path d="M5 12l14 0"></path>
-                                                    </svg>
-                                                    <span class="ml-1">Add to Cart</span>
-                                                </button>
-                                            </div>
-                                            <div class="flex justify-start text-center">
-                                                <div class="deals-countdown w-full"
-                                                    data-countdown="2028/11/11 00:00:00"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+@endforeach
                     </div>
+
                 </div>
             </div>
         </section>
+
         <section class="lg:my-14 my-8">
             <div class="container">
                 <div class="flex flex-wrap gap-y-6">
