@@ -143,7 +143,7 @@
                     <div class="lg:w-1/5 text-end md:w-1/2 w-3/5">
                         <div class="flex gap-7 items-center justify-end">
                             <div>
-                                <a href="#!" class="relative">
+                                <button type="button" class="text-gray-600 relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFavorites" role="button" aria-controls="offcanvasFavorites">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
                                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
                                         stroke="currentColor" fill="none" stroke-linecap="round"
@@ -157,7 +157,7 @@
                                         5
                                         <span class="invisible">unread messages</span>
                                     </span>
-                                </a>
+                                </button>
                             </div>
                             <div class="relative dropdown">
                                 @auth
@@ -456,13 +456,13 @@
         <div class="modal-content border-0 shadow-2xl" style="border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);">
             
             <!-- Dynamic Header Background -->
-            <div id="socialModalHeader" class="px-8 py-8 relative transition-colors duration-300" style="background-color: #1877F2; color: white;">
+            <div id="socialModalHeader" class="relative transition-colors duration-300" style="padding: 32px 32px 110px 32px; background-color: #1877F2; color: white;">
                 <!-- Close Button -->
-                <button type="button" class="absolute w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-colors" style="top: 15px; right: 15px;" data-bs-dismiss="modal" aria-label="Close">
+                <button type="button" class="absolute flex items-center justify-center rounded-full transition-colors" style="width: 32px; height: 32px; top: 15px; right: 15px; background-color: rgba(255,255,255,0.2);" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.4)'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.2)'" data-bs-dismiss="modal" aria-label="Close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 </button>
 
-                <div class="flex items-center gap-4 mb-6">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
                     <div id="socialModalIcon" class="flex items-center justify-center text-white" style="width: 64px; height: 64px; background-color: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.4); border-radius: 18px; flex-shrink: 0;">
                         <!-- Icon will be injected -->
                     </div>
@@ -472,25 +472,25 @@
                     </div>
                 </div>
 
-                <ul id="socialModalBullets" class="list-none p-0 m-0 space-y-2">
-                    <li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>5,000+ Followers</li>
-                    <li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>Cập nhật hàng ngày</li>
-                    <li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>Phân tích thị trường</li>
+                <ul id="socialModalBullets" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                    <li style="position: relative; padding-left: 16px; font-size: 14.5px; font-weight: 500;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>5,000+ Followers</li>
+                    <li style="position: relative; padding-left: 16px; font-size: 14.5px; font-weight: 500;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Cập nhật hàng ngày</li>
+                    <li style="position: relative; padding-left: 16px; font-size: 14.5px; font-weight: 500;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>Phân tích thị trường</li>
                 </ul>
             </div>
 
-            <div class="bg-white px-8 pb-8 pt-0 relative text-left">
+            <div style="background-color: white; padding: 0 32px 32px 32px; position: relative; text-align: left;">
                 <!-- Portrait Image overlapping -->
-                <div class="flex justify-center -mt-24 mb-4 relative z-10 pointer-events-none">
+                <div style="display: flex; justify-content: center; margin-top: -96px; margin-bottom: 24px; position: relative; z-index: 10; pointer-events: none;">
                     <!-- Note: Users will need to replace this with their actual transparent portrait image -->
-                    <img id="socialModalPortrait" src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Portrait" class="h-44 object-contain filter drop-shadow-xl" style="height: 180px;">
+                    <img id="socialModalPortrait" src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Portrait" style="height: 180px; object-fit: contain; filter: drop-shadow(0 20px 13px rgba(0,0,0,0.15));">
                 </div>
                 
-                <p id="socialModalDesc" class="text-[#4b5563] text-[15px] leading-relaxed mb-6 text-justify">
+                <p id="socialModalDesc" style="color: #4b5563; font-size: 15px; line-height: 1.6; margin-bottom: 24px; text-align: justify;">
                     Theo dõi trang Facebook cá nhân của chúng tôi để cập nhật những dự án bất động sản nghỉ dưỡng mới nhất, phân tích thị trường chuyên sâu và những câu chuyện thực tế từ hành trình làm nghề. Nơi chia sẻ kiến thức và kết nối cộng đồng nhà đầu tư.
                 </p>
 
-                <a id="socialModalBtn" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 rounded-xl text-white font-bold transition-all hover:-translate-y-1" style="background-color: #1877F2; box-shadow: 0 10px 20px rgba(24,119,242,0.2); padding: 16px 0;">
+                <a id="socialModalBtn" href="#" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border-radius: 12px; color: white; font-weight: bold; background-color: #1877F2; box-shadow: 0 10px 20px rgba(24,119,242,0.2); padding: 16px 0; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
                     <span id="socialModalBtnText">Truy cập trang Facebook</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
@@ -556,7 +556,7 @@ function openSocialModal(key) {
     document.getElementById('socialModalTitle').innerText = data.name;
     document.getElementById('socialModalSubtitle').innerText = data.subtitle;
     
-    const bulletsHtml = data.bullets.map(b => `<li class="relative pl-4 text-[14.5px] font-medium"><span class="absolute left-0 top-[8px] w-1.5 h-1.5 bg-white rounded-full"></span>${b}</li>`).join('');
+    const bulletsHtml = data.bullets.map(b => `<li style="position: relative; padding-left: 16px; font-size: 14.5px; font-weight: 500;"><span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background-color: white; border-radius: 50%;"></span>${b}</li>`).join('');
     document.getElementById('socialModalBullets').innerHTML = bulletsHtml;
     
     document.getElementById('socialModalPortrait').src = data.portrait;
@@ -889,6 +889,330 @@ function openSocialModal(key) {
                 <a href="#!"
                     class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
                     Thanh toán
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mẫu Thiệp Yêu Thích -->
+
+<div class="offcanvas offcanvas-right" tabindex="-1" id="offcanvasFavorites" aria-labelledby="offcanvasFavoritesLabel">
+    <div class="offcanvas-header border-b">
+        <div>
+            <h5 id="offcanvasFavoritesLabel">Danh Sách Yêu Thích</h5>
+            <span>Lưu trữ các mẫu bạn thích</span>
+        </div>
+        <button type="button" class="btn-close text-inherit" data-bs-dismiss="offcanvas" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x text-gray-700" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+    <div class="offcanvas-body p-4">
+        <div>
+            <!-- alert -->
+            <div class="bg-red-500 bg-opacity-25 text-red-800 mb-3 rounded-lg p-4" role="alert">
+                Bạn đã lưu 5 mẫu thiệp. <a href="#!" class="alert-link">Xem lại ngay!</a>
+            </div>
+            <ul class="list-none">
+                <!-- list group -->
+                <li class="py-3 border-t">
+                    <div class="flex items-center">
+                        <div class="w-1/2 md:w-1/2 lg:w-3/5">
+                            <div class="flex">
+                                <img src="{{ asset('assets/') }}/images/products/product-img-1.jpg" alt="Ecommerce"
+                                    class="w-16 h-16" />
+                                <div class="ml-3">
+                                    <!-- title -->
+                                    <a href="#!" class="text-inherit">
+                                        <h6>Haldiram's Sev Bhujia</h6>
+                                    </a>
+                                    <span><small class="text-gray-500">.98 / lb</small></span>
+                                    <!-- text -->
+                                    <div class="mt-2 small leading-none">
+                                        <a href="#!" class="text-rose-500 flex items-center">
+                                            <span class="mr-1 align-text-bottom">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-trash" width="14" height="14"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 7l16 0" />
+                                                    <path d="M10 11l0 6" />
+                                                    <path d="M14 11l0 6" />
+                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-500 text-sm">Remove</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- input group -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/5">
+                            <!-- input -->
+                            <div class="input-group input-spinner rounded-lg flex justify-between items-center">
+                                <input type="button" value="-"
+                                    class="button-minus w-8 py-1 border-r cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                                <input type="number" step="1" max="10" value="1" name="quantity"
+                                    class="quantity-field w-9 px-2 text-center h-7 border-0 bg-transparent" />
+                                <input type="button" value="+"
+                                    class="button-plus w-8 py-1 border-l cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="w-1/5 text-center md:w-1/5">
+                            <span class="font-bold text-gray-800">$5.00</span>
+                        </div>
+                    </div>
+                </li>
+                <!-- list group -->
+                <li class="py-3 border-t">
+                    <div class="flex items-center">
+                        <div class="w-1/2 md:w-1/2 lg:w-3/5">
+                            <div class="flex">
+                                <img src="{{ asset('assets/') }}/images/products/product-img-2.jpg" alt="Ecommerce"
+                                    class="w-16 h-16" />
+                                <div class="ml-3">
+                                    <a href="#!" class="text-inherit">
+                                        <h6>NutriChoice Digestive</h6>
+                                    </a>
+                                    <span><small class="text-gray-500">250g</small></span>
+                                    <!-- text -->
+                                    <div class="mt-2 small leading-none">
+                                        <a href="#!" class="text-rose-500 flex items-center">
+                                            <span class="mr-1 align-text-bottom">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-trash" width="14" height="14"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 7l16 0" />
+                                                    <path d="M10 11l0 6" />
+                                                    <path d="M14 11l0 6" />
+                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-500 text-sm">Remove</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- input group -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/5">
+                            <!-- input -->
+                            <div class="input-group input-spinner rounded-lg flex justify-between items-center">
+                                <input type="button" value="-"
+                                    class="button-minus w-8 py-1 border-r cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                                <input type="number" step="1" max="10" value="1" name="quantity"
+                                    class="quantity-field w-9 px-2 text-center h-7 border-0 bg-transparent" />
+                                <input type="button" value="+"
+                                    class="button-plus w-8 py-1 border-l cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="w-1/5 text-center md:w-1/5">
+                            <span class="font-bold text-red-600">$20.00</span>
+                            <div class="line-through text-gray-500 small">$26.00</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- list group -->
+                <li class="py-3 border-t">
+                    <div class="flex items-center">
+                        <div class="w-1/2 md:w-1/2 lg:w-3/5">
+                            <div class="flex">
+                                <img src="{{ asset('assets/') }}/images/products/product-img-3.jpg" alt="Ecommerce"
+                                    class="w-16 h-16" />
+                                <div class="ml-3">
+                                    <!-- title -->
+                                    <a href="#!" class="text-inherit">
+                                        <h6>Cadbury 5 Star Chocolate</h6>
+                                    </a>
+                                    <span><small class="text-gray-500">1 kg</small></span>
+                                    <!-- text -->
+                                    <div class="mt-2 small leading-none">
+                                        <a href="#!" class="text-rose-500 flex items-center">
+                                            <span class="mr-1 align-text-bottom">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-trash" width="14" height="14"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 7l16 0" />
+                                                    <path d="M10 11l0 6" />
+                                                    <path d="M14 11l0 6" />
+                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-500 text-sm">Remove</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- input group -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/5">
+                            <!-- input -->
+                            <div class="input-group input-spinner rounded-lg flex justify-between items-center">
+                                <input type="button" value="-"
+                                    class="button-minus w-8 py-1 border-r cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                                <input type="number" step="1" max="10" value="1" name="quantity"
+                                    class="quantity-field w-9 px-2 text-center h-7 border-0 bg-transparent" />
+                                <input type="button" value="+"
+                                    class="button-plus w-8 py-1 border-l cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="w-1/5 text-center md:w-1/5">
+                            <span class="font-bold text-gray-800">$15.00</span>
+                            <div class="line-through text-gray-500 small">$20.00</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- list group -->
+                <li class="py-3 border-t">
+                    <div class="flex items-center">
+                        <div class="w-1/2 md:w-1/2 lg:w-3/5">
+                            <div class="flex">
+                                <img src="{{ asset('assets/') }}/images/products/product-img-4.jpg" alt="Ecommerce"
+                                    class="w-16 h-16" />
+                                <div class="ml-3">
+                                    <!-- title -->
+                                    <!-- title -->
+                                    <a href="#!" class="text-inherit">
+                                        <h6>Onion Flavour Potato</h6>
+                                    </a>
+                                    <span><small class="text-gray-500">250g</small></span>
+                                    <!-- text -->
+                                    <div class="mt-2 small leading-none">
+                                        <a href="#!" class="text-rose-500 flex items-center">
+                                            <span class="mr-1 align-text-bottom">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-trash" width="14" height="14"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 7l16 0" />
+                                                    <path d="M10 11l0 6" />
+                                                    <path d="M14 11l0 6" />
+                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-500 text-sm">Remove</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- input group -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/5">
+                            <!-- input -->
+                            <div class="input-group input-spinner rounded-lg flex justify-between items-center">
+                                <input type="button" value="-"
+                                    class="button-minus w-8 py-1 border-r cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                                <input type="number" step="1" max="10" value="1" name="quantity"
+                                    class="quantity-field w-9 px-2 text-center h-7 border-0 bg-transparent" />
+                                <input type="button" value="+"
+                                    class="button-plus w-8 py-1 border-l cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="w-1/5 text-center md:w-1/5">
+                            <span class="font-bold text-gray-800">$15.00</span>
+                            <div class="line-through text-gray-500 small">$20.00</div>
+                        </div>
+                    </div>
+                </li>
+                <!-- list group -->
+                <li class="py-3 border-t border-b">
+                    <div class="flex items-center">
+                        <div class="w-1/2 md:w-1/2 lg:w-3/5">
+                            <div class="flex">
+                                <img src="{{ asset('assets/') }}/images/products/product-img-5.jpg" alt="Ecommerce"
+                                    class="w-16 h-16" />
+                                <div class="ml-3">
+                                    <!-- title -->
+                                    <a href="#!" class="text-inherit">
+                                        <h6>Salted Instant Popcorn</h6>
+                                    </a>
+                                    <span><small class="text-gray-500">100g</small></span>
+                                    <!-- text -->
+                                    <div class="mt-2 small leading-none">
+                                        <a href="#!" class="text-rose-500 flex items-center">
+                                            <span class="mr-1 align-text-bottom">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-trash" width="14" height="14"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M4 7l16 0" />
+                                                    <path d="M10 11l0 6" />
+                                                    <path d="M14 11l0 6" />
+                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-gray-500 text-sm">Remove</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- input group -->
+                        <div class="w-1/3 md:w-1/4 lg:w-1/5">
+                            <!-- input -->
+                            <div class="input-group input-spinner rounded-lg flex justify-between items-center">
+                                <input type="button" value="-"
+                                    class="button-minus w-8 py-1 border-r cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                                <input type="number" step="1" max="10" value="1" name="quantity"
+                                    class="quantity-field w-9 px-2 text-center h-7 border-0 bg-transparent" />
+                                <input type="button" value="+"
+                                    class="button-plus w-8 py-1 border-l cursor-pointer border-gray-300"
+                                    data-field="quantity" />
+                            </div>
+                        </div>
+                        <!-- price -->
+                        <div class="w-1/5 text-center md:w-1/5">
+                            <span class="font-bold text-gray-800">$15.00</span>
+                            <div class="line-through text-gray-500 small">$25.00</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!-- btn -->
+            <div class="flex justify-between mt-4">
+                <a href="#!"
+                    class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
+                    Đóng
+                </a>
+                <a href="#!"
+                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+                    Xem tất cả
                 </a>
             </div>
         </div>

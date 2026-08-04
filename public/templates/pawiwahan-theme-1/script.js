@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { initializeFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp, limit, doc, updateDoc, deleteDoc, increment, deleteField, startAfter, endBefore, limitToLast, getCountFromServer, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBfSALZx3_bnG4GI7djWenNDM5UjHZLuPM",
+    apiKey: "YOUR_FIREBASE_API_KEY",
     authDomain: "pawiwahan-theme-1.firebaseapp.com",
     projectId: "pawiwahan-theme-1",
     storageBucket: "pawiwahan-theme-1.firebasestorage.app",
