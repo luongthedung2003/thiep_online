@@ -1,15 +1,10 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.9.0"
-        },
-        {
-            "src": "/public/**",
-            "use": "@vercel/static"
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.9.0"
         }
-    ],
+    },
     "routes": [
         {
             "src": "/(assets|template_assets|templates|storage|css|js)/(.*)",
@@ -28,7 +23,7 @@
         "APP_KEY": "base64:ZvYYi/JJVro+Frq/wn8pdZ/DDkwUB1Fu8YL1QiPq1sg=",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://YOUR_VERCEL_DOMAIN.vercel.app",
+        "APP_URL": "https://thiep-online.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
