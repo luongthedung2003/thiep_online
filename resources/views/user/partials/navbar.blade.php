@@ -95,8 +95,8 @@
                 <div class="flex flex-wrap w-full items-center justify-between">
                     <div class="lg:w-1/6 md:w-1/2 w-2/5">
                         <a class="navbar-brand" href="/">
-                            <img src="{{ asset('assets/') }}/images/logo/freshcart-logo.svg"
-                                alt="TailwindCSS eCommerce HTML Template" />
+                            <img src="{{ asset('assets/') }}/images/logo/logo.png"
+                                alt="Logo Thiệp Cưới" style="height: 45px;" />
                         </a>
                     </div>
                     <div class="lg:w-2/5 hidden lg:block">
@@ -245,8 +245,8 @@
             <div class="container max-w-7xl mx-auto w-full xl:px-4 lg:px-0">
                 <div class="offcanvas offcanvas-left lg:visible" tabindex="-1" id="navbar-default">
                     <div class="offcanvas-header pb-1">
-                        <a href="/"><img src="{{ asset('assets/') }}/images/logo/freshcart-logo.svg"
-                                alt="TailwindCSS eCommerce HTML Template" /></a>
+                        <a href="/"><img src="{{ asset('assets/') }}/images/logo/logo.png"
+                                alt="Logo Thiệp Cưới" style="height: 40px;" /></a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x text-gray-700"
                                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
