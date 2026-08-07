@@ -907,7 +907,7 @@ function openSocialModal(key) {
         renderCart();
     }
 
-    window.animateFlyToTarget = function(startEl, targetId, imageSrc) {
+    window.animateFlyToTarget = function(startEl, targetId, imageSrc, type) {
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
 
@@ -919,65 +919,122 @@ function openSocialModal(key) {
             startRect = el.getBoundingClientRect();
         } else {
             startRect = {
-                left: window.innerWidth / 2 - 30,
-                top: window.innerHeight / 2 - 30,
-                width: 60,
-                height: 60
+                left: window.innerWidth / 2 - 25,
+                top: window.innerHeight / 2 - 25,
+                width: 50,
+                height: 50
             };
         }
 
         const targetRect = targetEl.getBoundingClientRect();
 
-        const flyer = document.createElement('div');
-        flyer.style.position = 'fixed';
-        flyer.style.zIndex = '99999999';
-        const startX = startRect.left + (startRect.width / 2) - 30;
-        const startY = startRect.top + (startRect.height / 2) - 30;
+        const flyerWrap = document.createElement('div');
+        flyerWrap.className = 'paper-plane-flyer';
+        flyerWrap.style.position = 'fixed';
+        flyerWrap.style.zIndex = '99999999';
         
-        flyer.style.left = `${startX}px`;
-        flyer.style.top = `${startY}px`;
-        flyer.style.width = '60px';
-        flyer.style.height = '60px';
-        flyer.style.borderRadius = '16px';
-        flyer.style.backgroundImage = `url('${imageSrc || '/assets/images/products/product-img-1.jpg'}')`;
-        flyer.style.backgroundSize = 'cover';
-        flyer.style.backgroundPosition = 'center';
-        flyer.style.boxShadow = '0 12px 35px rgba(255, 0, 102, 0.7), 0 0 20px rgba(0, 0, 0, 0.3)';
-        flyer.style.border = '3px solid #ffffff';
-        flyer.style.outline = '2px solid #ff0066';
-        flyer.style.pointerEvents = 'none';
-        flyer.style.opacity = '1';
-        flyer.style.transition = 'all 1.1s cubic-bezier(0.25, 1, 0.5, 1)';
-
-        document.body.appendChild(flyer);
-
-        flyer.getBoundingClientRect();
-
+        const startX = startRect.left + (startRect.width / 2) - 25;
+        const startY = startRect.top + (startRect.height / 2) - 25;
         const endX = targetRect.left + (targetRect.width / 2) - 15;
         const endY = targetRect.top + (targetRect.height / 2) - 15;
 
-        flyer.style.left = `${endX}px`;
-        flyer.style.top = `${endY}px`;
-        flyer.style.width = '30px';
-        flyer.style.height = '30px';
-        flyer.style.borderRadius = '50%';
-        flyer.style.transform = 'scale(0.5) rotate(720deg)';
-        flyer.style.opacity = '0.9';
+        const deltaX = endX - startX;
+        const deltaY = endY - startY;
+        const flyAngle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 45;
+
+        flyerWrap.style.left = `${startX}px`;
+        flyerWrap.style.top = `${startY}px`;
+        flyerWrap.style.width = '50px';
+        flyerWrap.style.height = '50px';
+        flyerWrap.style.pointerEvents = 'none';
+        flyerWrap.style.transform = `rotate(${flyAngle}deg) scale(1.1)`;
+        flyerWrap.style.transition = 'left 0.85s cubic-bezier(0.25, 1, 0.5, 1), top 0.85s cubic-bezier(0.1, 0.8, 0.3, 1), transform 0.85s ease-in-out, opacity 0.85s ease-in-out';
+
+        const isHeart = type === 'wishlist';
+        const badgeIcon = isHeart ? '❤️' : '🛒';
+
+        const innerPlane = document.createElement('div');
+        innerPlane.style.width = '100%';
+        innerPlane.style.height = '100%';
+        innerPlane.style.borderRadius = '50%';
+        innerPlane.style.background = 'linear-gradient(135deg, #ff0066 0%, #ff5252 100%)';
+        innerPlane.style.display = 'flex';
+        innerPlane.style.alignItems = 'center';
+        innerPlane.style.justifyContent = 'center';
+        innerPlane.style.boxShadow = '0 10px 25px rgba(255, 0, 102, 0.6), 0 0 15px rgba(255, 0, 102, 0.4)';
+        innerPlane.style.border = '2px solid #ffffff';
+        innerPlane.style.position = 'relative';
+
+        innerPlane.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M10 14l11 -11" />
+                <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+            </svg>
+            <div style="position:absolute; bottom:-4px; right:-4px; width:20px; height:20px; border-radius:50%; background:#ffffff; border:1px solid #ff0066; display:flex; align-items:center; justify-content:center; font-size:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+                ${badgeIcon}
+            </div>
+        `;
+
+        flyerWrap.appendChild(innerPlane);
+        document.body.appendChild(flyerWrap);
+
+        flyerWrap.getBoundingClientRect();
+
+        flyerWrap.style.left = `${endX}px`;
+        flyerWrap.style.top = `${endY}px`;
+        flyerWrap.style.transform = `rotate(${flyAngle}deg) scale(0.35)`;
+        flyerWrap.style.opacity = '0.9';
 
         setTimeout(() => {
-            flyer.remove();
+            flyerWrap.remove();
 
-            targetEl.style.transition = 'transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.4)';
-            targetEl.style.transform = 'scale(1.8)';
+            if (!document.getElementById('flyRingStyle')) {
+                const styleEl = document.createElement('style');
+                styleEl.id = 'flyRingStyle';
+                styleEl.innerHTML = `@keyframes flyRingPulse { 0% { transform: scale(0.3); opacity: 1; } 100% { transform: scale(2.2); opacity: 0; } }`;
+                document.head.appendChild(styleEl);
+            }
+
+            const ring = document.createElement('div');
+            ring.style.position = 'fixed';
+            ring.style.zIndex = '99999999';
+            ring.style.left = `${endX - 10}px`;
+            ring.style.top = `${endY - 10}px`;
+            ring.style.width = '50px';
+            ring.style.height = '50px';
+            ring.style.borderRadius = '50%';
+            ring.style.border = '3px solid #ff0066';
+            ring.style.pointerEvents = 'none';
+            ring.style.animation = 'flyRingPulse 0.45s ease-out forwards';
+            document.body.appendChild(ring);
+
+            setTimeout(() => ring.remove(), 450);
+
+            targetEl.style.transition = 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4)';
+            targetEl.style.transform = 'scale(1.7)';
             setTimeout(() => {
                 targetEl.style.transform = 'scale(1)';
-            }, 350);
-        }, 1100);
+            }, 300);
+        }, 850);
     };
+
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+
+    function syncCartDataWithDB() {
+        fetch('/cart')
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    saveCartData(data.cart);
+                }
+            })
+            .catch(() => {});
+    }
 
     window.addToCart = function(id, name, price, image, qty, btnEl) {
         let sourceEl = btnEl || (window.event ? (window.event.currentTarget || window.event.target) : null);
-        animateFlyToTarget(sourceEl, 'cartCount', image);
+        animateFlyToTarget(sourceEl, 'cartCount', image, 'cart');
 
         let cart = getCartData();
         let existingIndex = cart.findIndex(item => item.id == id);
@@ -996,6 +1053,21 @@ function openSocialModal(key) {
         }
         saveCartData(cart);
 
+        fetch('/cart/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken
+            },
+            body: JSON.stringify({ id: id, qty: quantityToAdd })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                saveCartData(data.cart);
+            }
+        }).catch(() => {});
+
         setTimeout(() => {
             const drawerEl = document.getElementById('offcanvasRight');
             if (drawerEl) {
@@ -1006,12 +1078,27 @@ function openSocialModal(key) {
                     drawerEl.classList.add('show');
                 }
             }
-        }, 1100);
+        }, 950);
     };
 
     window.removeFromCart = function(id) {
         let cart = getCartData().filter(item => item.id != id);
         saveCartData(cart);
+
+        fetch('/cart/remove', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken
+            },
+            body: JSON.stringify({ id: id })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                saveCartData(data.cart);
+            }
+        }).catch(() => {});
     };
 
     window.changeCartQty = function(id, delta) {
@@ -1024,6 +1111,21 @@ function openSocialModal(key) {
             }
             saveCartData(cart);
         }
+
+        fetch('/cart/update-qty', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken
+            },
+            body: JSON.stringify({ id: id, delta: delta })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                saveCartData(data.cart);
+            }
+        }).catch(() => {});
     };
 
     window.proceedToCheckout = function() {
@@ -1117,7 +1219,10 @@ function openSocialModal(key) {
         }).join('');
     }
 
-    document.addEventListener('DOMContentLoaded', renderCart);
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCart();
+        syncCartDataWithDB();
+    });
 })();
 </script>
 
@@ -1463,9 +1568,20 @@ function openSocialModal(key) {
         renderWishlist();
     }
 
+    function syncWishlistDataWithDB() {
+        fetch('/wishlist')
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    saveWishlistData(data.wishlist);
+                }
+            })
+            .catch(() => {});
+    }
+
     window.addToWishlist = function(id, name, price, image, btnEl) {
         let sourceEl = btnEl || (window.event ? (window.event.currentTarget || window.event.target) : null);
-        animateFlyToTarget(sourceEl, 'favCount', image);
+        animateFlyToTarget(sourceEl, 'favCount', image, 'wishlist');
 
         let list = getWishlistData();
         let existingIndex = list.findIndex(item => item.id == id);
@@ -1480,6 +1596,21 @@ function openSocialModal(key) {
         }
         saveWishlistData(list);
 
+        fetch('/wishlist/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken
+            },
+            body: JSON.stringify({ id: id })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                saveWishlistData(data.wishlist);
+            }
+        }).catch(() => {});
+
         setTimeout(() => {
             const drawerEl = document.getElementById('offcanvasFavorites');
             if (drawerEl) {
@@ -1490,12 +1621,27 @@ function openSocialModal(key) {
                     drawerEl.classList.add('show');
                 }
             }
-        }, 1100);
+        }, 950);
     };
 
     window.removeFromWishlist = function(id) {
         let list = getWishlistData().filter(item => item.id != id);
         saveWishlistData(list);
+
+        fetch('/wishlist/remove', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken
+            },
+            body: JSON.stringify({ id: id })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                saveWishlistData(data.wishlist);
+            }
+        }).catch(() => {});
     };
 
     function renderWishlist() {
@@ -1569,7 +1715,10 @@ function openSocialModal(key) {
         }).join('');
     }
 
-    document.addEventListener('DOMContentLoaded', renderWishlist);
+    document.addEventListener('DOMContentLoaded', function() {
+        renderWishlist();
+        syncWishlistDataWithDB();
+    });
 })();
 </script>
 
