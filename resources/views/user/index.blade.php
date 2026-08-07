@@ -689,39 +689,42 @@
         <section style="background: #e5e9ee; border-top: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1; padding: 60px 0; margin: 40px 0;">
             <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
                 <!-- Top-Left Metadata -->
-                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 30px;">
-                    UI UX Design Portfolio
+                <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 30px; text-transform: uppercase;">
+                    HƯỚNG DẪN TẠO THIỆP CƯỚI ONLINE DỄ DÀNG
                 </div>
 
                 <!-- Section Main Title -->
                 <div style="margin-bottom: 45px;">
                     <div style="width: 16px; height: 5px; background: #e11d48; margin-bottom: 10px;"></div>
                     <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em; color: #111827; margin: 0; text-transform: uppercase;">
-                        INDEX
+                        QUY TRÌNH TẠO THIỆP
                     </h2>
                 </div>
 
                 <!-- 5 Columns Step Grid - Guaranteed 1 Single Horizontal Row -->
                 <div style="overflow-x: auto; width: 100%; padding-bottom: 10px;">
-                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; min-width: 850px; width: 100%; justify-content: space-between; align-items: stretch;">
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; min-width: 900px; width: 100%; justify-content: space-between; align-items: stretch;">
                         
                         <!-- Step 01 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding-right: 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     01
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Chọn Mẫu Thiệp
                                 </div>
-                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
-                                    Khám phá bộ sưu tập
+                                <div style="font-size: 11px; color: #64748b; font-weight: 500; margin-bottom: 8px;">
+                                    Bộ sưu tập phong phú
+                                </div>
+                                <div style="font-size: 12px; color: #475569; font-weight: 400; line-height: 1.5; margin-bottom: 20px;">
+                                    Dễ dàng chọn lựa hàng trăm mẫu thiệp cưới hiện đại, sang trọng, tương thích hoàn hảo mọi màn hình.
                                 </div>
                                 <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
                                     <img src="{{ asset('assets/images/banner/banner_1.webp') }}" alt="Chọn mẫu thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 24px;">
                                 Đa dạng phong cách
                             </div>
                         </div>
@@ -729,84 +732,96 @@
                         <!-- Step 02 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     02
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Nhập Thông Tin
                                 </div>
-                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
-                                    Tên dâu rể, ngày & địa điểm
+                                <div style="font-size: 11px; color: #64748b; font-weight: 500; margin-bottom: 8px;">
+                                    Thông tin lễ cưới
+                                </div>
+                                <div style="font-size: 12px; color: #475569; font-weight: 400; line-height: 1.5; margin-bottom: 20px;">
+                                    Điền tên Chú rể, Cô dâu, ngày giờ tổ chức, địa điểm nhà trai nhà gái & vị trí bản đồ chỉ đường.
                                 </div>
                                 <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
                                     <img src="{{ asset('assets/images/banner/banner_2.webp') }}" alt="Nhập thông tin" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
-                                Nhập liệu dễ dàng
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 24px;">
+                                Nhập liệu siêu nhanh
                             </div>
                         </div>
 
                         <!-- Step 03 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     03
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Tùy Chỉnh Thiệp
                                 </div>
-                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
-                                    Tự do thêm ảnh & lời chúc
+                                <div style="font-size: 11px; color: #64748b; font-weight: 500; margin-bottom: 8px;">
+                                    Cá nhân hóa độc đáo
+                                </div>
+                                <div style="font-size: 12px; color: #475569; font-weight: 400; line-height: 1.5; margin-bottom: 20px;">
+                                    Thêm album ảnh cưới lãng mạn, nhạc nền nhẹ nhàng, danh sách mừng cưới & mẫu sổ lời chúc online.
                                 </div>
                                 <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
                                     <img src="{{ asset('assets/images/banner/banner_3.webp') }}" alt="Tùy chỉnh thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
-                                Độc quyền cá nhân
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 24px;">
+                                Tự do thiết kế
                             </div>
                         </div>
 
                         <!-- Step 04 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     04
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Xem Trước Thiệp
                                 </div>
-                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
-                                    Kiểm tra hiển thị di động
+                                <div style="font-size: 11px; color: #64748b; font-weight: 500; margin-bottom: 8px;">
+                                    Trực quan thực tế
+                                </div>
+                                <div style="font-size: 12px; color: #475569; font-weight: 400; line-height: 1.5; margin-bottom: 20px;">
+                                    Xem trước giao diện thiệp trực tiếp trên điện thoại & máy tính để kiểm tra chỉnh sửa trước khi gửi.
                                 </div>
                                 <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
                                     <img src="{{ asset('assets/images/banner/grocery-banner-2.jpg') }}" alt="Xem trước thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
-                                Trực quan tức thì
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 24px;">
+                                Hiển thị chuẩn xác
                             </div>
                         </div>
 
                         <!-- Step 05 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding-left: 24px; box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     05
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Tải & Gửi Thiệp
                                 </div>
-                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
-                                    Chia sẻ qua Zalo & QR
+                                <div style="font-size: 11px; color: #64748b; font-weight: 500; margin-bottom: 8px;">
+                                    Chia sẻ tức thì
+                                </div>
+                                <div style="font-size: 12px; color: #475569; font-weight: 400; line-height: 1.5; margin-bottom: 20px;">
+                                    Tải liên kết thiệp hoặc mã QR code để gửi nhanh qua Zalo, Messenger, Facebook tới quan khách.
                                 </div>
                                 <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
                                     <img src="{{ asset('assets/images/banner/banner-deal.jpg') }}" alt="Tải và gửi thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
-                                Chia sẻ tiện lợi
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 24px;">
+                                Gửi thiệp dễ dàng
                             </div>
                         </div>
 
@@ -814,9 +829,9 @@
                 </div>
 
                 <!-- Bottom Metadata -->
-                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 400; color: #6b7280; margin-top: 50px; padding-top: 10px;">
-                    <span>Designer _ Kim HJ</span>
-                    <span>A stubborn designer</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 500; color: #6b7280; margin-top: 50px; padding-top: 10px;">
+                    <span>Hệ Thống Tạo Thiệp Cưới Trực Tuyến</span>
+                    <span>Hoàn Toàn Miễn Phí & Dễ Dàng</span>
                 </div>
             </div>
         </section>
