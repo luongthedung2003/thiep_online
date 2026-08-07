@@ -349,15 +349,15 @@
                         <div>
                             <ul class="navbar-nav lg:flex gap-3 lg:items-center">
                                 <li class="nav-item dropdown w-full lg:w-auto">
-                                    <a class="nav-link {{ request()->is('/') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('/') ? 'color: #f43f5e !important;' : '' }}" href="/" role="button">Trang chủ</a>
+                                    <a class="nav-link {{ request()->is('/') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('/') ? 'color: #ff0066 !important;' : '' }}" href="/" role="button">Trang chủ</a>
 
                                 </li>
                                 <li class="nav-item w-full lg:w-auto">
-                                    <a class="nav-link {{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'color: #f43f5e !important;' : '' }}" href="/mau-thiep">Mẫu thiệp</a>
+                                    <a class="nav-link {{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('mau-thiep*') || request()->is('thiep*') ? 'color: #ff0066 !important;' : '' }}" href="/mau-thiep">Mẫu thiệp</a>
                                 </li>
 
                                 <li class="nav-item dropdown w-full lg:w-auto dropdown-fullwidth">
-                                    <a class="nav-link {{ request()->is('danh-gia*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('danh-gia*') ? 'color: #f43f5e !important;' : '' }}" href="/danh-gia">
+                                    <a class="nav-link {{ request()->is('danh-gia*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('danh-gia*') ? 'color: #ff0066 !important;' : '' }}" href="/danh-gia">
                                         Đánh giá
                                     </a>
 
@@ -365,11 +365,11 @@
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link {{ request()->is('bang-dieu-khien*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('bang-dieu-khien*') ? 'color: #f43f5e !important;' : '' }}" href="#!">Bảng điều khiển</a>
+                                    <a class="nav-link {{ request()->is('bang-dieu-khien*') ? 'active text-rose-500 font-bold' : 'text-gray-800' }}" style="{{ request()->is('bang-dieu-khien*') ? 'color: #ff0066 !important;' : '' }}" href="{{ route('dashboard') }}">Bảng điều khiển</a>
                                 </li>
                                 
                                 <li class="nav-item dropdown w-full lg:w-auto flex items-center">
-                                    <a class="nav-link {{ request()->is('lien-he') ? 'active text-rose-500 font-bold' : 'text-gray-800 font-bold' }}" style="{{ request()->is('lien-he') ? 'color: #f43f5e !important;' : '' }}" href="{{ route('contact') }}">
+                                    <a class="nav-link {{ request()->is('lien-he') ? 'active text-rose-500 font-bold' : 'text-gray-800 font-bold' }}" style="{{ request()->is('lien-he') ? 'color: #ff0066 !important;' : '' }}" href="{{ route('contact') }}">
                                         Liên hệ cho tôi
                                     </a>
                                     <a href="#" class="dropdown-toggle text-gray-500 hover:text-gray-800 p-2 ml-[-10px] hidden lg:block" data-bs-toggle="dropdown" aria-expanded="false"></a>

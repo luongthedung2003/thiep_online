@@ -31,6 +31,10 @@ Route::get('/lien-he', function () {
     return view('user.contact');
 })->name('contact');
 
+Route::get('/bang-dieu-khien', function () {
+    return view('user.profile');
+})->name('dashboard');
+
 Route::get('/danh-gia', function () {
     $posts = collect([
         (object)[

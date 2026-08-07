@@ -138,7 +138,7 @@ setTimeout(resizeIframes, 600);
     visibility: visible !important;
 }
 .hover-bg-green:hover {
-    background: #f43f5e !important;
+    background: #ff0066 !important;
     color: white !important;
 }
 
@@ -300,7 +300,7 @@ setTimeout(initHoverScroll, 700);
 .showcase-btn-select {
     flex: 1;
     padding: 8px 10px;
-    background: #f43f5e;
+    background: #ff0066;
     color: #ffffff !important;
     border-radius: 8px;
     font-size: 12px;
@@ -311,7 +311,7 @@ setTimeout(initHoverScroll, 700);
     text-decoration: none;
 }
 .showcase-btn-select:hover {
-    background: #e11d48;
+    background: #e6005c;
 }
 .showcase-prev-btn, .showcase-next-btn {
     position: absolute;

@@ -50,7 +50,7 @@
                                 </span>
                                 <div class="my-5 flex flex-col gap-2 items-center">
                                     <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; text-align: center;">
-                                        Miễn Phí In Ấn<br /><span style="color:#e11d48;">Cho Đơn Từ 500 Thiệp</span>
+                                        Miễn Phí In Ấn<br /><span style="color:#ff0066;">Cho Đơn Từ 500 Thiệp</span>
                                     </h2>
                                     <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; text-align: center;">
                                         Áp dụng cho tất cả đơn hàng từ 500 thiệp trở lên trong mùa cưới năm nay.
@@ -75,7 +75,7 @@
                                 </span>
                                 <div class="my-5 flex flex-col gap-2 items-center">
                                     <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; text-align: center;">
-                                        Bộ Sưu Tập<br /><span style="color:#e11d48;">Thiệp Cưới Cao Cấp</span>
+                                        Bộ Sưu Tập<br /><span style="color:#ff0066;">Thiệp Cưới Cao Cấp</span>
                                     </h2>
                                     <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; text-align: center;">
                                         Tạo ấn tượng khó quên với những mẫu thiệp thiết kế độc quyền hiện đại.
@@ -670,7 +670,7 @@
                                     </div>
                                     <div class="action-buttons-wrap" style="display:flex; gap:6px;">
                                         <a href="javascript:void(0)" onclick="openDemo('{{ url('/mau-thiep/'.$item->id.'/preview') }}')" class="overlay-btn" style="background:#4b5563; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#374151'" onmouseout="this.style.background='#4b5563'">Xem demo</a>
-                                        <a href="{{ url('/mau-thiep/'.$item->id.'/edit') }}" class="overlay-btn" style="background:#f43f5e; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#e11d48'" onmouseout="this.style.background='#f43f5e'">+ Chọn</a>
+                                        <a href="{{ url('/mau-thiep/'.$item->id.'/edit') }}" class="overlay-btn" style="background:#ff0066; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#e6005c'" onmouseout="this.style.background='#ff0066'">+ Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -695,20 +695,20 @@
 
                 <!-- Section Main Title -->
                 <div style="margin-bottom: 45px;">
-                    <div style="width: 16px; height: 5px; background: #e11d48; margin-bottom: 10px;"></div>
+                    <div style="width: 16px; height: 5px; background: #ff0066; margin-bottom: 10px;"></div>
                     <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em; color: #111827; margin: 0; text-transform: uppercase;">
                         QUY TRÌNH TẠO THIỆP
                     </h2>
                 </div>
 
                 <!-- 5 Columns Step Grid - Guaranteed 1 Single Horizontal Row -->
-                <div style="overflow-x: auto; width: 100%; padding-bottom: 10px;">
+                <div id="guide-steps-scroll-container" style="overflow-x: auto; width: 100%; padding-bottom: 10px; scroll-behavior: smooth;">
                     <div style="display: flex; flex-direction: row; flex-wrap: nowrap; min-width: 900px; width: 100%; justify-content: space-between; align-items: stretch;">
                         
                         <!-- Step 01 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding-right: 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #ff0066; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     01
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
@@ -732,7 +732,7 @@
                         <!-- Step 02 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #ff0066; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     02
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
@@ -756,7 +756,7 @@
                         <!-- Step 03 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #ff0066; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     03
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
@@ -780,7 +780,7 @@
                         <!-- Step 04 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #ff0066; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     04
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
@@ -804,7 +804,7 @@
                         <!-- Step 05 -->
                         <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding-left: 24px; box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
+                                <div style="font-size: 44px; font-weight: 800; color: #ff0066; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 20px;">
                                     05
                                 </div>
                                 <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
@@ -835,7 +835,184 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const scrollContainer = document.getElementById('guide-steps-scroll-container');
+                if (!scrollContainer) return;
+
+                let scrollDirection = 1;
+                let isPaused = false;
+
+                function startGuideAutoScroll() {
+                    return setInterval(function() {
+                        if (isPaused) return;
+                        const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+                        if (maxScrollLeft <= 10) return; // No scroll needed on very wide viewports
+
+                        if (scrollContainer.scrollLeft >= maxScrollLeft - 10) {
+                            scrollDirection = -1;
+                        } else if (scrollContainer.scrollLeft <= 10) {
+                            scrollDirection = 1;
+                        }
+
+                        scrollContainer.scrollBy({
+                            left: scrollDirection * 220,
+                            behavior: 'smooth'
+                        });
+                    }, 2200);
+                }
+
+                let autoScrollTimer = startGuideAutoScroll();
+
+                scrollContainer.addEventListener('mouseenter', function() { isPaused = true; });
+                scrollContainer.addEventListener('mouseleave', function() { isPaused = false; });
+                scrollContainer.addEventListener('touchstart', function() { isPaused = true; });
+                scrollContainer.addEventListener('touchend', function() { isPaused = false; });
+            });
+        </script>
         <!-- Step-by-Step Guide Section End -->
+
+        <!-- Customer Feedback Section Start (Exact 1:1 Match with Reference Image) -->
+        <section style="padding: 70px 0 90px; background: #ffffff; position: relative; overflow: hidden;">
+            <div style="max-width: 900px; margin: 0 auto; padding: 0 24px; text-align: center;">
+                
+                <!-- Section Title -->
+                <h2 style="font-size: 26px; font-weight: 900; color: #1e293b; font-family: 'Inter', system-ui, sans-serif; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 40px; position: relative; z-index: 2;">
+                    ĐÁNH GIÁ TỪ KHÁCH HÀNG
+                </h2>
+
+                <!-- Container for Watermark + Card -->
+                <div style="position: relative; max-width: 720px; margin: 0 auto;">
+                    
+                    <!-- Giant Watermark Outline Text -->
+                    <div style="font-size: clamp(90px, 16vw, 170px); font-weight: 900; font-family: 'Inter', system-ui, sans-serif; -webkit-text-stroke: 2px #ff0066; color: transparent; line-height: 0.85; opacity: 0.9; user-select: none; pointer-events: none; margin-bottom: -75px; position: relative; z-index: 1; text-align: center; text-transform: lowercase;">
+                        feedback
+                    </div>
+
+                    <!-- Feedback Card Container -->
+                    <div id="feedback-card-container" style="position: relative; z-index: 10; background: #ffffff; border-radius: 24px; box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.12), 0 10px 20px -5px rgba(0, 0, 0, 0.04); border: 1px solid rgba(226, 232, 240, 0.8); padding: 40px 45px; text-align: left; transition: all 0.3s ease;">
+                        
+                        <!-- Floating 3D Heart Speech Bubble Badge -->
+                        <div style="position: absolute; top: -35px; right: 30px; width: 76px; height: 76px; background: linear-gradient(135deg, #ff0066 0%, #e6005c 100%); border-radius: 22px 22px 4px 22px; box-shadow: 0 16px 32px rgba(255, 0, 102, 0.35); display: flex; align-items: center; justify-content: center; transform: rotate(6deg); z-index: 20;">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="#ffffff" stroke="none">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Feedback Content Item 1 (Active by default) -->
+                        <div class="feedback-item active-feedback" id="fb-1">
+                            <!-- User Info Header -->
+                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid #f1f5f9; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                                <div>
+                                    <div style="font-size: 17px; font-weight: 800; color: #0f172a; line-height: 1.2;">
+                                        Trần Quốc Bảo & Minh Anh
+                                    </div>
+                                    <div style="color: #fbbf24; font-size: 14px; margin-top: 3px; letter-spacing: 1px;">
+                                        ★ ★ ★ ★ ★
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review Text -->
+                            <div style="font-size: 14.5px; color: #334155; line-height: 1.7; font-weight: 400;">
+                                Trải nghiệm tuyệt vời tại Thiepcuoivn! Bộ mẫu thiệp cưới online cho lễ thành hôn của chúng mình vô cùng độc đáo, sang trọng và chuẩn định dạng di động. Cảm ơn đội ngũ hỗ trợ đã nhiệt tình hướng dẫn chỉnh sửa chi tiết từng album ảnh cưới, bản đồ chỉ đường và nhạc nền miễn phí. Quan khách hai bên họ hàng ai cũng khen thiệp hiện đại và tiện lợi. <br/><strong style="color: #0f172a; font-weight: 700;">**Rất khuyên dùng cho các cặp đôi!**</strong>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Content Item 2 -->
+                        <div class="feedback-item" id="fb-2" style="display: none;">
+                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Avatar" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid #f1f5f9; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                                <div>
+                                    <div style="font-size: 17px; font-weight: 800; color: #0f172a; line-height: 1.2;">
+                                        Nguyễn Hoàng Nam & Thảo Nguyên
+                                    </div>
+                                    <div style="color: #fbbf24; font-size: 14px; margin-top: 3px; letter-spacing: 1px;">
+                                        ★ ★ ★ ★ ★
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="font-size: 14.5px; color: #334155; line-height: 1.7; font-weight: 400;">
+                                Thiệp cưới điện tử cực kỳ đẹp mắt và dễ thao tác! Chỉ mất chưa đầy 10 phút là hai đứa mình đã hoàn thành xong thiệp mời để gửi qua Zalo cho bạn bè. Mọi thông tin như mừng cưới QR, đếm ngược ngày cưới và xác nhận tham dự (RSVP) đều hoạt động rất mượt mà. Tiết kiệm rất nhiều thời gian và chi phí in ấn! <br/><strong style="color: #0f172a; font-weight: 700;">**10/10 Dịch vụ hoàn hảo!**</strong>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Content Item 3 -->
+                        <div class="feedback-item" id="fb-3" style="display: none;">
+                            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Avatar" style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid #f1f5f9; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+                                <div>
+                                    <div style="font-size: 17px; font-weight: 800; color: #0f172a; line-height: 1.2;">
+                                        Lê Văn Tuấn & Ngọc Mai
+                                    </div>
+                                    <div style="color: #fbbf24; font-size: 14px; margin-top: 3px; letter-spacing: 1px;">
+                                        ★ ★ ★ ★ ★
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="font-size: 14.5px; color: #334155; line-height: 1.7; font-weight: 400;">
+                                Mẫu mã phong phú, giao diện chuẩn retina sắc nét trên cả iPhone và máy tính. Hỗ trợ khách hàng rất ân cần, hướng dẫn chi tiết từ lúc khởi tạo cho đến khi xuất bản liên kết. Bạn bè bạn gái mình nhận thiệp đều hỏi địa chỉ tạo thiệp vì quá ấn tượng. Cảm ơn hệ thống rất nhiều! <br/><strong style="color: #0f172a; font-weight: 700;">**Đáng giá từng trải nghiệm!**</strong>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Dots -->
+                        <div style="display: flex; justify-content: center; gap: 8px; margin-top: 30px;">
+                            <button type="button" onclick="switchFeedback(1)" id="fb-dot-1" style="width: 28px; height: 8px; border-radius: 9999px; background: #ff0066; border: none; cursor: pointer; transition: all 0.3s;"></button>
+                            <button type="button" onclick="switchFeedback(2)" id="fb-dot-2" style="width: 8px; height: 8px; border-radius: 9999px; background: #cbd5e1; border: none; cursor: pointer; transition: all 0.3s;"></button>
+                            <button type="button" onclick="switchFeedback(3)" id="fb-dot-3" style="width: 8px; height: 8px; border-radius: 9999px; background: #cbd5e1; border: none; cursor: pointer; transition: all 0.3s;"></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            let currentFbIndex = 1;
+            let fbAutoSlideTimer = null;
+
+            function renderFeedback(index) {
+                currentFbIndex = index;
+                for (let i = 1; i <= 3; i++) {
+                    const item = document.getElementById('fb-' + i);
+                    const dot = document.getElementById('fb-dot-' + i);
+                    if (item && dot) {
+                        if (i === index) {
+                            item.style.display = 'block';
+                            dot.style.width = '28px';
+                            dot.style.background = '#ff0066';
+                        } else {
+                            item.style.display = 'none';
+                            dot.style.width = '8px';
+                            dot.style.background = '#cbd5e1';
+                        }
+                    }
+                }
+            }
+
+            function switchFeedback(index) {
+                renderFeedback(index);
+                restartFbAutoSlide();
+            }
+
+            function restartFbAutoSlide() {
+                if (fbAutoSlideTimer) clearInterval(fbAutoSlideTimer);
+                fbAutoSlideTimer = setInterval(function() {
+                    let nextIndex = currentFbIndex >= 3 ? 1 : currentFbIndex + 1;
+                    renderFeedback(nextIndex);
+                }, 2000);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', restartFbAutoSlide);
+            } else {
+                restartFbAutoSlide();
+            }
+        </script>
+        <!-- Customer Feedback Section End -->
 
         <section>
             <div class="container">

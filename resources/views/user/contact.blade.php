@@ -11,7 +11,7 @@
     --text-primary: #111111;
     --text-secondary: #4B5563;
     --border: rgba(0, 0, 0, 0.08);
-    --accent: #f43f5e;
+    --accent: #ff0066;
 }
 .dark {
     --bg-body: #0B1A14;
@@ -26,7 +26,7 @@ body { background-color: var(--bg-body); color: var(--text-primary); }
 .contact-hero {
     position: relative;
     padding: 100px 20px 80px;
-    background: linear-gradient(to bottom, rgba(244, 63, 94, 0.05), transparent);
+    background: linear-gradient(to bottom, rgba(255, 0, 102, 0.05), transparent);
     text-align: center;
     border-bottom: 1px solid var(--border);
 }
@@ -76,7 +76,7 @@ body { background-color: var(--bg-body); color: var(--text-primary); }
     width: 50px;
     height: 50px;
     border-radius: 16px;
-    background: rgba(244, 63, 94, 0.1);
+    background: rgba(255, 0, 102, 0.1);
     color: var(--accent);
     display: flex;
     align-items: center;
@@ -125,7 +125,7 @@ body { background-color: var(--bg-body); color: var(--text-primary); }
 .form-control:focus {
     border-color: var(--accent);
     outline: none;
-    box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.1);
+    box-shadow: 0 0 0 4px rgba(255, 0, 102, 0.1);
 }
 textarea.form-control { resize: vertical; min-height: 120px; }
 
@@ -142,7 +142,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
     cursor: pointer;
     transition: all 0.2s;
 }
-.submit-btn:hover { background: #e11d48; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(244, 63, 94, 0.2); }
+.submit-btn:hover { background: #e6005c; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255, 0, 102, 0.25); }
 .submit-btn:active { transform: translateY(0); }
 
 .map-container {
