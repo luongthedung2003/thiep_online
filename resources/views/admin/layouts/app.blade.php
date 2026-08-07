@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'BankDash - Admin Portal')</title>
+    <title>@yield('title', 'ForYou - Admin Portal')</title>
 
     <!-- Google Fonts Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +38,9 @@
         }
     </script>
 
-    <!-- ApexCharts & Chart.js -->
+    <!-- ApexCharts & ECharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 
     <style>
         body {
@@ -68,6 +70,9 @@
         <!-- Sidebar -->
         @include('admin.partials.sidebar')
 
+        <!-- Mobile Sidebar Backdrop Overlay -->
+        <div id="sidebarBackdrop" onclick="closeSidebar()" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 lg:hidden hidden transition-opacity"></div>
+
         <!-- Main Content Area -->
         <div class="flex-1 flex flex-col min-w-0 overflow-hidden lg:pl-64">
             <!-- Topbar Header -->
@@ -79,6 +84,28 @@
             </main>
         </div>
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('sidebarBackdrop');
+            const isHidden = sidebar.classList.contains('-translate-x-full');
+            if (isHidden) {
+                sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.remove('hidden');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('hidden');
+            }
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const backdrop = document.getElementById('sidebarBackdrop');
+            sidebar.classList.add('-translate-x-full');
+            backdrop.classList.add('hidden');
+        }
+    </script>
 
     @yield('scripts')
 </body>

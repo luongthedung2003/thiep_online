@@ -89,7 +89,7 @@ export const routes = [
 ];
 
 const router = createBrowserRouter(routes, {
-  basename: '/admin',
+  basename: '/bankdash',
 });
 
 export default router;

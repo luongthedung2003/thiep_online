@@ -11,8 +11,14 @@ export default defineConfig({
   plugins: [
     tsconfigPaths(),
     react(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+    }),
   ],
-  base: '/admin/',
+  base: '/bankdash',
 
   //   preview: {
   //     port: 5000,

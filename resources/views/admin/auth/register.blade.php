@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bankdash. - Sign In</title>
+    <title>Bankdash. - Sign Up</title>
 
     <!-- Google Fonts Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,18 +25,17 @@
 <body class="min-h-screen flex items-center justify-center p-6 relative antialiased">
 
     <!-- Top Left Brand Logo -->
-    <a href="{{ route('admin.index') }}" class="absolute top-8 left-8 flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-rose-500 via-pink-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-rose-500/30 group-hover:scale-105 transition-transform duration-300">
-            <i class="ti ti-heart-handshake text-2xl"></i>
-        </div>
-        <span class="text-2xl font-black tracking-tight bg-gradient-to-r from-rose-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">ForYou</span>
+    <a href="{{ route('admin.index') }}" class="absolute top-8 left-8 flex items-center gap-1">
+        <span class="text-2xl font-extrabold tracking-tight text-[#1F2937]">Bankdash.</span>
     </a>
 
     <!-- Main Auth Card -->
     <div class="w-full max-w-md bg-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-slate-200/60 border border-slate-100">
         <div class="mb-6">
-            <h1 class="text-2xl font-bold text-[#1F2937]">Sign In</h1>
-            <p class="text-xs text-[#6B7280] mt-1.5 font-medium">Admin Portal — ForYou</p>
+            <h1 class="text-2xl font-bold text-[#1F2937]">Sign Up</h1>
+            <p class="text-xs text-[#6B7280] mt-1.5 font-medium">
+                Already have an account? <a href="{{ route('admin.login') }}" class="text-[#4B5563] hover:underline font-semibold">Sign In Here!</a>
+            </p>
         </div>
 
         <!-- Social Icons -->
@@ -58,27 +57,14 @@
             <span class="bg-white px-3 text-[11px] font-semibold text-slate-400 tracking-wider uppercase absolute">OR</span>
         </div>
 
-        @if(session('error'))
-            <div class="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-xl text-xs font-semibold">
-                {{ session('error') }}
-            </div>
-        @endif
-
-        @if(session('info'))
-            <div class="mb-4 p-3 bg-blue-50 border border-blue-200 text-blue-600 rounded-xl text-xs font-semibold">
-                {{ session('info') }}
-            </div>
-        @endif
-
-        @if($errors->any())
-            <div class="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-xl text-xs font-semibold">
-                {{ $errors->first() }}
-            </div>
-        @endif
-
-        <!-- Login Form -->
-        <form action="{{ route('admin.login.submit') }}" method="POST" class="space-y-4">
+        <!-- Register Form -->
+        <form action="{{ route('admin.register.submit') }}" method="POST" class="space-y-4">
             @csrf
+            <div>
+                <label for="name" class="block text-xs font-semibold text-[#374151] mb-1.5">Full Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 text-sm bg-white border border-slate-200 rounded-xl text-slate-800 focus:ring-2 focus:ring-[#1814F3] focus:border-[#1814F3] transition-all outline-none">
+            </div>
+
             <div>
                 <label for="email" class="block text-xs font-semibold text-[#374151] mb-1.5">Email address</label>
                 <input type="email" id="email" name="email" required class="w-full px-4 py-3 text-sm bg-white border border-slate-200 rounded-xl text-slate-800 focus:ring-2 focus:ring-[#1814F3] focus:border-[#1814F3] transition-all outline-none">
@@ -86,36 +72,13 @@
 
             <div>
                 <label for="password" class="block text-xs font-semibold text-[#374151] mb-1.5">Password</label>
-                <div class="relative">
-                    <input type="password" id="password" name="password" required class="w-full pl-4 pr-10 py-3 text-sm bg-white border border-slate-200 rounded-xl text-slate-800 focus:ring-2 focus:ring-[#1814F3] focus:border-[#1814F3] transition-all outline-none">
-                    <button type="button" onclick="togglePass()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
-                        <i class="ti ti-eye text-lg" id="eyeIcon"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="flex justify-end pt-1">
-                <a href="#forgot" class="text-xs font-medium text-[#4B5563] hover:underline">Forgot password?</a>
+                <input type="password" id="password" name="password" required class="w-full px-4 py-3 text-sm bg-white border border-slate-200 rounded-xl text-slate-800 focus:ring-2 focus:ring-[#1814F3] focus:border-[#1814F3] transition-all outline-none">
             </div>
 
             <button type="submit" class="w-full py-3.5 px-4 bg-[#1814F3] hover:bg-blue-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-[#1814F3]/25 transition-all transform active:scale-[0.99] mt-3">
-                Login
+                Register
             </button>
         </form>
     </div>
-
-    <script>
-        function togglePass() {
-            const passInput = document.getElementById('password');
-            const eyeIcon = document.getElementById('eyeIcon');
-            if (passInput.type === 'password') {
-                passInput.type = 'text';
-                eyeIcon.className = 'ti ti-eye-off text-lg';
-            } else {
-                passInput.type = 'password';
-                eyeIcon.className = 'ti ti-eye text-lg';
-            }
-        }
-    </script>
 </body>
 </html>

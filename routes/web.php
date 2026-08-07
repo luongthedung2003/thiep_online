@@ -109,12 +109,24 @@ Route::get('/wishlist', [\App\Http\Controllers\WishlistController::class, 'index
 Route::post('/wishlist/add', [\App\Http\Controllers\WishlistController::class, 'add'])->name('wishlist.add');
 Route::post('/wishlist/remove', [\App\Http\Controllers\WishlistController::class, 'remove'])->name('wishlist.remove');
 
-// Admin Portal Routes
-Route::get('/admin/login', function () {
-    return view('admin.auth.login');
-})->name('admin.login');
+// Admin Authentication Routes
+Route::get('/admin/login', [\App\Http\Controllers\AdminAuthController::class, 'showLogin'])->name('admin.login');
+Route::post('/admin/login', [\App\Http\Controllers\AdminAuthController::class, 'login'])->name('admin.login.submit');
+Route::get('/admin/authentication/login', [\App\Http\Controllers\AdminAuthController::class, 'showLogin']);
 
-Route::get('/admin/{any?}', function () {
+
+Route::post('/admin/logout', [\App\Http\Controllers\AdminAuthController::class, 'logout'])->name('admin.logout');
+
+// Protected Admin Portal Routes
+Route::get('/admin/{any?}', function (\Illuminate\Http\Request $request) {
+    \Illuminate\Support\Facades\Log::info('Admin route hit', [
+        'session_admin_logged_in' => session('admin_logged_in'),
+        'session_id' => session()->getId(),
+        'all_session' => session()->all(),
+    ]);
+    if (!session('admin_logged_in')) {
+        return redirect()->route('admin.login')->with('error', 'Vui lòng đăng nhập Admin trước!');
+    }
     return view('admin.index');
 })->where('any', '.*')->name('admin.index');
 
