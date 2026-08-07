@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('user.index', compact('templates'));
 });
 
-Route::get('/mau-thiep', [TemplateController::class, 'index']);
+Route::get('/mau-thiep', [TemplateController::class, 'index'])->name('shop');
 Route::get('/mau-thiep/{id}/edit', [TemplateController::class, 'edit']);
 Route::get('/mau-thiep/{id}/preview', [TemplateController::class, 'preview']);
 Route::post('/save-invitation', [TemplateController::class, 'save']);
