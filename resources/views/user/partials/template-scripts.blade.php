@@ -204,3 +204,139 @@ function initHoverScroll() {
 document.addEventListener('DOMContentLoaded', initHoverScroll);
 setTimeout(initHoverScroll, 700);
 </script>
+
+@verbatim
+<style>
+.showcase-3d-section {
+    background: radial-gradient(circle at 50% 30%, #fdf2f8 0%, #f9fafb 70%);
+}
+.showcase-3d-swiper {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+    overflow: visible !important;
+}
+.showcase-3d-slide {
+    width: 280px !important;
+    height: 530px !important;
+    transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+    .showcase-3d-slide {
+        width: 310px !important;
+        height: 570px !important;
+    }
+}
+.showcase-card-frame {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px -10px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.showcase-iframe-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fdfbf7;
+}
+.showcase-iframe {
+    width: 480px;
+    height: 2000px;
+    border: none;
+    pointer-events: none;
+    transform-origin: 0 0;
+}
+.showcase-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 14px 14px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    z-index: 20;
+}
+.showcase-prev-btn, .showcase-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 35;
+    width: 46px;
+    height: 46px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.showcase-prev-btn:hover, .showcase-next-btn:hover {
+    background: #f43f5e;
+    transform: translateY(-50%) scale(1.1);
+}
+.showcase-prev-btn:hover svg, .showcase-next-btn:hover svg {
+    stroke: #ffffff !important;
+}
+.showcase-prev-btn { left: 5px; }
+.showcase-next-btn { right: 5px; }
+@media (min-width: 1024px) {
+    .showcase-prev-btn { left: -15px; }
+    .showcase-next-btn { right: -15px; }
+}
+</style>
+@endverbatim
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function init3DShowcase() {
+        if (typeof Swiper !== 'undefined' && document.querySelector('.showcase-3d-swiper')) {
+            new Swiper('.showcase-3d-swiper', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                initialSlide: 1,
+                loop: true,
+                coverflowEffect: {
+                    rotate: 25,
+                    stretch: 0,
+                    depth: 220,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                navigation: {
+                    nextEl: '.showcase-next-btn',
+                    prevEl: '.showcase-prev-btn',
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }
+            });
+        }
+
+        function resizeShowcaseIframes() {
+            document.querySelectorAll('.showcase-card-frame').forEach(frame => {
+                const iframe = frame.querySelector('.showcase-iframe');
+                if (iframe && frame.clientWidth > 0) {
+                    const scale = frame.clientWidth / 480;
+                    iframe.style.transform = `scale(${scale})`;
+                }
+            });
+        }
+        window.addEventListener('resize', resizeShowcaseIframes);
+        resizeShowcaseIframes();
+        setTimeout(resizeShowcaseIframes, 300);
+        setTimeout(resizeShowcaseIframes, 800);
+    }
+
+    init3DShowcase();
+});
+</script>

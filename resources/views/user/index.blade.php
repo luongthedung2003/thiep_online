@@ -522,6 +522,58 @@
             </div>
         </section>
 
+        <!-- Mẫu Thiệp Cưới Online Đẹp Nhất 3D Showcase Start -->
+        <section class="showcase-3d-section py-12 md:py-16 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-6 md:mb-10">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+                        Mẫu thiệp cưới online <span class="text-rose-500 font-serif italic text-3xl md:text-5xl font-bold">đẹp nhất</span>
+                    </h2>
+                    <p class="text-gray-500 text-sm md:text-base mt-2 max-w-xl mx-auto font-medium">
+                        Khám phá những mẫu thiệp cưới được thiết kế tinh tế và hiện đại
+                    </p>
+                </div>
+
+                <!-- 3D Coverflow Slider Container -->
+                <div class="relative max-w-7xl mx-auto">
+                    <div class="swiper showcase-3d-swiper">
+                        <div class="swiper-wrapper">
+                            @foreach($templates as $tpl)
+                            <div class="swiper-slide showcase-3d-slide">
+                                <div class="showcase-card-frame">
+                                    <div class="showcase-iframe-wrap">
+                                        <iframe src="{{ url('/mau-thiep/'.$tpl->id.'/preview') }}" scrolling="no" loading="lazy" class="showcase-iframe"></iframe>
+                                    </div>
+                                    <div class="showcase-card-overlay">
+                                        <div class="truncate text-xs font-semibold text-white/95 mb-0.5">{{ $tpl->name }}</div>
+                                        <div class="flex gap-2">
+                                            <a href="javascript:void(0)" onclick="openDemo('{{ url('/mau-thiep/'.$tpl->id.'/preview') }}')" class="flex-1 py-1 px-2.5 bg-gray-800/80 hover:bg-gray-900 text-white rounded-md text-xs font-medium text-center backdrop-blur-sm transition">Xem full</a>
+                                            <a href="{{ url('/mau-thiep/'.$tpl->id.'/edit') }}" class="flex-1 py-1 px-2.5 bg-rose-500 hover:bg-rose-600 text-white rounded-md text-xs font-semibold text-center backdrop-blur-sm transition">+ Chọn mẫu</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <!-- Custom 3D Slider Navigation Buttons -->
+                    <button type="button" class="showcase-prev-btn" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button" class="showcase-next-btn" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Mẫu Thiệp Cưới Online Đẹp Nhất 3D Showcase End -->
+
         <section>
             <div class="container">
                 <div class="flex md:space-x-2 lg:space-x-6 flex-wrap md:flex-nowrap">
