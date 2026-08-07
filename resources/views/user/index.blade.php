@@ -11,16 +11,16 @@
 @endverbatim
 
 
-        <section class="mt-8">
-            <div class="container">
+        <section class="mt-0 w-full overflow-hidden">
+            <div class="w-full">
                 <div class="swiper-container swiper" id="swiper-1" data-pagination-type="" data-speed="400"
                     data-space-between="100" data-pagination="true" data-navigation="false" data-autoplay="true"
                     data-autoplay-delay="3000" data-effect="fade"
                     data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 1}}'>
                     <div class="swiper-wrapper pb-8">
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
-                            <div class="lg:py-32 p-12 lg:pl-12 xl:w-2/5 md:w-3/5">
+                            style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
+                            <div class="container mx-auto px-6 lg:py-32 p-12 xl:w-2/5 md:w-3/5">
                                 <span
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Ưu Đãi Mùa Cưới Giảm 50%</span>
                                 <div class="my-7 flex flex-col gap-2">
@@ -44,8 +44,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
-                            <div class="lg:py-32 lg:pl-12 lg:pr-6 px-12 py-12 xl:w-2/5 md:w-3/5">
+                            style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
+                            <div class="container mx-auto px-6 lg:py-32 p-12 xl:w-2/5 md:w-3/5">
                                 <span
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Miễn Phí In Ấn & Giao Hàng Toàn Quốc</span>
                                 <div class="my-7 flex flex-col gap-2">
@@ -72,8 +72,8 @@
 
                         <!-- Add more slides as needed -->
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
-                            <div class="lg:py-32 lg:pl-12 lg:pr-6 px-12 py-12 xl:w-2/5 md:w-3/5">
+                            style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
+                            <div class="container mx-auto px-6 lg:py-32 p-12 xl:w-2/5 md:w-3/5">
                                 <span
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Phong Cách Mới Nhất</span>
                                 <div class="my-7 flex flex-col gap-2">
