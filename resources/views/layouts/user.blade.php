@@ -47,6 +47,7 @@
 </head>
 
 <body>
+    @include("user.partials.preloader")
     @include("user.partials.navbar")
     @include("user.partials.toast-notification")
     <main>

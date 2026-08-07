@@ -1554,6 +1554,7 @@ function openSocialModal(key) {
 // Global Wishlist Functionality Engine
 (function() {
     const WISHLIST_KEY = 'wedding_portal_wishlist_data';
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
 
     function getWishlistData() {
         try {

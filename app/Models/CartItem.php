@@ -9,6 +9,8 @@ class CartItem extends Model
 {
     use HasFactory;
 
+    protected $table = 'cart_items';
+
     protected $fillable = [
         'user_id',
         'session_id',
@@ -18,7 +20,7 @@ class CartItem extends Model
 
     public function template()
     {
-        return $table = $this->belongsTo(Template::class, 'template_id');
+        return $this->belongsTo(Template::class, 'template_id');
     }
 
     public function user()
