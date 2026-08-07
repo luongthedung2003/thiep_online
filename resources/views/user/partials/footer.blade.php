@@ -8,29 +8,23 @@
                     <div class="w-1/2">
                         <!-- list -->
                         <ul class="flex flex-col gap-2">
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Vegetables & Fruits</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Breakfast & instant food</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Truyền Thống</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Tối Giản</a></li>
                             <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Hoa Lá</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Atta, rice & dal</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Sauces & spreads</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Organic & gourmet</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Baby care</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Cleaning essentials</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Personal care</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Sang Trọng</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Vintage</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Acrylic</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2">
                         <!-- list -->
                         <ul class="flex flex-col gap-2">
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Dairy, bread & eggs</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Cold drinks & juices</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Tea, coffee & drinks</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Masala, oil & more</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Chicken, meat & fish</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Paan corner</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Pharma & wellness</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Home & office</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Pet care</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Kraft</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Ép Kim</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thiệp Cắt Laser</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Phụ Kiện Thiệp</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Bảng Welcome</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Tem Sáp Cưới</a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,44 +35,44 @@
                         <h6>Về Chúng Tôi</h6>
                         <!-- list -->
                         <ul class="flex flex-col gap-2">
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Company</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">About</a></li>
-                            <li><a href="#!" class="inline-block">Blog</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Help Center</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Our Value</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Giới Thiệu</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Liên Hệ</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Blog Đám Cưới</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Khách Hàng Đánh Giá</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Tuyển Dụng</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2 sm:w-1/2 md:w-1/4 flex flex-col gap-4 mb-6">
-                        <h6>Dịch Vụ Khách Hàng</h6>
+                        <h6>Hỗ Trợ Khách Hàng</h6>
                         <ul class="flex flex-col gap-2">
                             <!-- list -->
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Payments</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Shipping</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Product Returns</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">FAQ</a></li>
-                            <li><a href="#!" class="inline-block">Shop Checkout</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Hướng Dẫn Tạo Thiệp</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Phương Thức Thanh Toán</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Câu Hỏi Thường Gặp</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Điều Khoản Sử Dụng</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Chính Sách Bảo Mật</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2 sm:w-1/2 md:w-1/4 flex flex-col gap-4">
                         <h6>Đại Lý Phân Phối</h6>
                         <ul class="flex flex-col gap-2">
                             <!-- list -->
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Shopper Opportunities</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Đại Lý Phân Phối</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Earnings</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Ideas & Guides</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">New Retailers</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Cơ Hội Hợp Tác</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Đăng Ký Đại Lý</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Bảng Giá Sỉ</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Chính Sách Hoa Hồng</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Tài Liệu Hướng Dẫn</a></li>
                         </ul>
                     </div>
                     <div class="w-1/2 sm:w-1/2 md:w-1/4 flex flex-col gap-4">
-                        <h6>WeddingCard programs</h6>
+                        <h6>Chương Trình Ưu Đãi</h6>
                         <ul class="flex flex-col gap-2">
                             <!-- list -->
-                            <li><a href="#!" class="inline-block hover:text-rose-500">WeddingCard programs</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Gift Cards</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Promos & Coupons</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">WeddingCard Ads</a></li>
-                            <li><a href="#!" class="inline-block hover:text-rose-500">Careers</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Gói Thiệp Premium</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Khuyến Mãi Tháng</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Thẻ Quà Tặng</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Giới Thiệu Bạn Bè</a></li>
+                            <li><a href="#!" class="inline-block hover:text-rose-500">Khách Hàng Thân Thiết</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,7 +82,7 @@
             <div class="gap-y-4 flex flex-wrap items-center justify-center lg:justify-start">
                 <div class="lg:w-2/5 lg:text-left text-center">
                     <div class="flex md:flex-row flex-col gap-3 md:gap-6 items-center">
-                        <div class="text-gray-900">Payment Partners</div>
+                        <div class="text-gray-900">Đối tác thanh toán</div>
                         <ul class="flex items-center flex-row gap-4">
                             <li>
                                 <a href="#!"><img src="{{ asset('assets/') }}/images/payment/amazonpay.svg"
@@ -113,7 +107,7 @@
                 </div>
                 <div class="lg:w-3/5 flex justify-end">
                     <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
-                        <div class="text-gray-900">Get deliveries with FreshCart</div>
+                        <div class="text-gray-900">Tải ứng dụng di động</div>
                         <ul class="flex flex-row gap-2">
                             <li>
                                 <a href="#!"><img src="{{ asset('assets/') }}/images/appbutton/appstore-btn.svg" alt=""
@@ -138,17 +132,12 @@
                                 document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
                             </script>
                         </span>
-                        FreshCart TailwindCSS eCommerce HTML Template. Powered by
-                        <a href="https://codescandy.com/" target="_blank" class="text-rose-500">Codescandy</a>
-                        <span class="text-nowrap">~ Distributed by
-                            <a href="https://ThemeWagon.com/" target="_blank"
-                                class="text-rose-500">ThemeWagon</a></span>
-                        .
+                        Thiệp Cưới Online. Nền tảng tạo & gửi thiệp cưới trực tuyến chuyên nghiệp.
                     </span>
                 </div>
                 <div class="md:w-1/2 flex md:justify-end items-center">
                     <div class="flex flex-row gap-5 items-center">
-                        <div class="text-gray-500">Follow us on</div>
+                        <div class="text-gray-500">Theo dõi chúng tôi</div>
                         <ul class="flex items-center justify-end text-sm gap-1">
                             <li>
                                 <a href="#!"

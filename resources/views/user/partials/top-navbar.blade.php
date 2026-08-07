@@ -156,7 +156,7 @@
 
 						<div class="dropdown-menu dropdown-menu-end !p-0">
 							<div class="leading-snug px-5 py-4 border-b border-gray-300">
-								<h5 class="mb-1 text-base">FreshCart Admin</h5>
+								<h5 class="mb-1 text-base">Quản Trị Viên</h5>
 								<small>admindemo@email.com</small>
 							</div>
 
