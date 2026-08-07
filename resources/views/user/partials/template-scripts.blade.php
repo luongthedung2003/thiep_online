@@ -208,30 +208,32 @@ setTimeout(initHoverScroll, 700);
 @verbatim
 <style>
 .showcase-3d-section {
-    background: radial-gradient(circle at 50% 30%, #fdf2f8 0%, #f9fafb 70%);
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
 }
 .showcase-3d-swiper {
-    padding-top: 1.5rem !important;
-    padding-bottom: 2.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 3.5rem !important;
     overflow: visible !important;
 }
 .showcase-3d-slide {
-    width: 280px !important;
-    height: 530px !important;
-    transition: all 0.3s ease;
+    width: 290px !important;
+    height: 550px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (min-width: 768px) {
     .showcase-3d-slide {
-        width: 310px !important;
-        height: 570px !important;
+        width: 320px !important;
+        height: 600px !important;
     }
 }
 .showcase-card-frame {
     width: 100%;
     height: 100%;
     background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px -10px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06);
+    border-radius: 24px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 20px 45px -10px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.05);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -242,7 +244,7 @@ setTimeout(initHoverScroll, 700);
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #fdfbf7;
+    background: #fafaf9;
 }
 .showcase-iframe {
     width: 480px;
@@ -256,39 +258,40 @@ setTimeout(initHoverScroll, 700);
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px 14px 14px;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    padding: 30px 16px 16px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.5) 70%, transparent 100%);
     z-index: 20;
+    backdrop-filter: blur(4px);
 }
 .showcase-prev-btn, .showcase-next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 35;
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
     background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.06);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 .showcase-prev-btn:hover, .showcase-next-btn:hover {
     background: #f43f5e;
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.12);
 }
 .showcase-prev-btn:hover svg, .showcase-next-btn:hover svg {
     stroke: #ffffff !important;
 }
-.showcase-prev-btn { left: 5px; }
-.showcase-next-btn { right: 5px; }
+.showcase-prev-btn { left: 0px; }
+.showcase-next-btn { right: 0px; }
 @media (min-width: 1024px) {
-    .showcase-prev-btn { left: -15px; }
-    .showcase-next-btn { right: -15px; }
+    .showcase-prev-btn { left: -20px; }
+    .showcase-next-btn { right: -20px; }
 }
 </style>
 @endverbatim
@@ -305,10 +308,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 initialSlide: 1,
                 loop: true,
                 coverflowEffect: {
-                    rotate: 25,
-                    stretch: 0,
-                    depth: 220,
-                    modifier: 1,
+                    rotate: 32,
+                    stretch: -15,
+                    depth: 260,
+                    modifier: 1.1,
                     slideShadows: true,
                 },
                 navigation: {
@@ -316,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     prevEl: '.showcase-prev-btn',
                 },
                 autoplay: {
-                    delay: 4000,
+                    delay: 3500,
                     disableOnInteraction: false,
                 }
             });
