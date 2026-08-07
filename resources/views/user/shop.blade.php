@@ -421,7 +421,7 @@
             <div class="container">
                 <div class="flex flex-wrap">
                     <div class="w-full mb-6">
-                        <h2 class="text-lg">Mẫu Thiệp Bán Chạy</h2>
+                        <h2 class="text-lg">Tất Cả Mẫu Thiệp</h2>
                     </div>
                 </div>
 
