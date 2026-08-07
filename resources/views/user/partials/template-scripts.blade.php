@@ -116,6 +116,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 };
             }
+
+            var qvFavBtn = document.getElementById('qvFavBtn');
+            if(qvFavBtn) {
+                qvFavBtn.onclick = function() {
+                    if (typeof addToWishlist === 'function') {
+                        addToWishlist(id, name, 0, image);
+                    }
+                };
+            }
         });
     }
 });

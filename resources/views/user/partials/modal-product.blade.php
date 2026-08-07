@@ -255,8 +255,10 @@
 													<path d="M9 11v-5a3 3 0 0 1 6 0v5"></path>
 												</svg>
 											</button>
-											<a
-												href="#"
+											<button
+												type="button"
+												id="qvFavBtn"
+												title="Thêm vào danh sách yêu thích"
 												class="btn inline-flex items-center gap-x-2 px-0 h-10 w-10 justify-center bg-white text-gray-800 border-gray-300 border disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-700 hover:border-gray-700 active:bg-gray-700 active:border-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300"
 											>
 												<svg
@@ -274,7 +276,7 @@
 													<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 													<path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 												</svg>
-											</a>
+											</button>
 										</div>
 									</div>
 									<!-- hr -->

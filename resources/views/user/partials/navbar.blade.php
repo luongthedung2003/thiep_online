@@ -152,11 +152,8 @@
                                         <path
                                             d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
                                     </svg>
-                                    <span
-                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-rose-500 text-white text-center font-semibold text-sm">
-                                        5
-                                        <span class="invisible">unread messages</span>
-                                    </span>
+                                    <span id="favCount"
+                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-rose-500 text-white flex items-center justify-center font-semibold text-xs leading-none">0</span>
                                 </button>
                             </div>
                             <div class="relative dropdown">
@@ -1363,11 +1360,11 @@ function openSocialModal(key) {
             </ul>
             <!-- btn -->
             <div class="flex justify-between mt-4">
-                <a href="#!"
+                <button type="button" data-bs-dismiss="offcanvas"
                     class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
                     Đóng
-                </a>
-                <a href="#!"
+                </button>
+                <a href="/mau-thiep"
                     class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
                     Xem tất cả
                 </a>
@@ -1375,6 +1372,130 @@ function openSocialModal(key) {
         </div>
     </div>
 </div>
+
+<script>
+// Global Wishlist Functionality Engine
+(function() {
+    const WISHLIST_KEY = 'wedding_portal_wishlist_data';
+
+    function getWishlistData() {
+        try {
+            return JSON.parse(localStorage.getItem(WISHLIST_KEY)) || [];
+        } catch(e) {
+            return [];
+        }
+    }
+
+    function saveWishlistData(list) {
+        localStorage.setItem(WISHLIST_KEY, JSON.stringify(list));
+        renderWishlist();
+    }
+
+    window.addToWishlist = function(id, name, price, image) {
+        let list = getWishlistData();
+        let existingIndex = list.findIndex(item => item.id == id);
+
+        if (existingIndex === -1) {
+            list.push({
+                id: id,
+                name: name || 'Mẫu Thiệp Cưới',
+                price: parseFloat(price) || 0,
+                image: image || '/assets/images/products/product-img-1.jpg'
+            });
+        }
+        saveWishlistData(list);
+
+        // Open offcanvas drawer
+        const drawerEl = document.getElementById('offcanvasFavorites');
+        if (drawerEl) {
+            if (window.bootstrap && bootstrap.Offcanvas) {
+                let bsDrawer = bootstrap.Offcanvas.getInstance(drawerEl) || new bootstrap.Offcanvas(drawerEl);
+                bsDrawer.show();
+            } else {
+                drawerEl.classList.add('show');
+            }
+        }
+    };
+
+    window.removeFromWishlist = function(id) {
+        let list = getWishlistData().filter(item => item.id != id);
+        saveWishlistData(list);
+    };
+
+    function renderWishlist() {
+        const list = getWishlistData();
+        
+        // Update badge count
+        const badge = document.getElementById('favCount');
+        if (badge) {
+            badge.textContent = list.length;
+        }
+
+        // Render items inside offcanvasFavorites
+        const drawer = document.getElementById('offcanvasFavorites');
+        if (!drawer) return;
+
+        const favList = drawer.querySelector('ul.list-none');
+        if (!favList) return;
+
+        if (list.length === 0) {
+            favList.innerHTML = `
+                <li class="py-8 text-center text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto text-gray-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <p class="font-medium text-gray-700">Danh sách yêu thích đang trống</p>
+                    <p class="text-xs text-gray-400 mt-1">Hãy bấm thả tim các mẫu thiệp bạn yêu thích nhé!</p>
+                </li>
+            `;
+            return;
+        }
+
+        favList.innerHTML = list.map(item => {
+            let displayPrice = item.price > 0 ? (item.price).toLocaleString('vi-VN') + 'đ' : 'Miễn phí';
+            let safeName = (item.name || '').replace(/'/g, "\\'");
+
+            return `
+                <li class="py-3 border-t">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg" />
+                            <div class="ml-3">
+                                <a href="#!" class="text-inherit">
+                                    <h6 class="font-semibold text-gray-800 text-sm">${item.name}</h6>
+                                </a>
+                                <span><small class="text-rose-500 font-medium">${displayPrice}</small></span>
+                                <div class="mt-2 small leading-none">
+                                    <a href="javascript:void(0)" onclick="removeFromWishlist('${item.id}')" class="text-rose-500 flex items-center">
+                                        <span class="mr-1 align-text-bottom">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M4 7l16 0" />
+                                                <path d="M10 11l0 6" />
+                                                <path d="M14 11l0 6" />
+                                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                            </svg>
+                                        </span>
+                                        <span class="text-gray-500 text-sm">Bỏ thích</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" onclick="addToCart('${item.id}', '${safeName}', ${item.price}, '${item.image}', 1)" class="btn btn-sm bg-rose-500 text-white hover:bg-rose-600 rounded-lg text-xs font-semibold px-3 py-1.5">
+                                + Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            `;
+        }).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', renderWishlist);
+})();
+</script>
 
 <!-- Modal -->
 <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
