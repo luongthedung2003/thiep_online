@@ -592,17 +592,39 @@
                         <div class="swiper-wrapper">
                             @foreach($templates as $tpl)
                             <div class="swiper-slide showcase-3d-slide">
-                                <div class="showcase-card-frame">
-                                    <div class="showcase-iframe-wrap">
-                                        <iframe src="{{ url('/mau-thiep/'.$tpl->id.'/preview') }}" scrolling="no" loading="lazy" class="showcase-iframe"></iframe>
+                                <div class="preview-container relative rounded-xl break-words border border-gray-200 overflow-hidden shadow-xl" style="position:relative; overflow:hidden; aspect-ratio:1/2; background:#f9f5ef; border-radius:12px; width:100%; height:100%;">
+                                    <div style="position:absolute; top:8px; left:8px; z-index:30;">
+                                        <span style="display:inline-block; padding:2px 6px; font-weight:600; font-size:12px; border-radius:4px; background:#dc2626; color:white;">Sale</span>
                                     </div>
-                                    <div class="showcase-card-overlay">
-                                        <div class="truncate text-xs font-bold text-white mb-1.5 drop-shadow-sm">{{ $tpl->name }}</div>
-                                        <div class="flex gap-2">
-                                            <a href="javascript:void(0)" onclick="openDemo('{{ url('/mau-thiep/'.$tpl->id.'/preview') }}')" class="flex-1 py-1.5 px-3 bg-gray-900/80 hover:bg-gray-900 text-white rounded-lg text-xs font-semibold text-center backdrop-blur-md transition shadow">Xem full</a>
-                                            <a href="{{ url('/mau-thiep/'.$tpl->id.'/edit') }}" class="flex-1 py-1.5 px-3 bg-rose-500 hover:bg-rose-600 text-white rounded-lg text-xs font-bold text-center backdrop-blur-md transition shadow">+ Chọn mẫu</a>
+                                    <div class="preview-scale-wrap" style="position:absolute; top:0; left:0; width:480px; height:2000px; transform-origin:0 0; transform:scale(0.5);">
+                                        <iframe src="{{ url('/mau-thiep/'.$tpl->id.'/preview') }}" style="width:100%; height:100%; border:none; pointer-events:none; overflow:hidden;" scrolling="no" loading="lazy" tabindex="-1"></iframe>
+                                    </div>
+                                    <div class="card-product-action" style="position:absolute; top:40%; left:50%; transform:translate(-50%,-50%); z-index:25; opacity:0; visibility:hidden; display:flex; gap:8px; transition: all 0.3s ease;">
+                                        <button type="button" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-name="{{ $tpl->name }}" data-category="{{ $tpl->category->name ?? 'Thiep Mau' }}" data-image="{{ asset($tpl->thumbnail) }}" data-id="{{ $tpl->id }}" data-code="MT-{{ str_pad($tpl->id, 5, '0', STR_PAD_LEFT) }}" title="Quick View">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>
+                                        </button>
+                                        <a href="#!" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);color:inherit;text-decoration:none;" title="Wishlist">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/></svg>
+                                        </a>
+                                        <a href="#!" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);color:inherit;text-decoration:none;" title="Compare">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10h14l-4 -4"/><path d="M17 14h-14l4 4"/></svg>
+                                        </a>
+                                    </div>
+                                    <div class="card-gradient-overlay" style="position:absolute; bottom:0; left:0; right:0; z-index:20; padding:30px 12px 12px; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); pointer-events:none; transition: all 0.3s ease;">
+                                        <div class="overlay-category" style="font-size:11px; color:#e5e7eb; margin-bottom:2px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">{{ $tpl->category->name ?? 'Mau Thiep' }}</div>
+                                        <div class="overlay-title" style="font-size:14px; font-weight:600; color:#ffffff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:6px; text-shadow:0 1px 3px rgba(0,0,0,0.8);">{{ $tpl->name }}</div>
+                                        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+                                            <div style="display:flex; align-items:center; gap:3px;">
+                                                <span class="overlay-stars" style="color:#fbbf24; font-size:13px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">&#9733;&#9733;&#9733;&#9733;<span style="opacity:.5">&#9733;</span></span>
+                                                <span class="overlay-reviews" style="color:#d1d5db; font-size:11px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">(149)</span>
+                                            </div>
+                                            <div class="action-buttons-wrap" style="display:flex; gap:6px;">
+                                                <a href="javascript:void(0)" onclick="openDemo('{{ url('/mau-thiep/'.$tpl->id.'/preview') }}')" class="overlay-btn" style="background:#4b5563; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#374151'" onmouseout="this.style.background='#4b5563'">Xem demo</a>
+                                                <a href="{{ url('/mau-thiep/'.$tpl->id.'/edit') }}" class="overlay-btn" style="background:#f43f5e; color:white; padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; z-index:30; position:relative; pointer-events:auto; box-shadow:0 2px 4px rgba(0,0,0,0.3); transition:background 0.3s; display:flex; justify-content:center; align-items:center;" onmouseover="this.style.background='#e11d48'" onmouseout="this.style.background='#f43f5e'">+ Chọn</a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <a href="{{ url('/mau-thiep/'.$tpl->id.'/edit') }}" style="position:absolute; inset:0; z-index:15;"></a>
                                 </div>
                             </div>
                             @endforeach

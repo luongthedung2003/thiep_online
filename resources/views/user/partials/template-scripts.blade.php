@@ -217,51 +217,15 @@ setTimeout(initHoverScroll, 700);
     overflow: visible !important;
 }
 .showcase-3d-slide {
-    width: 290px !important;
-    height: 550px !important;
+    width: 250px !important;
+    height: 500px !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (min-width: 768px) {
     .showcase-3d-slide {
-        width: 320px !important;
-        height: 600px !important;
+        width: 280px !important;
+        height: 560px !important;
     }
-}
-.showcase-card-frame {
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    border-radius: 24px;
-    border: 3px solid #ffffff;
-    box-shadow: 0 20px 45px -10px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.05);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-.showcase-iframe-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: #fafaf9;
-}
-.showcase-iframe {
-    width: 480px;
-    height: 2000px;
-    border: none;
-    pointer-events: none;
-    transform-origin: 0 0;
-}
-.showcase-card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 16px 16px;
-    background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.5) 70%, transparent 100%);
-    z-index: 20;
-    backdrop-filter: blur(4px);
 }
 .showcase-prev-btn, .showcase-next-btn {
     position: absolute;
@@ -323,21 +287,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     disableOnInteraction: false,
                 }
             });
-        }
-
-        function resizeShowcaseIframes() {
-            document.querySelectorAll('.showcase-card-frame').forEach(frame => {
-                const iframe = frame.querySelector('.showcase-iframe');
-                if (iframe && frame.clientWidth > 0) {
-                    const scale = frame.clientWidth / 480;
-                    iframe.style.transform = `scale(${scale})`;
-                }
-            });
-        }
-        window.addEventListener('resize', resizeShowcaseIframes);
-        resizeShowcaseIframes();
-        setTimeout(resizeShowcaseIframes, 300);
-        setTimeout(resizeShowcaseIframes, 800);
     }
 
     init3DShowcase();
