@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if(qvCartBtn) {
                 qvCartBtn.onclick = function() {
                     if (typeof addToCart === 'function') {
-                        addToCart(id, name, 0, image, 1);
+                        addToCart(id, name, 0, image, 1, qvCartBtn);
                     }
                 };
             }
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if(qvFavBtn) {
                 qvFavBtn.onclick = function() {
                     if (typeof addToWishlist === 'function') {
-                        addToWishlist(id, name, 0, image);
+                        addToWishlist(id, name, 0, image, qvFavBtn);
                     }
                 };
             }

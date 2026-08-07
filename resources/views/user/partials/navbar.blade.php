@@ -907,7 +907,78 @@ function openSocialModal(key) {
         renderCart();
     }
 
-    window.addToCart = function(id, name, price, image, qty) {
+    window.animateFlyToTarget = function(startEl, targetId, imageSrc) {
+        const targetEl = document.getElementById(targetId);
+        if (!targetEl) return;
+
+        let startRect;
+        if (startEl && startEl.getBoundingClientRect) {
+            startRect = startEl.getBoundingClientRect();
+        } else if (window.event && (window.event.currentTarget || window.event.target)) {
+            const el = window.event.currentTarget || window.event.target;
+            startRect = el.getBoundingClientRect();
+        } else {
+            startRect = {
+                left: window.innerWidth / 2 - 30,
+                top: window.innerHeight / 2 - 30,
+                width: 60,
+                height: 60
+            };
+        }
+
+        const targetRect = targetEl.getBoundingClientRect();
+
+        const flyer = document.createElement('div');
+        flyer.style.position = 'fixed';
+        flyer.style.zIndex = '99999999';
+        const startX = startRect.left + (startRect.width / 2) - 30;
+        const startY = startRect.top + (startRect.height / 2) - 30;
+        
+        flyer.style.left = `${startX}px`;
+        flyer.style.top = `${startY}px`;
+        flyer.style.width = '60px';
+        flyer.style.height = '60px';
+        flyer.style.borderRadius = '16px';
+        flyer.style.backgroundImage = `url('${imageSrc || '/assets/images/products/product-img-1.jpg'}')`;
+        flyer.style.backgroundSize = 'cover';
+        flyer.style.backgroundPosition = 'center';
+        flyer.style.boxShadow = '0 12px 35px rgba(255, 0, 102, 0.7), 0 0 20px rgba(0, 0, 0, 0.3)';
+        flyer.style.border = '3px solid #ffffff';
+        flyer.style.outline = '2px solid #ff0066';
+        flyer.style.pointerEvents = 'none';
+        flyer.style.opacity = '1';
+        flyer.style.transition = 'all 1.1s cubic-bezier(0.25, 1, 0.5, 1)';
+
+        document.body.appendChild(flyer);
+
+        flyer.getBoundingClientRect();
+
+        const endX = targetRect.left + (targetRect.width / 2) - 15;
+        const endY = targetRect.top + (targetRect.height / 2) - 15;
+
+        flyer.style.left = `${endX}px`;
+        flyer.style.top = `${endY}px`;
+        flyer.style.width = '30px';
+        flyer.style.height = '30px';
+        flyer.style.borderRadius = '50%';
+        flyer.style.transform = 'scale(0.5) rotate(720deg)';
+        flyer.style.opacity = '0.9';
+
+        setTimeout(() => {
+            flyer.remove();
+
+            targetEl.style.transition = 'transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.4)';
+            targetEl.style.transform = 'scale(1.8)';
+            setTimeout(() => {
+                targetEl.style.transform = 'scale(1)';
+            }, 350);
+        }, 1100);
+    };
+
+    window.addToCart = function(id, name, price, image, qty, btnEl) {
+        let sourceEl = btnEl || (window.event ? (window.event.currentTarget || window.event.target) : null);
+        animateFlyToTarget(sourceEl, 'cartCount', image);
+
         let cart = getCartData();
         let existingIndex = cart.findIndex(item => item.id == id);
         let quantityToAdd = parseInt(qty) || 1;
@@ -925,16 +996,17 @@ function openSocialModal(key) {
         }
         saveCartData(cart);
 
-        // Open offcanvas drawer
-        const drawerEl = document.getElementById('offcanvasRight');
-        if (drawerEl) {
-            if (window.bootstrap && bootstrap.Offcanvas) {
-                let bsDrawer = bootstrap.Offcanvas.getInstance(drawerEl) || new bootstrap.Offcanvas(drawerEl);
-                bsDrawer.show();
-            } else {
-                drawerEl.classList.add('show');
+        setTimeout(() => {
+            const drawerEl = document.getElementById('offcanvasRight');
+            if (drawerEl) {
+                if (window.bootstrap && bootstrap.Offcanvas) {
+                    let bsDrawer = bootstrap.Offcanvas.getInstance(drawerEl) || new bootstrap.Offcanvas(drawerEl);
+                    bsDrawer.show();
+                } else {
+                    drawerEl.classList.add('show');
+                }
             }
-        }
+        }, 1100);
     };
 
     window.removeFromCart = function(id) {
@@ -1391,7 +1463,10 @@ function openSocialModal(key) {
         renderWishlist();
     }
 
-    window.addToWishlist = function(id, name, price, image) {
+    window.addToWishlist = function(id, name, price, image, btnEl) {
+        let sourceEl = btnEl || (window.event ? (window.event.currentTarget || window.event.target) : null);
+        animateFlyToTarget(sourceEl, 'favCount', image);
+
         let list = getWishlistData();
         let existingIndex = list.findIndex(item => item.id == id);
 
@@ -1405,16 +1480,17 @@ function openSocialModal(key) {
         }
         saveWishlistData(list);
 
-        // Open offcanvas drawer
-        const drawerEl = document.getElementById('offcanvasFavorites');
-        if (drawerEl) {
-            if (window.bootstrap && bootstrap.Offcanvas) {
-                let bsDrawer = bootstrap.Offcanvas.getInstance(drawerEl) || new bootstrap.Offcanvas(drawerEl);
-                bsDrawer.show();
-            } else {
-                drawerEl.classList.add('show');
+        setTimeout(() => {
+            const drawerEl = document.getElementById('offcanvasFavorites');
+            if (drawerEl) {
+                if (window.bootstrap && bootstrap.Offcanvas) {
+                    let bsDrawer = bootstrap.Offcanvas.getInstance(drawerEl) || new bootstrap.Offcanvas(drawerEl);
+                    bsDrawer.show();
+                } else {
+                    drawerEl.classList.add('show');
+                }
             }
-        }
+        }, 1100);
     };
 
     window.removeFromWishlist = function(id) {
