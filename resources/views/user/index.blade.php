@@ -20,16 +20,16 @@
                     <div class="swiper-wrapper pb-8">
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-24 py-12 xl:w-1/2 md:w-3/5 text-left">
+                            <div class="w-full h-full flex flex-col items-center justify-center px-6 sm:px-12 lg:px-20 lg:py-24 py-12 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
                                     Ưu Đãi Mùa Cưới Giảm 50%
                                 </span>
-                                <div class="my-5 flex flex-col gap-2">
-                                    <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+                                <div class="my-5 flex flex-col gap-2 items-center">
+                                    <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; text-align: center;">
                                         Thiết Kế Thiệp Cưới<br /><span style="background: linear-gradient(135deg, #0f172a 0%, #475569 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hiện Đại & Tinh Tế</span>
                                     </h1>
-                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 480px;">
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; text-align: center;">
                                         Mang đến những bộ sưu tập thiệp cưới đa dạng, giúp ngày trọng đại của bạn thêm phần hoàn hảo.
                                     </p>
                                 </div>
@@ -43,16 +43,16 @@
                         </div>
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-24 py-12 xl:w-1/2 md:w-3/5 text-left">
+                            <div class="w-full h-full flex flex-col items-center justify-center px-6 sm:px-12 lg:px-20 lg:py-24 py-12 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
                                     Miễn Phí In Ấn & Giao Hàng Toàn Quốc
                                 </span>
-                                <div class="my-5 flex flex-col gap-2">
-                                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+                                <div class="my-5 flex flex-col gap-2 items-center">
+                                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; text-align: center;">
                                         Miễn Phí In Ấn<br /><span style="color:#e11d48;">Cho Đơn Từ 500 Thiệp</span>
                                     </h2>
-                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 480px;">
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; text-align: center;">
                                         Áp dụng cho tất cả đơn hàng từ 500 thiệp trở lên trong mùa cưới năm nay.
                                     </p>
                                 </div>
@@ -68,16 +68,16 @@
                         <!-- Add more slides as needed -->
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-24 py-12 xl:w-1/2 md:w-3/5 text-left">
+                            <div class="w-full h-full flex flex-col items-center justify-center px-6 sm:px-12 lg:px-20 lg:py-24 py-12 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
                                     Phong Cách Mới Nhất 2026
                                 </span>
-                                <div class="my-5 flex flex-col gap-2">
-                                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+                                <div class="my-5 flex flex-col gap-2 items-center">
+                                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; text-align: center;">
                                         Bộ Sưu Tập<br /><span style="color:#e11d48;">Thiệp Cưới Cao Cấp</span>
                                     </h2>
-                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 480px;">
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; text-align: center;">
                                         Tạo ấn tượng khó quên với những mẫu thiệp thiết kế độc quyền hiện đại.
                                     </p>
                                 </div>
