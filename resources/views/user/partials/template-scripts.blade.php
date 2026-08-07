@@ -208,25 +208,110 @@ setTimeout(initHoverScroll, 700);
 @verbatim
 <style>
 .showcase-3d-section {
-    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    background: #e6e8eb;
     position: relative;
+    padding: 3rem 0 3.5rem;
     overflow: hidden;
 }
 .showcase-3d-swiper {
     padding-top: 1.5rem !important;
     padding-bottom: 2.5rem !important;
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 .showcase-3d-slide {
-    width: 230px !important;
-    height: 460px !important;
+    width: 250px !important;
+    height: 490px !important;
     transition: all 0.35s ease;
 }
 @media (min-width: 768px) {
     .showcase-3d-slide {
-        width: 255px !important;
-        height: 510px !important;
+        width: 280px !important;
+        height: 540px !important;
     }
+}
+.showcase-card-frame {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+.showcase-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 30;
+    background: #ec4899;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(236, 72, 153, 0.4);
+}
+.showcase-iframe-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+.showcase-iframe {
+    width: 480px;
+    height: 2000px;
+    border: none;
+    pointer-events: none;
+    transform-origin: 0 0;
+}
+.showcase-hover-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 14px 14px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 65%, transparent 100%);
+    z-index: 25;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.showcase-card-frame:hover .showcase-hover-overlay {
+    opacity: 1;
+}
+.showcase-btn-demo {
+    flex: 1;
+    padding: 8px 10px;
+    background: rgba(31, 41, 55, 0.9);
+    color: #ffffff !important;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.showcase-btn-demo:hover {
+    background: #111827;
+}
+.showcase-btn-select {
+    flex: 1;
+    padding: 8px 10px;
+    background: #f43f5e;
+    color: #ffffff !important;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.showcase-btn-select:hover {
+    background: #e11d48;
 }
 .showcase-prev-btn, .showcase-next-btn {
     position: absolute;
@@ -240,23 +325,43 @@ setTimeout(initHoverScroll, 700);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.06);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 .showcase-prev-btn:hover, .showcase-next-btn:hover {
-    background: #f43f5e;
+    background: #ffffff;
     transform: translateY(-50%) scale(1.1);
 }
-.showcase-prev-btn:hover svg, .showcase-next-btn:hover svg {
-    stroke: #ffffff !important;
+.showcase-prev-btn { left: 20px; }
+.showcase-next-btn { right: 20px; }
+
+/* Swiper Pagination Bullets */
+.showcase-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 1.5rem;
 }
-.showcase-prev-btn { left: 8px; }
-.showcase-next-btn { right: 8px; }
-@media (min-width: 1024px) {
-    .showcase-prev-btn { left: 16px; }
-    .showcase-next-btn { right: 16px; }
+.showcase-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #94a3b8;
+    opacity: 0.6;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+}
+.showcase-pagination .swiper-pagination-bullet-active {
+    width: 28px;
+    height: 8px;
+    border-radius: 4px;
+    background: #ec4899;
+    opacity: 1;
 }
 </style>
 @endverbatim
@@ -270,14 +375,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 grabCursor: true,
                 centeredSlides: true,
                 slidesPerView: 'auto',
-                initialSlide: 1,
+                initialSlide: 2,
                 loop: true,
                 coverflowEffect: {
-                    rotate: 18,
-                    stretch: 0,
-                    depth: 130,
+                    rotate: 26,
+                    stretch: -30,
+                    depth: 230,
                     modifier: 1,
-                    slideShadows: false,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.showcase-pagination',
+                    clickable: true,
                 },
                 navigation: {
                     nextEl: '.showcase-next-btn',
@@ -291,14 +400,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function resizeShowcaseIframes() {
-            document.querySelectorAll('.showcase-3d-slide').forEach(slide => {
-                const container = slide.querySelector('.preview-container');
-                if (container && container.clientWidth > 0) {
-                    const wrap = container.querySelector('.preview-scale-wrap');
-                    if (wrap) {
-                        const scale = container.clientWidth / 480;
-                        wrap.style.transform = `scale(${scale})`;
-                    }
+            document.querySelectorAll('.showcase-card-frame').forEach(frame => {
+                const iframe = frame.querySelector('.showcase-iframe');
+                if (iframe && frame.clientWidth > 0) {
+                    const scale = frame.clientWidth / 480;
+                    iframe.style.transform = `scale(${scale})`;
                 }
             });
         }
