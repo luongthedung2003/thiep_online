@@ -210,21 +210,22 @@ setTimeout(initHoverScroll, 700);
 .showcase-3d-section {
     background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
     position: relative;
+    overflow: hidden;
 }
 .showcase-3d-swiper {
-    padding-top: 2rem !important;
-    padding-bottom: 3.5rem !important;
-    overflow: visible !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+    overflow: hidden !important;
 }
 .showcase-3d-slide {
-    width: 250px !important;
-    height: 500px !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 230px !important;
+    height: 460px !important;
+    transition: all 0.35s ease;
 }
 @media (min-width: 768px) {
     .showcase-3d-slide {
-        width: 280px !important;
-        height: 560px !important;
+        width: 255px !important;
+        height: 510px !important;
     }
 }
 .showcase-prev-btn, .showcase-next-btn {
@@ -232,30 +233,30 @@ setTimeout(initHoverScroll, 700);
     top: 50%;
     transform: translateY(-50%);
     z-index: 35;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.08);
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
 }
 .showcase-prev-btn:hover, .showcase-next-btn:hover {
     background: #f43f5e;
-    transform: translateY(-50%) scale(1.12);
+    transform: translateY(-50%) scale(1.1);
 }
 .showcase-prev-btn:hover svg, .showcase-next-btn:hover svg {
     stroke: #ffffff !important;
 }
-.showcase-prev-btn { left: 0px; }
-.showcase-next-btn { right: 0px; }
+.showcase-prev-btn { left: 8px; }
+.showcase-next-btn { right: 8px; }
 @media (min-width: 1024px) {
-    .showcase-prev-btn { left: -20px; }
-    .showcase-next-btn { right: -20px; }
+    .showcase-prev-btn { left: 16px; }
+    .showcase-next-btn { right: 16px; }
 }
 </style>
 @endverbatim
@@ -272,11 +273,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 initialSlide: 1,
                 loop: true,
                 coverflowEffect: {
-                    rotate: 32,
-                    stretch: -15,
-                    depth: 260,
-                    modifier: 1.1,
-                    slideShadows: true,
+                    rotate: 18,
+                    stretch: 0,
+                    depth: 130,
+                    modifier: 1,
+                    slideShadows: false,
                 },
                 navigation: {
                     nextEl: '.showcase-next-btn',
@@ -287,6 +288,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     disableOnInteraction: false,
                 }
             });
+        }
+
+        function resizeShowcaseIframes() {
+            document.querySelectorAll('.showcase-3d-slide').forEach(slide => {
+                const container = slide.querySelector('.preview-container');
+                if (container && container.clientWidth > 0) {
+                    const wrap = container.querySelector('.preview-scale-wrap');
+                    if (wrap) {
+                        const scale = container.clientWidth / 480;
+                        wrap.style.transform = `scale(${scale})`;
+                    }
+                }
+            });
+        }
+        window.addEventListener('resize', resizeShowcaseIframes);
+        resizeShowcaseIframes();
+        setTimeout(resizeShowcaseIframes, 300);
+        setTimeout(resizeShowcaseIframes, 800);
     }
 
     init3DShowcase();

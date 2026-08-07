@@ -574,31 +574,31 @@
         </section>
 
         <!-- Mẫu Thiệp Cưới Online Đẹp Nhất 3D Showcase Start -->
-        <section class="showcase-3d-section py-14 md:py-20 overflow-hidden bg-gray-100/70">
+        <section class="showcase-3d-section py-12 md:py-16 bg-gray-100/70">
             <div class="container mx-auto px-4">
                 <!-- Section Header -->
-                <div class="text-center mb-8 md:mb-12">
-                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
-                        Mẫu thiệp cưới online <span class="text-rose-500 font-serif italic text-4xl md:text-6xl font-bold">đẹp nhất</span>
+                <div class="text-center mb-8 md:mb-10">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+                        Mẫu thiệp cưới online <span class="text-rose-500 font-serif italic text-3xl md:text-5xl font-bold">đẹp nhất</span>
                     </h2>
-                    <p class="text-gray-500 text-sm md:text-base mt-3 max-w-xl mx-auto font-medium">
+                    <p class="text-gray-500 text-sm md:text-base mt-2 max-w-xl mx-auto font-medium">
                         Khám phá những mẫu thiệp cưới được thiết kế tinh tế và hiện đại
                     </p>
                 </div>
 
                 <!-- 3D Coverflow Slider Container -->
-                <div class="relative max-w-7xl mx-auto px-4">
+                <div class="relative w-full rounded-2xl overflow-hidden bg-white/60 p-2 md:p-4 shadow-sm border border-gray-200/80">
                     <div class="swiper showcase-3d-swiper">
                         <div class="swiper-wrapper">
                             @foreach($templates as $tpl)
                             <div class="swiper-slide showcase-3d-slide">
-                                <div class="relative rounded-lg break-words border border-gray-200 overflow-hidden shadow-lg" style="background:transparent; height:100%;">
+                                <div class="relative rounded-lg break-words border border-gray-200 overflow-hidden shadow-md" style="background:transparent; height:100%;">
                                     <!-- Full card iframe preview with glassmorphism info overlay -->
                                     <div class="preview-container" style="position:relative; overflow:hidden; height:100%; background:#f9f5ef; border-radius:12px;">
                                         <div style="position:absolute; top:8px; left:8px; z-index:30;">
                                             <span style="display:inline-block; padding:2px 6px; font-weight:600; font-size:12px; border-radius:4px; background:#dc2626; color:white;">Sale</span>
                                         </div>
-                                        <div class="preview-scale-wrap" style="position:absolute; top:0; left:0; width:480px; height:2000px; transform-origin:0 0; transform:scale(0.65);">
+                                        <div class="preview-scale-wrap" style="position:absolute; top:0; left:0; width:480px; height:2000px; transform-origin:0 0; transform:scale(0.55);">
                                             <iframe src="{{ url('/mau-thiep/'.$tpl->id.'/preview') }}" style="width:100%; height:100%; border:none; pointer-events:none; overflow:hidden;" scrolling="no" loading="lazy" tabindex="-1"></iframe>
                                         </div>
                                         <div class="card-product-action" style="position:absolute; top:40%; left:50%; transform:translate(-50%,-50%); z-index:25; opacity:0; visibility:hidden; display:flex; gap:8px; transition: all 0.3s ease;">
@@ -636,12 +636,12 @@
 
                     <!-- Custom 3D Slider Navigation Buttons -->
                     <button type="button" class="showcase-prev-btn" aria-label="Previous slide">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
                     </button>
                     <button type="button" class="showcase-next-btn" aria-label="Next slide">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </button>
