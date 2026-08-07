@@ -352,20 +352,26 @@ setTimeout(initHoverScroll, 700);
     margin-top: 1.25rem;
 }
 .showcase-pagination .swiper-pagination-bullet {
-    width: 7px;
-    height: 7px;
-    background: #94a3b8;
-    opacity: 0.6;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    width: 7px !important;
+    height: 7px !important;
+    background: #cbd5e1 !important;
+    opacity: 0.8 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
     margin: 0 !important;
 }
 .showcase-pagination .swiper-pagination-bullet-active {
-    width: 26px;
-    height: 7px;
-    border-radius: 4px;
-    background: #ff0066;
-    opacity: 1;
+    width: 26px !important;
+    height: 7px !important;
+    border-radius: 4px !important;
+    background: #ff0066 !important;
+    opacity: 1 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(255, 0, 102, 0.35) !important;
 }
 
 /* Showcase CTA Button */
