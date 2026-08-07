@@ -23,7 +23,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('/')->with('success', 'Đăng nhập thành công! Chào mừng bạn quay trở lại.');
         }
 
         return back()->withErrors([
@@ -53,7 +53,7 @@ class AuthController extends Controller
         ]);
 
         // Redirect to login page with success message
-        return redirect()->route('login')->with('success', 'Đăng ký thành công! Vui lòng đăng nhập.');
+        return redirect()->route('login')->with('success', 'Đăng ký tài khoản thành công!');
     }
 
     public function logout(Request $request)
@@ -63,6 +63,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')->with('info', 'Bạn đã đăng xuất tài khoản thành công.');
     }
 }

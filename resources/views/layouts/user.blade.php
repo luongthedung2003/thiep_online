@@ -48,6 +48,7 @@
 
 <body>
     @include("user.partials.navbar")
+    @include("user.partials.toast-notification")
     <main>
         @yield('content')
     </main>
