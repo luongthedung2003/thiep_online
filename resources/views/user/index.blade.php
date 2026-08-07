@@ -11,111 +11,99 @@
 @endverbatim
 
 
-        <!-- High-End 3D & Line-Art Graphic Hero Banner Section -->
-        <section class="mt-6 mb-10">
+        <section class="mt-8">
             <div class="container">
-                <div class="relative bg-[#f8f9fa] rounded-3xl py-12 px-6 md:py-20 md:px-12 overflow-hidden flex flex-col items-center justify-center min-h-[480px] md:min-h-[560px] border border-gray-100/80 shadow-sm" style="font-family: 'Cormorant Garamond', 'Playfair Display', serif;">
-                    
-                    <!-- Corner 3D Avatar Badges (Absolute Floating) -->
-                    <!-- Top-Left Avatar Badge -->
-                    <div class="absolute top-4 left-4 md:top-8 md:left-12 z-20 transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-                        <img src="{{ asset('assets/images/banner/avatar_top_left.png') }}" class="w-24 md:w-40 lg:w-48 h-auto drop-shadow-lg" alt="3D Avatar Top Left">
-                    </div>
-                    <!-- Top-Right Avatar Badge -->
-                    <div class="absolute top-4 right-4 md:top-8 md:right-12 z-20 transition-transform duration-300 hover:scale-105 hover:rotate-3">
-                        <img src="{{ asset('assets/images/banner/avatar_top_right.png') }}" class="w-24 md:w-40 lg:w-48 h-auto drop-shadow-lg" alt="3D Avatar Top Right">
-                    </div>
-                    <!-- Bottom-Left Avatar Badge -->
-                    <div class="absolute bottom-4 left-4 md:bottom-8 md:left-12 z-20 transition-transform duration-300 hover:scale-105 hover:rotate-3">
-                        <img src="{{ asset('assets/images/banner/avatar_bot_left.png') }}" class="w-24 md:w-40 lg:w-48 h-auto drop-shadow-lg" alt="3D Avatar Bottom Left">
-                    </div>
-                    <!-- Bottom-Right Avatar Badge -->
-                    <div class="absolute bottom-4 right-4 md:bottom-8 md:right-12 z-20 transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-                        <img src="{{ asset('assets/images/banner/avatar_bot_right.png') }}" class="w-24 md:w-40 lg:w-48 h-auto drop-shadow-lg" alt="3D Avatar Bottom Right">
-                    </div>
-
-                    <!-- Floating Decorative Dots -->
-                    <div class="absolute top-3 left-[51%] -translate-x-1/2 w-3 h-3 rounded-full bg-blue-400 opacity-80"></div>
-                    <div class="absolute bottom-8 left-[78%] w-3.5 h-3.5 rounded-full bg-purple-500 opacity-80"></div>
-                    <div class="absolute bottom-[35%] left-[26%] w-2.5 h-2.5 rounded-full bg-rose-500 opacity-80"></div>
-                    <div class="absolute top-[48%] left-[7%] w-2.5 h-2.5 rounded-full bg-purple-400 opacity-70"></div>
-                    <div class="absolute top-[32%] right-[8%] w-2.5 h-2.5 rounded-full bg-rose-500 opacity-80"></div>
-
-                    <!-- Main Typographic Composition -->
-                    <div class="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto select-none leading-none">
-                        
-                        <!-- Line 1: Orange + | Take it | Book Doodle | Paper Airplane Dashed Arrow | Let's start Button -->
-                        <div class="flex items-center justify-center flex-wrap gap-2 md:gap-4 mb-1 md:mb-3">
-                            <!-- Orange Plus (+) Doodle -->
-                            <svg class="w-7 h-7 md:w-10 md:h-10 text-amber-500 stroke-current inline-block transform -rotate-12 mr-1" viewBox="0 0 24 24" fill="none" stroke-width="4.5">
-                                <path d="M12 4v16M4 12h16" stroke-linecap="round"/>
-                            </svg>
-                            
-                            <!-- Main Text: Take it -->
-                            <span class="text-6xl md:text-8xl lg:text-[110px] font-normal text-gray-900 tracking-tight" style="font-family: 'Cormorant Garamond', serif;">
-                                Take it
-                            </span>
-
-                            <!-- Book Doodle & Dashed Arrow to Let's start -->
-                            <div class="relative hidden sm:inline-flex items-center ml-2 md:ml-4">
-                                <!-- Book Line Art -->
-                                <svg class="w-12 h-10 md:w-16 md:h-12 text-gray-800 opacity-80" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="1.6">
-                                    <path d="M6 10c9 0 14-3.5 18 0 4-3.5 9 0 18 0v24c-9 0-14 3.5-18 0-4 3.5-9 0-18 0V10zM24 10v24" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M10 16h10M10 20h8M10 24h10M28 16h10M28 20h8M28 24h10" stroke-linecap="round"/>
-                                </svg>
-
-                                <!-- Dashed Curved Arrow -->
-                                <svg class="w-12 h-10 text-gray-600 ml-1 opacity-70" viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M 5 12 C 15 30, 35 32, 45 20" stroke-dasharray="3 3" stroke-linecap="round"/>
-                                    <path d="M 40 18 L 46 20 L 44 26" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-
-                                <!-- Pill Button: Let's start -->
-                                <a href="{{ url('/mau-thiep') }}" class="inline-flex items-center px-6 py-2.5 rounded-full border border-gray-900 bg-white/80 text-gray-900 text-sm font-sans font-semibold hover:bg-gray-900 hover:text-white transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
-                                    Let's start
+                <div class="swiper-container swiper" id="swiper-1" data-pagination-type="" data-speed="400"
+                    data-space-between="100" data-pagination="true" data-navigation="false" data-autoplay="true"
+                    data-autoplay-delay="3000" data-effect="fade"
+                    data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 1}}'>
+                    <div class="swiper-wrapper pb-8">
+                        <div class="swiper-slide custom-banner-slide"
+                            style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+                            <div class="lg:py-32 p-12 lg:pl-12 xl:w-2/5 md:w-3/5">
+                                <span
+                                    class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Ưu Đãi Mùa Cưới Giảm 50%</span>
+                                <div class="my-7 flex flex-col gap-2">
+                                    <h1 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">Thiết Kế Thiệp Cưới Hiện Đại & Tinh Tế
+                                    </h1>
+                                    <p class="text-md font-light">Mang đến những bộ sưu tập thiệp cưới đa dạng, giúp ngày trọng đại của bạn thêm phần hoàn hảo.</p>
+                                </div>
+                                <a href="#!"
+                                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+                                    Shop Now
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-arrow-right inline-block" width="14"
+                                        height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M5 12l14 0" />
+                                        <path d="M13 18l6 -6" />
+                                        <path d="M13 6l6 6" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide custom-banner-slide"
+                            style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+                            <div class="lg:py-32 lg:pl-12 lg:pr-6 px-12 py-12 xl:w-2/5 md:w-3/5">
+                                <span
+                                    class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Miễn Phí In Ấn & Giao Hàng Toàn Quốc</span>
+                                <div class="my-7 flex flex-col gap-2">
+                                    <h2 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">
+                                        Miễn Phí In Ấn<br />đơn từ<span class="text-rose-500">500 thiệp</span>
+                                    </h2>
+                                    <p class="text-md font-light">Áp dụng cho đơn hàng từ 500 thiệp trở lên trong mùa cưới này.</p>
+                                </div>
+                                <a href="#!"
+                                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+                                    Shop Now
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-arrow-right inline-block" width="14"
+                                        height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M5 12l14 0" />
+                                        <path d="M13 18l6 -6" />
+                                        <path d="M13 6l6 6" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
 
-                        <!-- Line 2: [the] badge | to next -->
-                        <div class="flex items-center justify-center flex-wrap gap-3 md:gap-5 mb-1 md:mb-3">
-                            <!-- Rounded Dark Badge: the -->
-                            <div class="inline-flex items-center justify-center px-6 py-1.5 md:px-9 md:py-2.5 rounded-2xl bg-[#1e2736] text-white text-4xl md:text-6xl lg:text-7xl font-normal tracking-wide shadow-md transform -rotate-1 border border-gray-800" style="font-family: 'Cormorant Garamond', serif;">
-                                the
-                            </div>
-
-                            <!-- Text: to next -->
-                            <span class="text-6xl md:text-8xl lg:text-[110px] font-normal text-gray-900 tracking-tight" style="font-family: 'Cormorant Garamond', serif;">
-                                to next
-                            </span>
-                        </div>
-
-                        <!-- Line 3: Globe Wireframe Doodle | levels with Orange Circle Accent -->
-                        <div class="flex items-center justify-center gap-3 md:gap-6 relative">
-                            <!-- Globe Wireframe Doodle (Absolute Left / Relative) -->
-                            <div class="absolute -left-16 md:-left-24 bottom-0 hidden sm:block opacity-75">
-                                <svg class="w-16 h-16 md:w-24 md:h-24 text-gray-800" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3">
-                                    <circle cx="32" cy="32" r="28"/>
-                                    <ellipse cx="32" cy="32" rx="28" ry="11"/>
-                                    <ellipse cx="32" cy="32" rx="11" ry="28"/>
-                                    <line x1="4" y1="32" x2="60" y2="32"/>
-                                    <line x1="32" y1="4" x2="32" y2="60"/>
-                                </svg>
-                            </div>
-
-                            <!-- Text: levels with ring circle outline overlapping s -->
-                            <div class="relative inline-flex items-center">
-                                <span class="text-6xl md:text-8xl lg:text-[110px] font-normal text-gray-900 tracking-tight" style="font-family: 'Cormorant Garamond', serif;">
-                                    level<span class="relative z-10">s</span>
-                                </span>
-
-                                <!-- Orange Ring Circle Accent -->
-                                <svg class="absolute right-[-14px] md:right-[-24px] top-1/2 -translate-y-1/2 w-14 h-14 md:w-24 md:h-24 text-amber-500 pointer-events-none" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="4.5">
-                                    <circle cx="40" cy="40" r="34"/>
-                                </svg>
+                        <!-- Add more slides as needed -->
+                        <div class="swiper-slide custom-banner-slide"
+                            style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+                            <div class="lg:py-32 lg:pl-12 lg:pr-6 px-12 py-12 xl:w-2/5 md:w-3/5">
+                                <span
+                                    class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Phong Cách Mới Nhất</span>
+                                <div class="my-7 flex flex-col gap-2">
+                                    <h2 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">
+                                        Bộ Sưu Tập<br />Thiệp Cưới <span class="text-rose-500">Cao Cấp</span>
+                                    </h2>
+                                    <p class="text-md font-light">Tạo ấn tượng khó quên với những mẫu thiệp thiết kế độc quyền.</p>
+                                </div>
+                                <a href="#!"
+                                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+                                    Khám Phá
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-arrow-right inline-block" width="14"
+                                        height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M5 12l14 0" />
+                                        <path d="M13 18l6 -6" />
+                                        <path d="M13 6l6 6" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination !bottom-14"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-navigation">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>

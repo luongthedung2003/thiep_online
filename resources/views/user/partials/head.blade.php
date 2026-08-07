@@ -1,12 +1,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/') }}/images/favicon/favicon.ico" />
 
 <!-- Libs CSS -->
-<link rel="preload" as="image" href="{{ asset('assets/images/banner/banner_1.webp') }}" type="image/webp" />
-<link rel="preload" as="image" href="{{ asset('assets/images/banner/banner_2.webp') }}" type="image/webp" />
-<link rel="preload" as="image" href="{{ asset('assets/images/banner/banner_3.webp') }}" type="image/webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.46.0/tabler-icons.min.css" />
 <link rel="stylesheet" href="{{ asset('assets/libs/') }}/simplebar/dist/simplebar.min.css" />
 
