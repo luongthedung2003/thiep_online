@@ -109,3 +109,9 @@ Route::get('/wishlist', [\App\Http\Controllers\WishlistController::class, 'index
 Route::post('/wishlist/add', [\App\Http\Controllers\WishlistController::class, 'add'])->name('wishlist.add');
 Route::post('/wishlist/remove', [\App\Http\Controllers\WishlistController::class, 'remove'])->name('wishlist.remove');
 
+// Admin Portal Route
+Route::get('/admin/{any?}', function () {
+    return view('admin.index');
+})->where('any', '.*')->name('admin.index');
+
+
