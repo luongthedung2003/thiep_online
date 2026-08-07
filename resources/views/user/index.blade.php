@@ -686,126 +686,126 @@
         <!-- Mẫu Thiệp Bán Chạy End-->
 
         <!-- Step-by-Step Guide Section Start (Exact 1:1 Match with Reference Image) -->
-        <section class="py-16 my-10" style="background: #e5e9ee; border-top: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1;">
-            <div class="container mx-auto px-6 max-w-7xl">
+        <section style="background: #e5e9ee; border-top: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1; padding: 60px 0; margin: 40px 0;">
+            <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
                 <!-- Top-Left Metadata -->
-                <div class="text-xs font-medium tracking-wide text-gray-500 mb-10">
+                <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 30px;">
                     UI UX Design Portfolio
                 </div>
 
                 <!-- Section Main Title -->
-                <div class="mb-14">
-                    <div style="width: 16px; height: 5px; background: #e11d48;" class="mb-3"></div>
-                    <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em; color: #111827;" class="uppercase">
+                <div style="margin-bottom: 45px;">
+                    <div style="width: 16px; height: 5px; background: #e11d48; margin-bottom: 10px;"></div>
+                    <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em; color: #111827; margin: 0; text-transform: uppercase;">
                         INDEX
                     </h2>
                 </div>
 
-                <!-- 5 Columns Step Grid - Strictly 1 Single Row -->
-                <div class="overflow-x-auto pb-4">
-                    <div class="grid grid-cols-5 min-w-[850px]" style="align-items: stretch;">
+                <!-- 5 Columns Step Grid - Guaranteed 1 Single Horizontal Row -->
+                <div style="overflow-x: auto; width: 100%; padding-bottom: 10px;">
+                    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; min-width: 850px; width: 100%; justify-content: space-between; align-items: stretch;">
                         
                         <!-- Step 01 -->
-                        <div class="flex flex-col justify-between pr-6 border-r" style="border-color: rgba(148, 163, 184, 0.4);">
+                        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding-right: 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-6">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
                                     01
                                 </div>
-                                <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
+                                <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Chọn Mẫu Thiệp
-                                </h3>
-                                <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                </div>
+                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
                                     Khám phá bộ sưu tập
-                                </p>
-                                <div class="w-full overflow-hidden" style="height: 90px;">
-                                    <img src="{{ asset('assets/images/banner/banner_1.webp') }}" alt="Chọn mẫu thiệp" style="width: 100%; height: 90px; object-fit: cover; border-radius: 0;" loading="lazy">
+                                </div>
+                                <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
+                                    <img src="{{ asset('assets/images/banner/banner_1.webp') }}" alt="Chọn mẫu thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-8">
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
                                 Đa dạng phong cách
                             </div>
                         </div>
 
                         <!-- Step 02 -->
-                        <div class="flex flex-col justify-between px-6 border-r" style="border-color: rgba(148, 163, 184, 0.4);">
+                        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-6">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
                                     02
                                 </div>
-                                <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
+                                <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Nhập Thông Tin
-                                </h3>
-                                <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                </div>
+                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
                                     Tên dâu rể, ngày & địa điểm
-                                </p>
-                                <div class="w-full overflow-hidden" style="height: 90px;">
-                                    <img src="{{ asset('assets/images/banner/banner_2.webp') }}" alt="Nhập thông tin" style="width: 100%; height: 90px; object-fit: cover; border-radius: 0;" loading="lazy">
+                                </div>
+                                <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
+                                    <img src="{{ asset('assets/images/banner/banner_2.webp') }}" alt="Nhập thông tin" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-8">
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
                                 Nhập liệu dễ dàng
                             </div>
                         </div>
 
                         <!-- Step 03 -->
-                        <div class="flex flex-col justify-between px-6 border-r" style="border-color: rgba(148, 163, 184, 0.4);">
+                        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-6">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
                                     03
                                 </div>
-                                <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
+                                <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Tùy Chỉnh Thiệp
-                                </h3>
-                                <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                </div>
+                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
                                     Tự do thêm ảnh & lời chúc
-                                </p>
-                                <div class="w-full overflow-hidden" style="height: 90px;">
-                                    <img src="{{ asset('assets/images/banner/banner_3.webp') }}" alt="Tùy chỉnh thiệp" style="width: 100%; height: 90px; object-fit: cover; border-radius: 0;" loading="lazy">
+                                </div>
+                                <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
+                                    <img src="{{ asset('assets/images/banner/banner_3.webp') }}" alt="Tùy chỉnh thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-8">
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
                                 Độc quyền cá nhân
                             </div>
                         </div>
 
                         <!-- Step 04 -->
-                        <div class="flex flex-col justify-between px-6 border-r" style="border-color: rgba(148, 163, 184, 0.4);">
+                        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 24px; border-right: 1px solid rgba(148, 163, 184, 0.4); box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-6">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
                                     04
                                 </div>
-                                <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
+                                <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Xem Trước Thiệp
-                                </h3>
-                                <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                </div>
+                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
                                     Kiểm tra hiển thị di động
-                                </p>
-                                <div class="w-full overflow-hidden" style="height: 90px;">
-                                    <img src="{{ asset('assets/images/banner/grocery-banner-2.jpg') }}" alt="Xem trước thiệp" style="width: 100%; height: 90px; object-fit: cover; border-radius: 0;" loading="lazy">
+                                </div>
+                                <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
+                                    <img src="{{ asset('assets/images/banner/grocery-banner-2.jpg') }}" alt="Xem trước thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-8">
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
                                 Trực quan tức thì
                             </div>
                         </div>
 
                         <!-- Step 05 -->
-                        <div class="flex flex-col justify-between pl-6">
+                        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; padding-left: 24px; box-sizing: border-box;">
                             <div>
-                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-6">
+                                <div style="font-size: 44px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif; margin-bottom: 24px;">
                                     05
                                 </div>
-                                <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
+                                <div style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 4px;">
                                     Tải & Gửi Thiệp
-                                </h3>
-                                <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
-                                    Chia sẻ qua Zalo, QR & Zalo
-                                </p>
-                                <div class="w-full overflow-hidden" style="height: 90px;">
-                                    <img src="{{ asset('assets/images/banner/banner-deal.jpg') }}" alt="Tải và gửi thiệp" style="width: 100%; height: 90px; object-fit: cover; border-radius: 0;" loading="lazy">
+                                </div>
+                                <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-bottom: 20px;">
+                                    Chia sẻ qua Zalo & QR
+                                </div>
+                                <div style="width: 100%; height: 95px; overflow: hidden; margin-top: 10px;">
+                                    <img src="{{ asset('assets/images/banner/banner-deal.jpg') }}" alt="Tải và gửi thiệp" style="width: 100%; height: 95px; object-fit: cover; border-radius: 0; display: block;" loading="lazy">
                                 </div>
                             </div>
-                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-8">
+                            <div style="font-size: 11px; color: #9ca3af; font-weight: 400; margin-top: 30px;">
                                 Chia sẻ tiện lợi
                             </div>
                         </div>
@@ -814,7 +814,7 @@
                 </div>
 
                 <!-- Bottom Metadata -->
-                <div class="flex justify-between items-center text-xs font-normal text-gray-500 mt-16 pt-4">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 400; color: #6b7280; margin-top: 50px; padding-top: 10px;">
                     <span>Designer _ Kim HJ</span>
                     <span>A stubborn designer</span>
                 </div>
