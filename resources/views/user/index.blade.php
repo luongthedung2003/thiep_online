@@ -19,7 +19,7 @@
                     data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 1}}'>
                     <div class="swiper-wrapper pb-8">
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_1.png')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
                             <div class="lg:py-32 p-12 lg:pl-12 xl:w-2/5 md:w-3/5">
                                 <span
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Ưu Đãi Mùa Cưới Giảm 50%</span>
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_2.png')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
                             <div class="lg:py-32 lg:pl-12 lg:pr-6 px-12 py-12 xl:w-2/5 md:w-3/5">
                                 <span
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Miễn Phí In Ấn & Giao Hàng Toàn Quốc</span>
@@ -72,7 +72,7 @@
 
                         <!-- Add more slides as needed -->
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_3.png')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
                             <div class="lg:py-32 lg:pl-12 lg:pr-6 px-12 py-12 xl:w-2/5 md:w-3/5">
                                 <span
                                     class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Phong Cách Mới Nhất</span>
@@ -527,7 +527,7 @@
                 <div class="flex md:space-x-2 lg:space-x-6 flex-wrap md:flex-nowrap">
                     <div class="w-full md:w-1/2 mb-3 lg:">
                         <div class="py-10 px-8 rounded-lg"
-                            style="background: url({{asset('assets/images/banner/banner_2.png')}}) no-repeat; background-size: cover; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; background-position: center">
                             <div class="flex flex-col gap-5">
                                 <div class="flex flex-col gap-1">
                                     <h2 class="font-bold text-xl">Bộ Sưu Tập Sang Trọng</h2>
@@ -549,7 +549,7 @@
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="py-10 px-8 rounded-lg"
-                            style="background: url({{asset('assets/images/banner/banner_3.png')}}) no-repeat; background-size: cover; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; background-position: center">
                             <div class="flex flex-col gap-5">
                                 <div class="flex flex-col gap-1">
                                     <h2 class="font-bold text-xl">Thiết Kế Độc Quyền</h2>
@@ -640,7 +640,7 @@
                     <div class="xl:grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 flex-nowrap flex">
                         <div class="flex-0 block w-full md:w-auto">
                             <div class="pt-8 px-6 rounded-lg"
-                                style="background: url({{asset('assets/images/banner/banner_2.png')}}) no-repeat; background-size: cover; height: 470px">
+                                style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; height: 470px">
                                 <div class="flex flex-col gap-5">
                                     <div class="flex flex-col gap-2">
                                         <h3 class="text-lg text-white">Giảm 50% Cho Đơn Hàng Đầu Tiên.</h3>
