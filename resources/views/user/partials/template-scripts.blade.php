@@ -221,8 +221,21 @@ setTimeout(initHoverScroll, 700);
 .showcase-3d-slide {
     width: 250px !important;
     height: 490px !important;
-    transition: all 0.35s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.45;
+    filter: blur(1.5px) brightness(0.85);
 }
+.showcase-3d-slide.swiper-slide-active {
+    opacity: 1 !important;
+    filter: blur(0px) brightness(1) !important;
+    z-index: 50 !important;
+}
+.showcase-3d-slide.swiper-slide-next,
+.showcase-3d-slide.swiper-slide-prev {
+    opacity: 0.75 !important;
+    filter: blur(0.5px) brightness(0.92) !important;
+}
+
 @media (min-width: 768px) {
     .showcase-3d-slide {
         width: 280px !important;
@@ -234,7 +247,7 @@ setTimeout(initHoverScroll, 700);
     height: 100%;
     background: #ffffff;
     border-radius: 18px;
-    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -378,10 +391,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 initialSlide: 2,
                 loop: true,
                 coverflowEffect: {
-                    rotate: 26,
-                    stretch: -30,
-                    depth: 230,
-                    modifier: 1,
+                    rotate: 35,
+                    stretch: -40,
+                    depth: 380,
+                    modifier: 1.25,
+                    scale: 0.75,
                     slideShadows: true,
                 },
                 pagination: {
