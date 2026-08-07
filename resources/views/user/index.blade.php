@@ -685,137 +685,136 @@
         </section>
         <!-- Mẫu Thiệp Bán Chạy End-->
 
-        <!-- Step-by-Step Guide Section Start (Matching Reference Image) -->
-        <section class="py-14 my-10" style="background: #f8fafc; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
-            <div class="container mx-auto px-4">
-                <!-- Section Header Metadata -->
-                <div class="flex justify-between items-center text-xs font-semibold tracking-wider text-gray-400 uppercase mb-8">
-                    <span>HƯỚNG DẪN 5 BƯỚC</span>
-                    <span>THIỆP CƯỚI TRỰC TUYẾN</span>
+        <!-- Step-by-Step Guide Section Start (1:1 Match with Reference Image) -->
+        <section class="py-16 my-10" style="background: #e5e9ee; border-top: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1;">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <!-- Top-Left Metadata -->
+                <div class="text-xs font-medium tracking-wide text-gray-500 mb-10">
+                    HƯỚNG DẪN TẠO THIỆP CƯỚI
                 </div>
 
                 <!-- Section Main Title -->
-                <div class="mb-12">
-                    <div style="width: 28px; height: 5px; background: #e11d48; border-radius: 2px;" class="mb-3"></div>
-                    <h2 style="font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 900; letter-spacing: -0.02em; color: #0f172a;" class="uppercase">
-                        QUY TRÌNH TẠO THIỆP
+                <div class="mb-14">
+                    <div style="width: 16px; height: 5px; background: #e11d48;" class="mb-3"></div>
+                    <h2 style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em; color: #111827;" class="uppercase">
+                        QUY TRÌNH
                     </h2>
                 </div>
 
-                <!-- 5 Columns Step Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 lg:divide-x divide-gray-200/80 gap-y-8 sm:gap-y-6 lg:gap-y-0">
+                <!-- 5 Columns Step Grid with 1:1 Dividers -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-10 sm:gap-y-8 lg:gap-y-0" style="align-items: stretch;">
                     
                     <!-- Step 01 -->
-                    <div class="flex flex-col justify-between pt-4 sm:pt-0 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                    <div class="flex flex-col justify-between lg:pr-8 lg:border-r" style="border-color: rgba(148, 163, 184, 0.4);">
                         <div>
-                            <div style="font-size: 44px; font-weight: 900; color: #e11d48; line-height: 1; font-family: system-ui, -apple-system, sans-serif;">
+                            <div style="font-size: 48px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-7">
                                 01
                             </div>
-                            <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;" class="mt-4 mb-1">
+                            <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
                                 Chọn Mẫu Thiệp
                             </h3>
-                            <p style="font-size: 13px; color: #64748b;" class="mb-5 leading-normal">
-                                Khám phá bộ sưu tập thiệp phong phú & độc đáo.
+                            <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                Khám phá bộ sưu tập mẫu thiệp
                             </p>
-                            <div class="overflow-hidden rounded-lg shadow-sm border border-gray-200/60 bg-white group hover:shadow-md transition-all duration-300">
-                                <img src="{{ asset('assets/images/banner/banner_1.webp') }}" alt="Chọn mẫu thiệp" class="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="w-full overflow-hidden">
+                                <img src="{{ asset('assets/images/banner/banner_1.webp') }}" alt="Chọn mẫu thiệp" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 0;" loading="lazy">
                             </div>
                         </div>
-                        <div style="font-size: 12px; color: #94a3b8; font-weight: 500;" class="mt-6">
+                        <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-10">
                             Đa dạng phong cách
                         </div>
                     </div>
 
                     <!-- Step 02 -->
-                    <div class="flex flex-col justify-between pt-4 sm:pt-0 lg:px-6 last:lg:pr-0">
+                    <div class="flex flex-col justify-between lg:px-8 lg:border-r" style="border-color: rgba(148, 163, 184, 0.4);">
                         <div>
-                            <div style="font-size: 44px; font-weight: 900; color: #e11d48; line-height: 1; font-family: system-ui, -apple-system, sans-serif;">
+                            <div style="font-size: 48px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-7">
                                 02
                             </div>
-                            <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;" class="mt-4 mb-1">
+                            <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
                                 Nhập Thông Tin
                             </h3>
-                            <p style="font-size: 13px; color: #64748b;" class="mb-5 leading-normal">
-                                Tên chú rể, cô dâu, ngày giờ & địa điểm lễ cưới.
+                            <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                Tên dâu rể, ngày & địa điểm
                             </p>
-                            <div class="overflow-hidden rounded-lg shadow-sm border border-gray-200/60 bg-white group hover:shadow-md transition-all duration-300">
-                                <img src="{{ asset('assets/images/banner/banner_2.webp') }}" alt="Nhập thông tin" class="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="w-full overflow-hidden">
+                                <img src="{{ asset('assets/images/banner/banner_2.webp') }}" alt="Nhập thông tin" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 0;" loading="lazy">
                             </div>
                         </div>
-                        <div style="font-size: 12px; color: #94a3b8; font-weight: 500;" class="mt-6">
-                            Tùy chỉnh dễ dàng
+                        <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-10">
+                            Nhập liệu dễ dàng
                         </div>
                     </div>
 
                     <!-- Step 03 -->
-                    <div class="flex flex-col justify-between pt-4 sm:pt-0 lg:px-6 last:lg:pr-0">
+                    <div class="flex flex-col justify-between lg:px-8 lg:border-r" style="border-color: rgba(148, 163, 184, 0.4);">
                         <div>
-                            <div style="font-size: 44px; font-weight: 900; color: #e11d48; line-height: 1; font-family: system-ui, -apple-system, sans-serif;">
+                            <div style="font-size: 48px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-7">
                                 03
                             </div>
-                            <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;" class="mt-4 mb-1">
+                            <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
                                 Tùy Chỉnh Thiệp
                             </h3>
-                            <p style="font-size: 13px; color: #64748b;" class="mb-5 leading-normal">
-                                Tự do thêm album ảnh, nhạc nền & lời chúc.
+                            <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                Tự do thêm ảnh, nhạc & lời chúc
                             </p>
-                            <div class="overflow-hidden rounded-lg shadow-sm border border-gray-200/60 bg-white group hover:shadow-md transition-all duration-300">
-                                <img src="{{ asset('assets/images/banner/banner_3.webp') }}" alt="Tùy chỉnh thiệp" class="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="w-full overflow-hidden">
+                                <img src="{{ asset('assets/images/banner/banner_3.webp') }}" alt="Tùy chỉnh thiệp" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 0;" loading="lazy">
                             </div>
                         </div>
-                        <div style="font-size: 12px; color: #94a3b8; font-weight: 500;" class="mt-6">
+                        <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-10">
                             Độc quyền cá nhân
                         </div>
                     </div>
 
                     <!-- Step 04 -->
-                    <div class="flex flex-col justify-between pt-4 sm:pt-0 lg:px-6 last:lg:pr-0">
+                    <div class="flex flex-col justify-between lg:px-8 lg:border-r" style="border-color: rgba(148, 163, 184, 0.4);">
                         <div>
-                            <div style="font-size: 44px; font-weight: 900; color: #e11d48; line-height: 1; font-family: system-ui, -apple-system, sans-serif;">
+                            <div style="font-size: 48px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-7">
                                 04
                             </div>
-                            <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;" class="mt-4 mb-1">
+                            <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
                                 Xem Trước Thiệp
                             </h3>
-                            <p style="font-size: 13px; color: #64748b;" class="mb-5 leading-normal">
-                                Kiểm tra giao diện trực quan trên điện thoại.
+                            <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                Kiểm tra hiển thị giao diện di động
                             </p>
-                            <div class="overflow-hidden rounded-lg shadow-sm border border-gray-200/60 bg-white group hover:shadow-md transition-all duration-300">
-                                <img src="{{ asset('assets/images/banner/grocery-banner-2.jpg') }}" alt="Xem trước thiệp" class="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="w-full overflow-hidden">
+                                <img src="{{ asset('assets/images/banner/grocery-banner-2.jpg') }}" alt="Xem trước thiệp" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 0;" loading="lazy">
                             </div>
                         </div>
-                        <div style="font-size: 12px; color: #94a3b8; font-weight: 500;" class="mt-6">
+                        <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-10">
                             Trực quan tức thì
                         </div>
                     </div>
 
                     <!-- Step 05 -->
-                    <div class="flex flex-col justify-between pt-4 sm:pt-0 lg:px-6 last:lg:pr-0">
+                    <div class="flex flex-col justify-between lg:pl-8">
                         <div>
-                            <div style="font-size: 44px; font-weight: 900; color: #e11d48; line-height: 1; font-family: system-ui, -apple-system, sans-serif;">
+                            <div style="font-size: 48px; font-weight: 800; color: #e11d48; line-height: 1; font-family: 'Inter', system-ui, sans-serif;" class="mb-7">
                                 05
                             </div>
-                            <h3 style="font-size: 16px; font-weight: 700; color: #0f172a;" class="mt-4 mb-1">
+                            <h3 style="font-size: 14px; font-weight: 800; color: #111827;" class="mb-1">
                                 Tải & Gửi Thiệp
                             </h3>
-                            <p style="font-size: 13px; color: #64748b;" class="mb-5 leading-normal">
-                                Lưu thiệp & gửi qua Zalo, Messenger hoặc Mã QR.
+                            <p style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mb-5">
+                                Chia sẻ qua Zalo, QR & Messenger
                             </p>
-                            <div class="overflow-hidden rounded-lg shadow-sm border border-gray-200/60 bg-white group hover:shadow-md transition-all duration-300">
-                                <img src="{{ asset('assets/images/banner/banner-deal.jpg') }}" alt="Tải và gửi thiệp" class="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                            <div class="w-full overflow-hidden">
+                                <img src="{{ asset('assets/images/banner/banner-deal.jpg') }}" alt="Tải và gửi thiệp" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 0;" loading="lazy">
                             </div>
                         </div>
-                        <div style="font-size: 12px; color: #94a3b8; font-weight: 500;" class="mt-6">
+                        <div style="font-size: 11px; color: #9ca3af; font-weight: 400;" class="mt-10">
                             Chia sẻ tiện lợi
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Section Footer Metadata -->
-                <div class="flex justify-between items-center text-xs font-semibold text-gray-400 mt-12 pt-6 border-t border-gray-200/60">
-                    <span>Hệ Thống Thiệp Cưới Trực Tuyến</span>
-                    <span>Miễn Phí & Dễ Dàng</span>
+                <!-- Bottom Metadata -->
+                <div class="flex justify-between items-center text-xs font-normal text-gray-500 mt-16">
+                    <span>Hệ thống thiệp cưới _ Online</span>
+                    <span>Tự động & Miễn phí</span>
                 </div>
             </div>
         </section>
