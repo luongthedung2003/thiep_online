@@ -141,29 +141,34 @@
                         </button>
                     </div>
                     <div class="lg:w-1/5 text-end md:w-1/2 w-3/5">
-                        <div class="flex gap-4 items-center justify-end">
-                            <!-- 1. Wishlist / Heart Button (Soft Green/Rose Bubble) -->
-                            <div class="relative">
-                                <button type="button" title="Mẫu thiệp yêu thích" class="relative inline-flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:scale-110 shadow-sm" style="background-color: #e6f4ea; color: #16a34a;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFavorites" role="button" aria-controls="offcanvasFavorites">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="flex gap-7 items-center justify-end">
+                            <div>
+                                <button type="button" class="text-gray-600 relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFavorites" role="button" aria-controls="offcanvasFavorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart"
+                                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        <path
+                                            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
                                     </svg>
-                                    <span class="absolute -top-1 -right-1 flex items-center justify-center min-w-[20px] h-[20px] px-1 bg-rose-500 text-white font-bold text-[11px] rounded-full border-2 border-white shadow-sm">5</span>
+                                    <span
+                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-rose-500 text-white text-center font-semibold text-sm">
+                                        5
+                                        <span class="invisible">unread messages</span>
+                                    </span>
                                 </button>
                             </div>
-
-                            <!-- 2. Account / User Button (Soft Amber/Yellow Bubble) -->
                             <div class="relative dropdown">
                                 @auth
-                                    <a href="#" class="inline-flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-200 hover:scale-105 shadow-sm dropdown-toggle" style="background-color: #fef3c7; color: #b45309;" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <a href="#" class="text-gray-600 font-semibold flex items-center gap-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
                                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
                                            <path d="M15 19l2 2l4 -4"></path>
                                         </svg>
-                                        <span class="hidden lg:block font-semibold text-xs" style="max-width: 100px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="{{ Auth::user()->name }}">{{ Auth::user()->name }}</span>
+                                        <span class="hidden lg:block" style="max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="{{ Auth::user()->name }}">{{ Auth::user()->name }}</span>
                                     </a>
                                     <ul class="dropdown-menu shadow-lg rounded-xl border-0 mt-2 p-2">
                                         <li>
@@ -172,7 +177,7 @@
                                         <li><hr class="dropdown-divider my-1"></li>
                                         <li>
                                             <a class="dropdown-item py-2 font-medium text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors flex items-center gap-2" href="{{ route('logout') }}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
                                                    <path d="M9 12h12l-3 -3"></path>
@@ -183,8 +188,11 @@
                                         </li>
                                     </ul>
                                 @else
-                                    <a href="/login" title="Tài khoản" class="inline-flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:scale-110 shadow-sm" style="background-color: #fef3c7; color: #b45309;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <a href="/login" class="text-gray-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user"
+                                            width="22" height="22" viewBox="0 0 24 24" stroke-width="2"
+                                            stroke="currentColor" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                                             <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
@@ -192,23 +200,34 @@
                                     </a>
                                 @endauth
                             </div>
-
-                            <!-- 3. Cart Button (Soft Blue/Cyan Bubble) -->
-                            <div class="relative">
-                                <button type="button" title="Giỏ hàng" class="relative inline-flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200 hover:scale-110 shadow-sm" style="background-color: #e0e7ff; color: #2563eb;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" role="button" aria-controls="offcanvasRight">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <div>
+                                <button type="button" class="text-gray-600 relative" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" role="button" aria-controls="offcanvasRight">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-shopping-bag" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+                                        <path
+                                            d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
                                         <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
                                     </svg>
-                                    <span id="cartCount" class="absolute -top-1 -right-1 flex items-center justify-center min-w-[20px] h-[20px] px-1 bg-rose-500 text-white font-bold text-[11px] rounded-full border-2 border-white shadow-sm">0</span>
+                                    <span id="cartCount"
+                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-3 bg-rose-500 text-white text-center font-semibold text-sm">
+                                        0
+                                        <span class="invisible">unread messages</span>
+                                    </span>
                                 </button>
                             </div>
-
                             <div class="lg:hidden leading-none">
                                 <!-- Button -->
-                                <button class="collapsed" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-label="Toggle navigation">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 text-gray-800" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <button class="collapsed" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#navbar-default" aria-controls="navbar-default"
+                                    aria-label="Toggle navigation">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-menu-2 text-gray-800" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                         <path d="M4 6l16 0" />
                                         <path d="M4 12l16 0" />
