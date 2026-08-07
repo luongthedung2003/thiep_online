@@ -20,52 +20,47 @@
                     <div class="swiper-wrapper pb-8">
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-32 py-12 xl:w-1/2 md:w-3/5 text-left">
-                                <span
-                                    class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Ưu Đãi Mùa Cưới Giảm 50%</span>
-                                <div class="my-7 flex flex-col gap-2">
-                                    <h1 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">Thiết Kế Thiệp Cưới Hiện Đại & Tinh Tế
+                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-24 py-12 xl:w-1/2 md:w-3/5 text-left">
+                                <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                                    <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+                                    Ưu Đãi Mùa Cưới Giảm 50%
+                                </span>
+                                <div class="my-5 flex flex-col gap-2">
+                                    <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+                                        Thiết Kế Thiệp Cưới<br /><span style="background: linear-gradient(135deg, #0f172a 0%, #475569 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hiện Đại & Tinh Tế</span>
                                     </h1>
-                                    <p class="text-md font-light">Mang đến những bộ sưu tập thiệp cưới đa dạng, giúp ngày trọng đại của bạn thêm phần hoàn hảo.</p>
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 480px;">
+                                        Mang đến những bộ sưu tập thiệp cưới đa dạng, giúp ngày trọng đại của bạn thêm phần hoàn hảo.
+                                    </p>
                                 </div>
-                                <a href="#!"
-                                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
-                                    Shop Now
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-arrow-right inline-block" width="14"
-                                        height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M5 12l14 0" />
-                                        <path d="M13 18l6 -6" />
-                                        <path d="M13 6l6 6" />
-                                    </svg>
+                                <a href="{{ url('/mau-thiep') }}" style="display:inline-flex; align-items:center; justify-content:space-between; padding:8px 8px 8px 24px; border-radius:9999px; background:rgba(255, 255, 255, 0.9); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(255, 255, 255, 0.8); box-shadow:0 12px 30px -6px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05); font-weight:600; color:#0f172a; font-size:15px; text-decoration:none; transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 18px 36px -6px rgba(0,0,0,0.15), 0 8px 16px -4px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px -6px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05)'">
+                                    <span>Khám phá ngay</span>
+                                    <div style="width:38px; height:38px; border-radius:50%; background:#0f172a; color:white; display:flex; align-items:center; justify-content:center; margin-left:20px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-32 py-12 xl:w-1/2 md:w-3/5 text-left">
-                                <span
-                                    class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Miễn Phí In Ấn & Giao Hàng Toàn Quốc</span>
-                                <div class="my-7 flex flex-col gap-2">
-                                    <h2 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">
-                                        Miễn Phí In Ấn<br />đơn từ<span class="text-rose-500">500 thiệp</span>
+                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-24 py-12 xl:w-1/2 md:w-3/5 text-left">
+                                <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                                    <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+                                    Miễn Phí In Ấn & Giao Hàng Toàn Quốc
+                                </span>
+                                <div class="my-5 flex flex-col gap-2">
+                                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+                                        Miễn Phí In Ấn<br /><span style="color:#e11d48;">Cho Đơn Từ 500 Thiệp</span>
                                     </h2>
-                                    <p class="text-md font-light">Áp dụng cho đơn hàng từ 500 thiệp trở lên trong mùa cưới này.</p>
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 480px;">
+                                        Áp dụng cho tất cả đơn hàng từ 500 thiệp trở lên trong mùa cưới năm nay.
+                                    </p>
                                 </div>
-                                <a href="#!"
-                                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
-                                    Shop Now
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-arrow-right inline-block" width="14"
-                                        height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M5 12l14 0" />
-                                        <path d="M13 18l6 -6" />
-                                        <path d="M13 6l6 6" />
-                                    </svg>
+                                <a href="{{ url('/mau-thiep') }}" style="display:inline-flex; align-items:center; justify-content:space-between; padding:8px 8px 8px 24px; border-radius:9999px; background:rgba(255, 255, 255, 0.9); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(255, 255, 255, 0.8); box-shadow:0 12px 30px -6px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05); font-weight:600; color:#0f172a; font-size:15px; text-decoration:none; transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 18px 36px -6px rgba(0,0,0,0.15), 0 8px 16px -4px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px -6px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05)'">
+                                    <span>Tạo thiệp ngay</span>
+                                    <div style="width:38px; height:38px; border-radius:50%; background:#0f172a; color:white; display:flex; align-items:center; justify-content:center; margin-left:20px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -73,27 +68,24 @@
                         <!-- Add more slides as needed -->
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-32 py-12 xl:w-1/2 md:w-3/5 text-left">
-                                <span
-                                    class="inline-block p-2 text-sm align-baseline leading-none rounded-lg bg-yellow-500 text-gray-900 font-semibold">Phong Cách Mới Nhất</span>
-                                <div class="my-7 flex flex-col gap-2">
-                                    <h2 class="text-gray-900 text-xl lg:text-5xl font-bold leading-tight">
-                                        Bộ Sưu Tập<br />Thiệp Cưới <span class="text-rose-500">Cao Cấp</span>
+                            <div class="w-full px-6 sm:px-12 lg:px-20 lg:py-24 py-12 xl:w-1/2 md:w-3/5 text-left">
+                                <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                                    <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+                                    Phong Cách Mới Nhất 2026
+                                </span>
+                                <div class="my-5 flex flex-col gap-2">
+                                    <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; letter-spacing: -0.035em; color: #0f172a; line-height: 1.15; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+                                        Bộ Sưu Tập<br /><span style="color:#e11d48;">Thiệp Cưới Cao Cấp</span>
                                     </h2>
-                                    <p class="text-md font-light">Tạo ấn tượng khó quên với những mẫu thiệp thiết kế độc quyền.</p>
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: #4b5563; letter-spacing: -0.01em; line-height: 1.6; max-width: 480px;">
+                                        Tạo ấn tượng khó quên với những mẫu thiệp thiết kế độc quyền hiện đại.
+                                    </p>
                                 </div>
-                                <a href="#!"
-                                    class="btn inline-flex items-center gap-x-2 bg-gray-800 text-white border-gray-800 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-900 hover:border-gray-900 active:bg-gray-900 active:border-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
-                                    Khám Phá
-                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-arrow-right inline-block" width="14"
-                                        height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M5 12l14 0" />
-                                        <path d="M13 18l6 -6" />
-                                        <path d="M13 6l6 6" />
-                                    </svg>
+                                <a href="{{ url('/mau-thiep') }}" style="display:inline-flex; align-items:center; justify-content:space-between; padding:8px 8px 8px 24px; border-radius:9999px; background:rgba(255, 255, 255, 0.9); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(255, 255, 255, 0.8); box-shadow:0 12px 30px -6px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05); font-weight:600; color:#0f172a; font-size:15px; text-decoration:none; transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 18px 36px -6px rgba(0,0,0,0.15), 0 8px 16px -4px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px -6px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05)'">
+                                    <span>Xem tất cả mẫu</span>
+                                    <div style="width:38px; height:38px; border-radius:50%; background:#0f172a; color:white; display:flex; align-items:center; justify-content:center; margin-left:20px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                    </div>
                                 </a>
                             </div>
                         </div>
