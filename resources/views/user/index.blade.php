@@ -116,93 +116,103 @@
                     </div>
                 </div>
                 <style>
-                    .cat-pop-card {
+                    .cat-card-item {
                         position: relative;
-                        height: 175px;
-                        border-radius: 26px;
-                        padding: 20px;
+                        width: 100%;
+                        height: 185px;
+                        filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.06));
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        text-decoration: none !important;
+                        display: block;
+                    }
+                    .cat-card-item:hover {
+                        transform: translateY(-6px);
+                        filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.14));
+                    }
+                    .cat-card-svg {
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                    }
+                    .cat-card-content {
+                        position: relative;
+                        z-index: 10;
+                        height: 100%;
+                        padding: 22px 22px 20px 22px;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        overflow: hidden;
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                        text-decoration: none !important;
                     }
-                    .cat-pop-card:hover {
-                        transform: translateY(-6px);
-                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-                    }
-                    .cat-pop-card-grid {
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 45%;
-                        pointer-events: none;
-                        opacity: 0.22;
-                        background-image: linear-gradient(45deg, rgba(255,255,255,0.9) 25%, transparent 25%), 
-                                          linear-gradient(-45deg, rgba(255,255,255,0.9) 25%, transparent 25%), 
-                                          linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.9) 75%), 
-                                          linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.9) 75%);
-                        background-size: 16px 16px;
-                        background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
-                    }
-                    .cat-pop-title {
-                        font-size: 20px;
+                    .cat-card-title {
+                        font-size: 22px;
                         font-weight: 900;
                         color: #111827;
-                        line-height: 1.2;
+                        line-height: 1.15;
+                        letter-spacing: -0.5px;
                         margin: 0;
                     }
-                    .cat-pop-subtitle {
+                    .cat-card-subtitle {
                         font-size: 12px;
                         font-weight: 700;
-                        color: rgba(17, 24, 39, 0.75);
+                        color: rgba(17, 24, 39, 0.65);
                         margin-top: 4px;
                         margin-bottom: 0;
                     }
-                    .cat-pop-btn {
+                    .cat-card-btn {
                         display: inline-flex;
                         align-items: center;
-                        gap: 4px;
-                        padding: 6px 16px;
+                        gap: 6px;
+                        padding: 7px 20px;
                         background-color: #ffffff;
                         color: #111827;
-                        font-size: 12px;
+                        font-size: 13px;
                         font-weight: 900;
                         border-radius: 9999px;
-                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                         transition: all 0.25s ease;
+                        width: fit-content;
                     }
-                    .cat-pop-card:hover .cat-pop-btn {
+                    .cat-card-item:hover .cat-card-btn {
                         background-color: #111827;
                         color: #ffffff;
                         transform: scale(1.05);
                     }
-                    .cat-pop-box {
-                        position: relative;
-                        z-index: 10;
-                        width: 72px;
-                        height: 72px;
-                        background-color: #111827;
-                        border-radius: 20px;
-                        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+                    /* 3D Crate Box & Orbit Graphics */
+                    .cat-3d-graphic {
+                        position: absolute;
+                        right: 8px;
+                        top: 12px;
+                        bottom: 12px;
+                        width: 125px;
+                        z-index: 15;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        color: #ffffff;
-                        transform: rotate(-6deg);
-                        transition: all 0.3s ease;
-                        border: 2px solid rgba(255, 255, 255, 0.25);
+                        pointer-events: none;
                     }
-                    .cat-pop-card:hover .cat-pop-box {
-                        transform: rotate(3deg) scale(1.1);
+                    .cat-crate {
+                        position: relative;
+                        width: 74px;
+                        height: 68px;
+                        background: linear-gradient(145deg, #1e293b, #0f172a);
+                        border-radius: 16px;
+                        transform: rotate(-10deg);
+                        box-shadow: 0 10px 22px rgba(0,0,0,0.3);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid rgba(255, 255, 255, 0.2);
+                        transition: transform 0.3s ease;
                     }
-                    .cat-pop-badge {
+                    .cat-card-item:hover .cat-crate {
+                        transform: rotate(-4deg) scale(1.08);
+                    }
+                    .cat-crate-badge {
                         position: absolute;
-                        top: -10px;
-                        right: -10px;
+                        right: -8px;
+                        bottom: 4px;
                         width: 30px;
                         height: 30px;
                         border-radius: 50%;
@@ -210,11 +220,28 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-size: 13px;
-                        font-weight: bold;
-                        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+                        font-size: 14px;
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
                     }
                 </style>
+
+                <!-- SVG Definitions for Reusable Patterns & ClipPaths -->
+                <svg style="display: none;">
+                    <defs>
+                        <!-- Checkerboard Pattern -->
+                        <pattern id="cat-grid-pattern" width="32" height="32" patternUnits="userSpaceOnUse">
+                            <rect width="16" height="16" fill="rgba(255,255,255,0.35)"/>
+                            <rect x="16" width="16" height="16" fill="transparent"/>
+                            <rect y="16" width="16" height="16" fill="transparent"/>
+                            <rect x="16" y="16" width="16" height="16" fill="rgba(255,255,255,0.35)"/>
+                        </pattern>
+
+                        <!-- Card Speech Bubble Clip Path (viewBox 0 0 320 185) -->
+                        <clipPath id="cat-card-clip" clipPathUnits="userSpaceOnUse">
+                            <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
 
                 <div class="swiper-container swiper" id="swiper-1" data-pagination-type="" data-speed="400"
                     data-space-between="20" data-pagination="false" data-navigation="true" data-autoplay="true"
@@ -223,27 +250,49 @@
                     <div class="swiper-wrapper py-10">
                         <!-- Slide 1: Thiệp Truyền Thống -->
                         <div class="swiper-slide">
-                            <a href="#!" class="cat-pop-card" style="background: linear-gradient(135deg, #d2f872 0%, #bbf156 50%, #9ee538 100%);">
-                                <div class="cat-pop-card-grid"></div>
+                            <a href="#!" class="cat-card-item">
+                                <!-- Card Speech Bubble Background -->
+                                <svg class="cat-card-svg" viewBox="0 0 320 185" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#d2f872"/>
+                                            <stop offset="50%" stop-color="#bbf156"/>
+                                            <stop offset="100%" stop-color="#9ee538"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Base Card Fill -->
+                                    <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z" fill="url(#grad-1)"/>
+                                    <!-- Bottom Checkerboard Grid overlay -->
+                                    <g clip-path="url(#cat-card-clip)">
+                                        <rect x="0" y="115" width="320" height="70" fill="url(#cat-grid-pattern)" opacity="0.6"/>
+                                    </g>
+                                </svg>
 
                                 <!-- Left Content -->
-                                <div style="position: relative; z-index: 10; max-width: 60%;">
-                                    <h3 class="cat-pop-title">Thiệp Truyền Thống</h3>
-                                    <p class="cat-pop-subtitle">Nét Đẹp Đậm Chất Việt</p>
-                                </div>
-                                <div style="position: relative; z-index: 10;">
-                                    <span class="cat-pop-btn">GO <span style="font-size: 10px;">❯</span></span>
+                                <div class="cat-card-content">
+                                    <div style="max-width: 60%;">
+                                        <h3 class="cat-card-title">Thiệp Truyền Thống</h3>
+                                        <p class="cat-card-subtitle">Nét Đẹp Đậm Chất Việt</p>
+                                    </div>
+                                    <div>
+                                        <span class="cat-card-btn">GO <span style="font-size: 11px;">❯</span></span>
+                                    </div>
                                 </div>
 
-                                <!-- Right 3D Graphics -->
-                                <div style="position: absolute; right: 10px; top: 10px; bottom: 10px; width: 110px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="position: absolute; width: 100px; height: 100px; color: rgba(17,24,39,0.25); pointer-events: none;" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="120 40"/>
-                                        <polygon points="90,45 96,55 84,55" fill="currentColor"/>
+                                <!-- Right 3D Crate & Orbit Graphics -->
+                                <div class="cat-3d-graphic">
+                                    <svg style="position: absolute; width: 120px; height: 120px; overflow: visible;" viewBox="0 0 120 120">
+                                        <!-- Sparkles -->
+                                        <line x1="35" y1="20" x2="30" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="48" y1="16" x2="48" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="60" y1="20" x2="65" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <!-- Orbit Arrow -->
+                                        <path d="M 15 65 C 10 25, 110 15, 115 60 C 120 95, 30 105, 20 78" fill="none" stroke="#4d7c0f" stroke-width="3.5" stroke-linecap="round"/>
+                                        <path d="M 30 88 L 18 78 L 28 68" fill="none" stroke="#4d7c0f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <div class="cat-pop-box">
-                                        <i class="ti ti-book text-3xl" style="color: #facc15; font-size: 32px;"></i>
-                                        <div class="cat-pop-badge" style="background-color: #facc15;">😊</div>
+                                    <div class="cat-crate">
+                                        <i class="ti ti-book" style="color: #facc15; font-size: 32px;"></i>
+                                        <div class="cat-crate-badge" style="background: #facc15;">😊</div>
                                     </div>
                                 </div>
                             </a>
@@ -251,24 +300,42 @@
 
                         <!-- Slide 2: Thiệp Tối Giản -->
                         <div class="swiper-slide">
-                            <a href="#!" class="cat-pop-card" style="background: linear-gradient(135deg, #fbb6e6 0%, #f79ee0 50%, #f47ad4 100%);">
-                                <div class="cat-pop-card-grid"></div>
+                            <a href="#!" class="cat-card-item">
+                                <svg class="cat-card-svg" viewBox="0 0 320 185" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#fbb6e6"/>
+                                            <stop offset="50%" stop-color="#f79ee0"/>
+                                            <stop offset="100%" stop-color="#f47ad4"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z" fill="url(#grad-2)"/>
+                                    <g clip-path="url(#cat-card-clip)">
+                                        <rect x="0" y="115" width="320" height="70" fill="url(#cat-grid-pattern)" opacity="0.6"/>
+                                    </g>
+                                </svg>
 
-                                <div style="position: relative; z-index: 10; max-width: 60%;">
-                                    <h3 class="cat-pop-title">Thiệp Tối Giản</h3>
-                                    <p class="cat-pop-subtitle">Tinh Tế & Nhẹ Nhàng</p>
-                                </div>
-                                <div style="position: relative; z-index: 10;">
-                                    <span class="cat-pop-btn">GO <span style="font-size: 10px;">❯</span></span>
+                                <div class="cat-card-content">
+                                    <div style="max-width: 60%;">
+                                        <h3 class="cat-card-title">Thiệp Tối Giản</h3>
+                                        <p class="cat-card-subtitle">Tinh Tế & Nhẹ Nhàng</p>
+                                    </div>
+                                    <div>
+                                        <span class="cat-card-btn">GO <span style="font-size: 11px;">❯</span></span>
+                                    </div>
                                 </div>
 
-                                <div style="position: absolute; right: 10px; top: 10px; bottom: 10px; width: 110px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="position: absolute; width: 100px; height: 100px; color: rgba(17,24,39,0.25); pointer-events: none;" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="100 50"/>
+                                <div class="cat-3d-graphic">
+                                    <svg style="position: absolute; width: 120px; height: 120px; overflow: visible;" viewBox="0 0 120 120">
+                                        <line x1="35" y1="20" x2="30" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="48" y1="16" x2="48" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="60" y1="20" x2="65" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 15 65 C 10 25, 110 15, 115 60 C 120 95, 30 105, 20 78" fill="none" stroke="#be185d" stroke-width="3.5" stroke-linecap="round"/>
+                                        <path d="M 30 88 L 18 78 L 28 68" fill="none" stroke="#be185d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <div class="cat-pop-box">
-                                        <span style="font-size: 24px; font-weight: 900; color: #ffffff;">Aa</span>
-                                        <div class="cat-pop-badge" style="background-color: #10b981; color: #ffffff;">🟢</div>
+                                    <div class="cat-crate">
+                                        <span style="font-size: 26px; font-weight: 900; color: #ffffff;">Aa</span>
+                                        <div class="cat-crate-badge" style="background: #10b981;">🟢</div>
                                     </div>
                                 </div>
                             </a>
@@ -276,24 +343,42 @@
 
                         <!-- Slide 3: Thiệp Hoa Lá -->
                         <div class="swiper-slide">
-                            <a href="#!" class="cat-pop-card" style="background: linear-gradient(135deg, #9cf4ed 0%, #6beae0 50%, #43ded2 100%);">
-                                <div class="cat-pop-card-grid"></div>
+                            <a href="#!" class="cat-card-item">
+                                <svg class="cat-card-svg" viewBox="0 0 320 185" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#9cf4ed"/>
+                                            <stop offset="50%" stop-color="#6beae0"/>
+                                            <stop offset="100%" stop-color="#43ded2"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z" fill="url(#grad-3)"/>
+                                    <g clip-path="url(#cat-card-clip)">
+                                        <rect x="0" y="115" width="320" height="70" fill="url(#cat-grid-pattern)" opacity="0.6"/>
+                                    </g>
+                                </svg>
 
-                                <div style="position: relative; z-index: 10; max-width: 60%;">
-                                    <h3 class="cat-pop-title">Thiệp Hoa Lá</h3>
-                                    <p class="cat-pop-subtitle">Tự Nhiên & Lãng Mạn</p>
-                                </div>
-                                <div style="position: relative; z-index: 10;">
-                                    <span class="cat-pop-btn">GO <span style="font-size: 10px;">❯</span></span>
+                                <div class="cat-card-content">
+                                    <div style="max-width: 60%;">
+                                        <h3 class="cat-card-title">Thiệp Hoa Lá</h3>
+                                        <p class="cat-card-subtitle">Tự Nhiên & Lãng Mạn</p>
+                                    </div>
+                                    <div>
+                                        <span class="cat-card-btn">GO <span style="font-size: 11px;">❯</span></span>
+                                    </div>
                                 </div>
 
-                                <div style="position: absolute; right: 10px; top: 10px; bottom: 10px; width: 110px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="position: absolute; width: 100px; height: 100px; color: rgba(17,24,39,0.25); pointer-events: none;" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="140 20"/>
+                                <div class="cat-3d-graphic">
+                                    <svg style="position: absolute; width: 120px; height: 120px; overflow: visible;" viewBox="0 0 120 120">
+                                        <line x1="35" y1="20" x2="30" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="48" y1="16" x2="48" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="60" y1="20" x2="65" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 15 65 C 10 25, 110 15, 115 60 C 120 95, 30 105, 20 78" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round"/>
+                                        <path d="M 30 88 L 18 78 L 28 68" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <div class="cat-pop-box">
-                                        <i class="ti ti-flower text-3xl" style="color: #fb7185; font-size: 32px;"></i>
-                                        <div class="cat-pop-badge" style="background-color: #fb7185;">🌸</div>
+                                    <div class="cat-crate">
+                                        <i class="ti ti-flower" style="color: #fb7185; font-size: 32px;"></i>
+                                        <div class="cat-crate-badge" style="background: #fb7185;">🌸</div>
                                     </div>
                                 </div>
                             </a>
@@ -301,24 +386,42 @@
 
                         <!-- Slide 4: Thiệp Sang Trọng -->
                         <div class="swiper-slide">
-                            <a href="#!" class="cat-pop-card" style="background: linear-gradient(135deg, #ffe082 0%, #ffd54f 50%, #ffca28 100%);">
-                                <div class="cat-pop-card-grid"></div>
+                            <a href="#!" class="cat-card-item">
+                                <svg class="cat-card-svg" viewBox="0 0 320 185" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="grad-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#ffe082"/>
+                                            <stop offset="50%" stop-color="#ffd54f"/>
+                                            <stop offset="100%" stop-color="#ffca28"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z" fill="url(#grad-4)"/>
+                                    <g clip-path="url(#cat-card-clip)">
+                                        <rect x="0" y="115" width="320" height="70" fill="url(#cat-grid-pattern)" opacity="0.6"/>
+                                    </g>
+                                </svg>
 
-                                <div style="position: relative; z-index: 10; max-width: 60%;">
-                                    <h3 class="cat-pop-title">Thiệp Sang Trọng</h3>
-                                    <p class="cat-pop-subtitle">Đẳng Cấp & Kiêu Sa</p>
-                                </div>
-                                <div style="position: relative; z-index: 10;">
-                                    <span class="cat-pop-btn">GO <span style="font-size: 10px;">❯</span></span>
+                                <div class="cat-card-content">
+                                    <div style="max-width: 60%;">
+                                        <h3 class="cat-card-title">Thiệp Sang Trọng</h3>
+                                        <p class="cat-card-subtitle">Đẳng Cấp & Kiêu Sa</p>
+                                    </div>
+                                    <div>
+                                        <span class="cat-card-btn">GO <span style="font-size: 11px;">❯</span></span>
+                                    </div>
                                 </div>
 
-                                <div style="position: absolute; right: 10px; top: 10px; bottom: 10px; width: 110px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="position: absolute; width: 100px; height: 100px; color: rgba(17,24,39,0.25); pointer-events: none;" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="110 30"/>
+                                <div class="cat-3d-graphic">
+                                    <svg style="position: absolute; width: 120px; height: 120px; overflow: visible;" viewBox="0 0 120 120">
+                                        <line x1="35" y1="20" x2="30" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="48" y1="16" x2="48" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="60" y1="20" x2="65" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 15 65 C 10 25, 110 15, 115 60 C 120 95, 30 105, 20 78" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
+                                        <path d="M 30 88 L 18 78 L 28 68" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <div class="cat-pop-box">
-                                        <i class="ti ti-diamond text-3xl" style="color: #fcd34d; font-size: 32px;"></i>
-                                        <div class="cat-pop-badge" style="background-color: #fbbf24;">💎</div>
+                                    <div class="cat-crate">
+                                        <i class="ti ti-diamond" style="color: #fcd34d; font-size: 32px;"></i>
+                                        <div class="cat-crate-badge" style="background: #fbbf24;">💎</div>
                                     </div>
                                 </div>
                             </a>
@@ -326,24 +429,42 @@
 
                         <!-- Slide 5: Thiệp Vintage -->
                         <div class="swiper-slide">
-                            <a href="#!" class="cat-pop-card" style="background: linear-gradient(135deg, #ffab91 0%, #ff8a65 50%, #ff7043 100%);">
-                                <div class="cat-pop-card-grid"></div>
+                            <a href="#!" class="cat-card-item">
+                                <svg class="cat-card-svg" viewBox="0 0 320 185" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="grad-5" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#ffab91"/>
+                                            <stop offset="50%" stop-color="#ff8a65"/>
+                                            <stop offset="100%" stop-color="#ff7043"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z" fill="url(#grad-5)"/>
+                                    <g clip-path="url(#cat-card-clip)">
+                                        <rect x="0" y="115" width="320" height="70" fill="url(#cat-grid-pattern)" opacity="0.6"/>
+                                    </g>
+                                </svg>
 
-                                <div style="position: relative; z-index: 10; max-width: 60%;">
-                                    <h3 class="cat-pop-title">Thiệp Vintage</h3>
-                                    <p class="cat-pop-subtitle">Hoài Niệm & Ấm Cúng</p>
-                                </div>
-                                <div style="position: relative; z-index: 10;">
-                                    <span class="cat-pop-btn">GO <span style="font-size: 10px;">❯</span></span>
+                                <div class="cat-card-content">
+                                    <div style="max-width: 60%;">
+                                        <h3 class="cat-card-title">Thiệp Vintage</h3>
+                                        <p class="cat-card-subtitle">Hoài Niệm & Ấm Cúng</p>
+                                    </div>
+                                    <div>
+                                        <span class="cat-card-btn">GO <span style="font-size: 11px;">❯</span></span>
+                                    </div>
                                 </div>
 
-                                <div style="position: absolute; right: 10px; top: 10px; bottom: 10px; width: 110px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="position: absolute; width: 100px; height: 100px; color: rgba(17,24,39,0.25); pointer-events: none;" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="130 30"/>
+                                <div class="cat-3d-graphic">
+                                    <svg style="position: absolute; width: 120px; height: 120px; overflow: visible;" viewBox="0 0 120 120">
+                                        <line x1="35" y1="20" x2="30" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="48" y1="16" x2="48" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="60" y1="20" x2="65" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 15 65 C 10 25, 110 15, 115 60 C 120 95, 30 105, 20 78" fill="none" stroke="#c2410c" stroke-width="3.5" stroke-linecap="round"/>
+                                        <path d="M 30 88 L 18 78 L 28 68" fill="none" stroke="#c2410c" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <div class="cat-pop-box">
-                                        <i class="ti ti-camera text-3xl" style="color: #fdba74; font-size: 32px;"></i>
-                                        <div class="cat-pop-badge" style="background-color: #fb923c;">📷</div>
+                                    <div class="cat-crate">
+                                        <i class="ti ti-camera" style="color: #fdba74; font-size: 32px;"></i>
+                                        <div class="cat-crate-badge" style="background: #fb923c;">📷</div>
                                     </div>
                                 </div>
                             </a>
@@ -351,24 +472,42 @@
 
                         <!-- Slide 6: Thiệp Acrylic -->
                         <div class="swiper-slide">
-                            <a href="#!" class="cat-pop-card" style="background: linear-gradient(135deg, #d1c4e9 0%, #b39ddb 50%, #9575cd 100%);">
-                                <div class="cat-pop-card-grid"></div>
+                            <a href="#!" class="cat-card-item">
+                                <svg class="cat-card-svg" viewBox="0 0 320 185" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="grad-6" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#d1c4e9"/>
+                                            <stop offset="50%" stop-color="#b39ddb"/>
+                                            <stop offset="100%" stop-color="#9575cd"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M 24,18 L 180,18 C 190,18 198,4 212,3 C 222,3 230,12 238,18 L 296,18 A 24,24 0 0,1 320,42 L 320,161 A 24,24 0 0,1 296,185 L 24,185 A 24,24 0 0,1 0,161 L 0,42 A 24,24 0 0,1 24,18 Z" fill="url(#grad-6)"/>
+                                    <g clip-path="url(#cat-card-clip)">
+                                        <rect x="0" y="115" width="320" height="70" fill="url(#cat-grid-pattern)" opacity="0.6"/>
+                                    </g>
+                                </svg>
 
-                                <div style="position: relative; z-index: 10; max-width: 60%;">
-                                    <h3 class="cat-pop-title">Thiệp Acrylic</h3>
-                                    <p class="cat-pop-subtitle">Trong Suốt & Hiện Đại</p>
-                                </div>
-                                <div style="position: relative; z-index: 10;">
-                                    <span class="cat-pop-btn">GO <span style="font-size: 10px;">❯</span></span>
+                                <div class="cat-card-content">
+                                    <div style="max-width: 60%;">
+                                        <h3 class="cat-card-title">Thiệp Acrylic</h3>
+                                        <p class="cat-card-subtitle">Trong Suốt & Hiện Đại</p>
+                                    </div>
+                                    <div>
+                                        <span class="cat-card-btn">GO <span style="font-size: 11px;">❯</span></span>
+                                    </div>
                                 </div>
 
-                                <div style="position: absolute; right: 10px; top: 10px; bottom: 10px; width: 110px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="position: absolute; width: 100px; height: 100px; color: rgba(17,24,39,0.25); pointer-events: none;" viewBox="0 0 100 100">
-                                        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="80 60"/>
+                                <div class="cat-3d-graphic">
+                                    <svg style="position: absolute; width: 120px; height: 120px; overflow: visible;" viewBox="0 0 120 120">
+                                        <line x1="35" y1="20" x2="30" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="48" y1="16" x2="48" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="60" y1="20" x2="65" y2="10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 15 65 C 10 25, 110 15, 115 60 C 120 95, 30 105, 20 78" fill="none" stroke="#6b21a8" stroke-width="3.5" stroke-linecap="round"/>
+                                        <path d="M 30 88 L 18 78 L 28 68" fill="none" stroke="#6b21a8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    <div class="cat-pop-box">
-                                        <i class="ti ti-box-transparent text-3xl" style="color: #d8b4fe; font-size: 32px;"></i>
-                                        <div class="cat-pop-badge" style="background-color: #c084fc;">✨</div>
+                                    <div class="cat-crate">
+                                        <i class="ti ti-box-transparent" style="color: #d8b4fe; font-size: 32px;"></i>
+                                        <div class="cat-crate-badge" style="background: #c084fc;">✨</div>
                                     </div>
                                 </div>
                             </a>
