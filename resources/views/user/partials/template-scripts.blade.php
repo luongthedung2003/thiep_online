@@ -107,6 +107,15 @@ document.addEventListener('DOMContentLoaded', function() {
             var qvCategory = document.getElementById('qv-category');
             if(qvCode) qvCode.textContent = code;
             if(qvCategory) qvCategory.textContent = category;
+
+            var qvCartBtn = document.getElementById('qvCartBtn');
+            if(qvCartBtn) {
+                qvCartBtn.onclick = function() {
+                    if (typeof addToCart === 'function') {
+                        addToCart(id, name, 0, image, 1);
+                    }
+                };
+            }
         });
     }
 });

@@ -232,13 +232,15 @@
 										</div>
 										<div class="flex gap-2">
 											<!-- btn -->
-											<a
-												href="#"
+											<button
+												type="button"
+												id="qvCartBtn"
+												title="Thêm vào giỏ hàng"
 												class="mr-1 btn inline-flex items-center gap-x-2 px-0 h-10 w-10 justify-center bg-white text-gray-800 border-gray-300 border disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-700 hover:border-gray-700 active:bg-gray-700 active:border-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300"
 											>
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
-													class="icon icon-tabler icon-tabler-arrows-exchange"
+													class="icon icon-tabler icon-tabler-shopping-bag"
 													width="20"
 													height="20"
 													viewBox="0 0 24 24"
@@ -249,10 +251,10 @@
 													stroke-linejoin="round"
 												>
 													<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-													<path d="M7 10h14l-4 -4"></path>
-													<path d="M17 14h-14l4 4"></path>
+													<path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"></path>
+													<path d="M9 11v-5a3 3 0 0 1 6 0v5"></path>
 												</svg>
-											</a>
+											</button>
 											<a
 												href="#"
 												class="btn inline-flex items-center gap-x-2 px-0 h-10 w-10 justify-center bg-white text-gray-800 border-gray-300 border disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-700 hover:border-gray-700 active:bg-gray-700 active:border-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300"
