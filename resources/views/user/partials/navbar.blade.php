@@ -213,10 +213,7 @@
                                         <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
                                     </svg>
                                     <span id="cartCount"
-                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-3 bg-rose-500 text-white text-center font-semibold text-sm">
-                                        0
-                                        <span class="invisible">unread messages</span>
-                                    </span>
+                                        class="absolute top-0 -mt-1 left-full rounded-full h-5 w-5 -ml-2 bg-rose-500 text-white flex items-center justify-center font-semibold text-xs leading-none">0</span>
                                 </button>
                             </div>
                             <div class="lg:hidden leading-none">
@@ -980,7 +977,7 @@ function openSocialModal(key) {
         const badge = document.getElementById('cartCount');
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         if (badge) {
-            badge.childNodes[0].nodeValue = totalItems;
+            badge.textContent = totalItems;
         }
 
         // Render items inside offcanvasRight
