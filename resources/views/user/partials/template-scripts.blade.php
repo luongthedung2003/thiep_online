@@ -219,8 +219,8 @@ setTimeout(initHoverScroll, 700);
     overflow: visible !important;
 }
 .showcase-3d-slide {
-    width: 250px !important;
-    height: 490px !important;
+    width: 215px !important;
+    height: 420px !important;
     transition: all 0.35s ease;
 }
 @media (min-width: 768px) {
@@ -234,7 +234,7 @@ setTimeout(initHoverScroll, 700);
     height: 100%;
     background: #ffffff;
     border-radius: 18px;
-    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
 }
@@ -334,8 +334,12 @@ setTimeout(initHoverScroll, 700);
     background: #ffffff;
     transform: translateY(-50%) scale(1.1);
 }
-.showcase-prev-btn { left: 20px; }
-.showcase-next-btn { right: 20px; }
+.showcase-prev-btn { left: 10px; }
+.showcase-next-btn { right: 10px; }
+@media (min-width: 768px) {
+    .showcase-prev-btn { left: 20px; }
+    .showcase-next-btn { right: 20px; }
+}
 
 /* Swiper Pagination Bullets */
 .showcase-pagination {
@@ -345,11 +349,11 @@ setTimeout(initHoverScroll, 700);
     align-items: center;
     justify-content: center;
     gap: 6px;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 .showcase-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     background: #94a3b8;
     opacity: 0.6;
     border-radius: 50%;
@@ -357,11 +361,34 @@ setTimeout(initHoverScroll, 700);
     margin: 0 !important;
 }
 .showcase-pagination .swiper-pagination-bullet-active {
-    width: 28px;
-    height: 8px;
+    width: 26px;
+    height: 7px;
     border-radius: 4px;
-    background: #ec4899;
+    background: #ff0066;
     opacity: 1;
+}
+
+/* Showcase CTA Button */
+.showcase-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ff0066;
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    box-shadow: 0 8px 20px rgba(255, 0, 102, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+.showcase-cta-btn:hover {
+    background: #e6005c;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(255, 0, 102, 0.45);
+    color: #ffffff !important;
 }
 </style>
 @endverbatim
