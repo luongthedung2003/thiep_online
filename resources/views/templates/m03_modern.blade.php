@@ -14,19 +14,137 @@
 .mw-loader {
     position: fixed; top: 0; left: 0;
     width: 100%; height: 100%;
-    background: #000;
-    display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(ellipse at center, #1a0533 0%, #0a0014 50%, #000000 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
     z-index: 9999;
-    transition: opacity 1s ease;
+    transition: opacity 0.8s ease;
+    overflow: hidden;
 }
 .mw-loader.hidden { opacity: 0; pointer-events: none; }
+
+/* Sparkle orbit */
+.mw-loader-orbit {
+    position: relative;
+    width: 110px; height: 110px;
+    margin-bottom: 2rem;
+}
+.mw-loader-orbit-ring {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+    border-top-color: #c084fc;
+    border-right-color: #f0abfc;
+    animation: mwSpin 1.4s linear infinite;
+}
+.mw-loader-orbit-ring:nth-child(2) {
+    inset: 12px;
+    border-top-color: #e879f9;
+    border-right-color: transparent;
+    border-left-color: #a855f7;
+    animation-duration: 2s;
+    animation-direction: reverse;
+}
+@keyframes mwSpin { to { transform: rotate(360deg); } }
+
+/* Center gem */
+.mw-loader-gem {
+    position: absolute;
+    inset: 0; margin: auto;
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+}
+.mw-loader-gem svg {
+    width: 38px; height: 38px;
+    filter: drop-shadow(0 0 10px #c084fc99);
+    animation: mwGemPulse 2s ease-in-out infinite;
+}
+@keyframes mwGemPulse {
+    0%,100% { transform: scale(1); filter: drop-shadow(0 0 8px #c084fc88); }
+    50%      { transform: scale(1.08); filter: drop-shadow(0 0 18px #e879f9cc); }
+}
+
+/* Sparkle dots */
+.mw-sparkle {
+    position: absolute;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #f0abfc;
+    animation: mwSparkle 1.8s ease-in-out infinite;
+}
+.mw-sparkle:nth-child(1) { top: 5px; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.mw-sparkle:nth-child(2) { bottom: 5px; left: 50%; transform: translateX(-50%); animation-delay: 0.6s; }
+.mw-sparkle:nth-child(3) { left: 5px; top: 50%; transform: translateY(-50%); animation-delay: 0.3s; }
+.mw-sparkle:nth-child(4) { right: 5px; top: 50%; transform: translateY(-50%); animation-delay: 0.9s; }
+@keyframes mwSparkle {
+    0%,100% { opacity: 0.2; transform: translateX(-50%) scale(0.6); }
+    50%      { opacity: 1; transform: translateX(-50%) scale(1.3); }
+}
+
+/* Loader text */
 .mw-loader-text {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem; font-weight: 300;
-    letter-spacing: 3px;
-    animation: mw-pulse 2s infinite;
+    font-size: 1.5rem; font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #9333ea, #e879f9, #c084fc, #a855f7, #9333ea);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: mwTextShimmer 2.5s linear infinite;
+    margin-bottom: 0.5rem;
 }
-@keyframes mw-pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+@keyframes mwTextShimmer {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+/* Subtitle */
+.mw-loader-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    color: #c084fc;
+    letter-spacing: 2.5px;
+    opacity: 0.6;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* Progress bar */
+.mw-loader-bar {
+    width: 140px; height: 2px;
+    background: rgba(192,132,252,0.15);
+    border-radius: 99px;
+    overflow: hidden;
+}
+.mw-loader-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #7c3aed, #e879f9, #c084fc);
+    animation: mwBarFill 0.9s ease-out forwards;
+}
+@keyframes mwBarFill {
+    0%   { width: 0%; }
+    70%  { width: 88%; }
+    100% { width: 100%; }
+}
+
+/* Floating dust */
+.mw-dust {
+    position: absolute;
+    width: 2px; height: 2px;
+    border-radius: 50%;
+    background: #c084fc;
+    opacity: 0;
+    animation: mwDust 5s ease-in infinite;
+}
+@keyframes mwDust {
+    0%   { opacity: 0; transform: translateY(100vh) scale(0.5); }
+    20%  { opacity: 0.6; }
+    80%  { opacity: 0.3; }
+    100% { opacity: 0; transform: translateY(-10vh) scale(1.2); }
+}
 
 /* ── Floating dots ── */
 .mw-floating-dot {
@@ -231,7 +349,39 @@
 
     {{-- Loading --}}
     <div class="mw-loader" id="mw-loader">
-        <div class="mw-loader-text">LOADING</div>
+        <!-- Floating dust particles -->
+        <div class="mw-dust" style="left:15%;animation-delay:0s;"></div>
+        <div class="mw-dust" style="left:30%;animation-delay:1.2s;"></div>
+        <div class="mw-dust" style="left:55%;animation-delay:0.6s;"></div>
+        <div class="mw-dust" style="left:70%;animation-delay:2s;"></div>
+        <div class="mw-dust" style="left:85%;animation-delay:3s;"></div>
+
+        <!-- Orbit spinner with gem center -->
+        <div class="mw-loader-orbit">
+            <div class="mw-loader-orbit-ring"></div>
+            <div class="mw-loader-orbit-ring"></div>
+            <div class="mw-sparkle"></div>
+            <div class="mw-sparkle"></div>
+            <div class="mw-sparkle"></div>
+            <div class="mw-sparkle"></div>
+            <div class="mw-loader-gem">
+                <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 34S4 25 4 13.5C4 8.3 8.3 4 13.5 4c3.1 0 5.8 1.5 7.5 3.9C22.7 5.5 25.4 4 28.5 4 33.7 4 38 8.3 38 13.5 38 25 19 34 19 34Z"
+                          stroke="url(#mwHG)" stroke-width="1.5" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="mwHG" x1="4" y1="4" x2="38" y2="34" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#c084fc"/>
+                            <stop offset="0.5" stop-color="#e879f9"/>
+                            <stop offset="1" stop-color="#7c3aed"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <div class="mw-loader-text">Wedding</div>
+        <div class="mw-loader-sub">Đang tải thiệp cưới...</div>
+        <div class="mw-loader-bar"><div class="mw-loader-bar-fill"></div></div>
     </div>
 
     {{-- Floating dots --}}
@@ -389,7 +539,7 @@
     setTimeout(function(){
         const l = document.getElementById('mw-loader');
         if(l) l.classList.add('hidden');
-    }, 2500);
+    }, 800);
 
     // Scroll animation
     const obs = new IntersectionObserver(function(entries){
