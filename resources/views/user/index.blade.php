@@ -2,6 +2,8 @@
 
 @section('content')
 
+<link rel="preload" as="image" href="{{asset('assets/images/banner/banner_4.webp')}}">
+
 @verbatim
 <style>
     .custom-banner-slide { height: 350px; }
@@ -19,7 +21,7 @@
                     data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 1}}'>
                     <div class="swiper-wrapper pb-8">
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_4.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
                             <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:py-16 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
@@ -42,7 +44,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_5.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
                             <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:py-16 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
@@ -67,7 +69,7 @@
 
                         <!-- Add more slides as needed -->
                         <div class="swiper-slide custom-banner-slide"
-                            style="background: url({{asset('assets/images/banner/banner_3.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
+                            style="background: url({{asset('assets/images/banner/banner_6.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
                             <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:pt-56 lg:pb-12 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
