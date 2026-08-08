@@ -35,14 +35,29 @@ window.addEventListener('popstate', function(event) {
         actualCloseModal();
     }
 });
-</script>
 
-<script>
+function openQuickView(btn) {
+    if (btn) window._lastQuickViewTrigger = btn;
+    var modalEl = document.getElementById('quickViewModal');
+    if (!modalEl) return;
+    var modal = (window.bootstrap && window.bootstrap.Modal) 
+        ? (bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl)) 
+        : null;
+    if (modal) {
+        modal.show(btn);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var quickViewModal = document.getElementById('quickViewModal');
     if(quickViewModal) {
         quickViewModal.addEventListener('show.bs.modal', function (event) {
-            var button = event.relatedTarget;
+            var button = event.relatedTarget || window._lastQuickViewTrigger;
+            if (button && button.closest) {
+                var trigger = button.closest('[data-name]') || button;
+                if (trigger) button = trigger;
+            }
+            if (!button || !button.getAttribute('data-id')) return;
             var name = button.getAttribute('data-name');
             var category = button.getAttribute('data-category');
             var image = button.getAttribute('data-image');
@@ -114,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (typeof addToCart === 'function') {
                         addToCart(id, name, 0, image, 1, qvCartBtn);
                     }
+                    var bsModal = (window.bootstrap && bootstrap.Modal) ? (bootstrap.Modal.getInstance(quickViewModal) || new bootstrap.Modal(quickViewModal)) : null;
+                    if (bsModal) bsModal.hide();
                 };
             }
 
@@ -123,6 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (typeof addToWishlist === 'function') {
                         addToWishlist(id, name, 0, image, qvFavBtn);
                     }
+                    var bsModal = (window.bootstrap && bootstrap.Modal) ? (bootstrap.Modal.getInstance(quickViewModal) || new bootstrap.Modal(quickViewModal)) : null;
+                    if (bsModal) bsModal.hide();
                 };
             }
         });
@@ -147,13 +166,20 @@ setTimeout(resizeIframes, 600);
 
 @verbatim
 <style>
-.preview-container:hover .card-gradient-overlay {
-    padding-top: 80px !important;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 75%, transparent 100%) !important;
-}
-.preview-container:hover .card-product-action {
-    opacity: 1 !important;
-    visibility: visible !important;
+@media (min-width: 768px) {
+    .preview-container .card-gradient-overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease, padding 0.3s ease !important;
+    }
+    .preview-container:hover .card-gradient-overlay {
+        opacity: 1 !important;
+        padding-top: 80px !important;
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 75%, transparent 100%) !important;
+    }
+    .preview-container:hover .card-product-action {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
 }
 .hover-bg-green:hover {
     background: #ff0066 !important;
@@ -207,7 +233,7 @@ function initHoverScroll() {
             const scale = container.clientWidth / 480;
             const visibleTemplateH = container.clientHeight / scale;
             const maxScroll = Math.max(0, IFRAME_H - visibleTemplateH);
-            wrap.style.transition = 'transform 7s linear';
+            wrap.style.transition = 'transform 3s linear';
             wrap.style.transform = `scale(${scale}) translateY(-${maxScroll}px)`;
         });
 

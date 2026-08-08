@@ -64,19 +64,42 @@
     <script src="{{ asset('assets/') }}/js/vendors/swiper.js"></script>
     <script src="{{ asset('assets/') }}/js/vendors/countdown.js"></script>
     <script src="{{ asset('assets/') }}/js/vendors/increment-value.js"></script>
+    @include('user.partials.template-scripts')
     <script>
+        function adjustHeaderPadding() {
+            var header = document.getElementById("main-header");
+            if (header && !header.classList.contains("header-scrolled")) {
+                document.body.style.paddingTop = header.offsetHeight + "px";
+            }
+        }
+        function handleHeaderScroll() {
+            var header = document.getElementById("main-header");
+            if (header) {
+                if (window.scrollY > 30) {
+                    header.classList.add("header-scrolled");
+                } else {
+                    header.classList.remove("header-scrolled");
+                }
+            }
+        }
+        window.addEventListener("scroll", handleHeaderScroll);
+        document.addEventListener('show.bs.offcanvas', function () {
+            var header = document.getElementById("main-header");
+            if (header) {
+                header.classList.add("offcanvas-active");
+            }
+        });
+        document.addEventListener('hidden.bs.offcanvas', function () {
+            var header = document.getElementById("main-header");
+            if (header) {
+                header.classList.remove("offcanvas-active");
+            }
+        });
         document.addEventListener("DOMContentLoaded", function() {
-            var header = document.getElementById("main-header");
-            if (header) {
-                document.body.style.paddingTop = header.offsetHeight + "px";
-            }
+            adjustHeaderPadding();
+            handleHeaderScroll();
         });
-        window.addEventListener("resize", function() {
-            var header = document.getElementById("main-header");
-            if (header) {
-                document.body.style.paddingTop = header.offsetHeight + "px";
-            }
-        });
+        window.addEventListener("resize", adjustHeaderPadding);
     </script>
     @yield('scripts')
 </body>

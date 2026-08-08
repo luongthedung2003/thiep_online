@@ -1,7 +1,56 @@
-<header id="main-header" style="position: fixed; top: 0; width: 100%; z-index: 1020; background-color: #ffffff; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+<style>
+    #main-header-bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        pointer-events: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    #top-notification-bar {
+        max-height: 50px;
+        opacity: 1;
+        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, padding 0.35s ease !important;
+        overflow: hidden;
+    }
+    #main-header-middle {
+        transition: padding 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    #main-header.header-scrolled #top-notification-bar {
+        max-height: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    #main-header.header-scrolled #main-header-middle {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    #main-header.header-scrolled #main-header-bg {
+        background: rgba(255, 255, 255, 0.88) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    }
+    .offcanvas {
+        background-color: #ffffff !important;
+        z-index: 1060 !important;
+    }
+    .offcanvas-backdrop {
+        z-index: 1040 !important;
+    }
+    #main-header.offcanvas-active {
+        z-index: 1050 !important;
+    }
+</style>
+<header id="main-header" style="position: fixed; top: 0; width: 100%; z-index: 1020;">
+    <div id="main-header-bg"></div>
     <!-- navbar -->
-    <div class="border-b">
-        <div class="bg-gray-100 py-1">
+    <div class="border-b border-gray-200/50">
+        <div id="top-notification-bar" class="py-1" style="background: rgba(243, 244, 246, 0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
             <div class="container">
                 <div class="flex flex-wrap">
                     <div class="md:w-1/2 w-full text-center md:text-left"><span>Chuyên cung cấp thiệp Online</span>
@@ -90,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="pt-5">
+        <div id="main-header-middle" class="pt-5">
             <div class="container">
                 <div class="flex flex-wrap w-full items-center justify-between">
                     <div class="lg:w-1/6 md:w-1/2 w-2/5">

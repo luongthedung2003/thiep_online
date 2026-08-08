@@ -25,6 +25,65 @@
         line-height: 2.25rem;
     }
 }
+
+/* ── Bottom Sheet on Mobile ── */
+@media (max-width: 767px) {
+    /* Override Bootstrap modal wrapper when open */
+    #quickViewModal.show {
+        padding: 0 !important;
+        align-items: flex-end !important;
+        display: flex !important;
+    }
+    #quickViewModal .modal-dialog {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        min-height: unset !important;
+        transform: translateY(100%) !important;
+        transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1) !important;
+        align-self: flex-end !important;
+    }
+    #quickViewModal.show .modal-dialog {
+        transform: translateY(0) !important;
+    }
+    #quickViewModal.fade:not(.show) .modal-dialog {
+        transform: translateY(100%) !important;
+    }
+    #quickViewModal .modal-content {
+        border-radius: 20px 20px 0 0 !important;
+        border: none !important;
+        max-height: 85vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: 0 -4px 30px rgba(0,0,0,0.15) !important;
+    }
+    /* Drag handle */
+    #quickViewModal .modal-content::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: #d1d5db;
+        border-radius: 99px;
+        margin: 12px auto 0;
+        flex-shrink: 0;
+    }
+    #quickViewModal .modal-body {
+        padding: 8px 16px 32px !important;
+    }
+    /* Hide iframe preview on mobile */
+    #quickViewLeft {
+        display: none !important;
+    }
+    #quickViewRight {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+}
 </style>
 <!-- Modal -->
 <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
@@ -169,7 +228,7 @@
 												></path>
 											</svg>
 										</small>
-										<a href="#" class="text-rose-500">(30 reviews)</a>
+										<a href="javascript:void(0)" class="text-rose-500">(30 reviews)</a>
 									</div>
 									<div class="text-md">
 										<span class="text-gray-900 font-semibold">$18</span>
@@ -310,7 +369,7 @@
 									<div class="relative">
 										<a
 											class="dropdown-toggle btn inline-flex items-center gap-x-2 bg-white text-gray-800 border-gray-300 border disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-gray-700 hover:border-gray-700 active:bg-gray-700 active:border-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300"
-											href="#"
+											href="javascript:void(0)"
 											role="button"
 											data-bs-toggle="dropdown"
 											aria-expanded="false"
@@ -320,7 +379,7 @@
 
 										<ul class="dropdown-menu">
 											<li>
-												<a class="dropdown-item" href="#">
+												<a class="dropdown-item" href="javascript:void(0)">
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
 														class="icon icon-tabler icon-tabler-brand-facebook inline-block"
@@ -340,7 +399,7 @@
 												</a>
 											</li>
 											<li>
-												<a class="dropdown-item" href="#">
+												<a class="dropdown-item" href="javascript:void(0)">
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
 														class="icon icon-tabler icon-tabler-brand-x"
@@ -361,7 +420,7 @@
 												</a>
 											</li>
 											<li>
-												<a class="dropdown-item" href="#">
+												<a class="dropdown-item" href="javascript:void(0)">
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
 														class="icon icon-tabler icon-tabler-brand-instagram"

@@ -20,7 +20,7 @@
                     <div class="swiper-wrapper pb-8">
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_1.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:pt-56 lg:pb-12 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
+                            <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:py-16 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
                                     Ưu Đãi Mùa Cưới Giảm 50%
@@ -43,7 +43,7 @@
                         </div>
                         <div class="swiper-slide custom-banner-slide"
                             style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; border-radius: 0; background-position: center">
-                            <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:pt-56 lg:pb-12 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
+                            <div class="w-full h-full flex flex-col items-center justify-center py-12 lg:py-16 px-6 sm:px-12 lg:px-20 text-center max-w-4xl mx-auto">
                                 <span style="display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border-radius:9999px; background:rgba(255, 255, 255, 0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(229, 231, 235, 0.8); font-size:13px; font-weight:500; color:#374151; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
                                     <span style="width:7px; height:7px; border-radius:50%; background:#10b981; display:inline-block;"></span>
                                     Miễn Phí In Ấn & Giao Hàng Toàn Quốc
@@ -589,10 +589,6 @@
                                     <div class="showcase-iframe-wrap">
                                         <iframe src="{{ url('/mau-thiep/'.$tpl->id.'/preview') }}" scrolling="no" loading="lazy" class="showcase-iframe"></iframe>
                                     </div>
-                                    <div class="showcase-hover-overlay">
-                                        <a href="javascript:void(0)" onclick="openDemo('{{ url('/mau-thiep/'.$tpl->id.'/preview') }}')" class="showcase-btn-demo">Xem full</a>
-                                        <a href="{{ url('/mau-thiep/'.$tpl->id.'/edit') }}" class="showcase-btn-select">+ Chọn mẫu</a>
-                                    </div>
                                 </div>
                             </div>
                             @endforeach
@@ -643,22 +639,9 @@
                     <div class="relative rounded-lg break-words border border-gray-200 overflow-hidden" style="background:transparent;">
                         <!-- Full card iframe preview with glassmorphism info overlay -->
                         <div class="preview-container" style="position:relative; overflow:hidden; aspect-ratio:1/2; background:#f9f5ef; border-radius:8px;">
-                            <div style="position:absolute; top:8px; left:8px; z-index:30;">
-                                <span style="display:inline-block; padding:2px 6px; font-weight:600; font-size:12px; border-radius:4px; background:#dc2626; color:white;">Sale</span>
-                            </div>
+
                             <div class="preview-scale-wrap" style="position:absolute; top:0; left:0; width:480px; height:2000px; transform-origin:0 0; transform:scale(0.5);">
                                 <iframe src="{{ url('/mau-thiep/'.$item->id.'/preview') }}" style="width:100%; height:100%; border:none; pointer-events:none; overflow:hidden;" scrolling="no" loading="lazy" tabindex="-1"></iframe>
-                            </div>
-                            <div class="card-product-action" style="position:absolute; top:40%; left:50%; transform:translate(-50%,-50%); z-index:25; opacity:0; visibility:hidden; display:flex; gap:8px; transition: all 0.3s ease;">
-                                <button type="button" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-name="{{ $item->name }}" data-category="{{ $item->category->name ?? 'Thiep Mau' }}" data-image="{{ asset($item->thumbnail) }}" data-id="{{ $item->id }}" data-code="MT-{{ str_pad($item->id, 5, '0', STR_PAD_LEFT) }}" title="Quick View">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>
-                                </button>
-                                <button type="button" onclick="addToWishlist('{{ $item->id }}', '{{ addslashes($item->name) }}', 0, '{{ asset($item->thumbnail) }}')" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;color:inherit;" title="Wishlist">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/></svg>
-                                </button>
-                                <button type="button" onclick="addToCart('{{ $item->id }}', '{{ addslashes($item->name) }}', 0, '{{ asset($item->thumbnail) }}', 1)" class="action-btn hover-bg-green" style="height:36px;width:36px;background:white;border-radius:8px;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;color:inherit;" title="Thêm giỏ hàng">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"/><path d="M9 11v-5a3 3 0 0 1 6 0v5"/></svg>
-                                </button>
                             </div>
                             <div class="card-gradient-overlay" style="position:absolute; bottom:0; left:0; right:0; z-index:20; padding:30px 12px 12px; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); pointer-events:none; transition: all 0.3s ease;">
                                 <div class="overlay-category" style="font-size:11px; color:#e5e7eb; margin-bottom:2px; text-shadow:0 1px 2px rgba(0,0,0,0.5);">{{ $item->category->name ?? 'Mau Thiep' }}</div>
@@ -674,7 +657,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{ url('/mau-thiep/'.$item->id.'/edit') }}" style="position:absolute; inset:0; z-index:15;"></a>
+                            <button type="button"
+                                style="position:absolute; inset:0; z-index:15; background:transparent; border:none; cursor:pointer;"
+                                data-bs-toggle="modal" data-bs-target="#quickViewModal"
+                                data-name="{{ $item->name }}"
+                                data-category="{{ $item->category->name ?? 'Thiep Mau' }}"
+                                data-image="{{ asset($item->thumbnail) }}"
+                                data-id="{{ $item->id }}"
+                                data-code="MT-{{ str_pad($item->id, 5, '0', STR_PAD_LEFT) }}"
+                            ></button>
                         </div>
                     </div>
 @empty
@@ -1014,122 +1005,7 @@
         </script>
         <!-- Customer Feedback Section End -->
 
-        <section>
-            <div class="container">
-                <div class="flex flex-wrap">
-                    <div class="md:w-full mb-6">
-                        <h2 class="text-lg">Ưu Đãi Đặc Biệt</h2>
-                    </div>
-                </div>
-                <div class="block w-full overflow-x-auto scrolling-touch pb-6">
-                    <div class="xl:grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 flex-nowrap flex">
-                        <div class="flex-0 block w-full md:w-auto">
-                            <div class="pt-8 px-6 rounded-lg"
-                                style="background: url({{asset('assets/images/banner/banner_2.webp')}}) no-repeat; background-size: cover; height: 470px">
-                                <div class="flex flex-col gap-5">
-                                    <div class="flex flex-col gap-2">
-                                        <h3 class="text-lg text-white">Giảm 50% Cho Đơn Hàng Đầu Tiên.</h3>
-                                        <p class="text-white text-base">Đặt in ngay để nhận trọn bộ quà tặng cưới cao cấp.</p>
-                                    </div>
-                                    <div>
-                                        <a href="#!"
-                                            class="btn inline-flex items-center gap-x-2 bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
-                                            <span>Shop Now</span>
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-arrow-right" width="14"
-                                                    height="14" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M5 12l14 0"></path>
-                                                    <path d="M13 18l6 -6"></path>
-                                                    <path d="M13 6l6 6"></path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-@foreach($templates->take(3) as $template)
-                        <div class="flex-0 block w-full md:w-auto">
-                            <div class="relative flex flex-col min-w-0 rounded-lg break-words border bg-white border-gray-300 card-product">
-                                {{-- Preview iframe full width, no padding --}}
-                                <div class="preview-wrap" style="position:relative; overflow:hidden; width:100%; height:200px; background:#f9f5ef; border-radius:8px 8px 0 0;"
-                                     onmouseenter="var iw=this.querySelector('iframe').contentWindow; this._scrollInt = setInterval(function(){ try{ iw.scrollBy(0, 1); }catch(e){} }, 15);"
-                                     onmouseleave="clearInterval(this._scrollInt); var iw=this.querySelector('iframe').contentWindow; try{ iw.scrollTo(0,0); }catch(e){}">
-                                    <iframe src="{{ url('/mau-thiep/'.$template->id.'/preview') }}"
-                                            style="width:100%; height:100%; border:none; pointer-events:none; overflow:hidden;"
-                                            scrolling="no" loading="lazy"></iframe>
-                                    {{-- 3 nút overlay hiện khi hover --}}
-                                    <div class="absolute w-full bottom-[15%] opacity-0 invisible card-product-action flex justify-center gap-2" style="pointer-events:auto; z-index:10;">
-                                        <a href="#!"
-                                            class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white"
-                                            data-bs-toggle="tooltip" data-bs-html="true" title="Quick View">
-                                            <span data-bs-toggle="modal" data-bs-target="#quickViewModal"
-                                                data-name="{{ $template->name }}"
-                                                data-category="{{ $template->category->name ?? 'Thiệp Cưới' }}"
-                                                data-image="{{ asset($template->thumbnail) }}"
-                                                data-id="{{ $template->id }}"
-                                                data-code="MT-{{ str_pad($template->id, 5, '0', STR_PAD_LEFT) }}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>
-                                            </span>
-                                        </a>
-                                        <button type="button" onclick="addToWishlist('{{ $template->id }}', '{{ addslashes($template->name) }}', 0, '{{ asset($template->thumbnail) }}')"
-                                            class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white border-0 cursor-pointer text-gray-700"
-                                            data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/></svg>
-                                        </button>
-                                        <button type="button" onclick="addToCart('{{ $template->id }}', '{{ addslashes($template->name) }}', 0, '{{ asset($template->thumbnail) }}', 1)"
-                                            class="h-[34px] w-[34px] leading-[34px] bg-white shadow inline-flex items-center justify-center rounded-lg hover:bg-rose-500 hover:text-white border-0 cursor-pointer text-gray-700"
-                                            data-bs-toggle="tooltip" data-bs-html="true" title="Thêm vào giỏ hàng">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-bag" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"/><path d="M9 11v-5a3 3 0 0 1 6 0v5"/></svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                {{-- Card info --}}
-                                <div class="flex-auto p-4" style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 0 0 8px 8px;">
-                                    <div class="flex flex-col gap-3">
-                                        <a href="#!" class="text-decoration-none text-gray-500"><small>{{ $template->category->name ?? 'Thiệp Cưới' }}</small></a>
-                                        <div class="flex flex-col gap-2">
-                                            <h3 class="text-base truncate"><a href="#!">{{ $template->name }}</a></h3>
-                                            <div class="flex justify-between items-center">
-                                                <div>
-                                                    <span class="text-gray-900 font-semibold">Liên hệ</span>
-                                                </div>
-                                                <div class="flex items-center">
-                                                    <small class="text-yellow-500 flex items-center">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"/></svg>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star-half-filled" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1a.993 .993 0 0 1 .823 .443l.067 .116l2.852 5.781l6.38 .925c.741 .108 1.08 .94 .703 1.526l-.07 .095l-.078 .086l-4.624 4.499l1.09 6.355a1.001 1.001 0 0 1 -1.249 1.135l-.101 -.035l-.101 -.046l-5.693 -3l-5.706 3c-.105 .055 -.212 .09 -.32 .106l-.106 .01a1.003 1.003 0 0 1 -1.038 -1.06l.013 -.11l1.09 -6.355l-4.623 -4.5a1.001 1.001 0 0 1 .328 -1.647l.113 -.036l.114 -.023l6.379 -.925l2.853 -5.78a.968 .968 0 0 1 .904 -.56zm0 3.274v12.476a1 1 0 0 1 .239 .029l.115 .036l.112 .05l4.363 2.299l-.836 -4.873a1 1 0 0 1 .136 -.696l.07 -.099l.082 -.09l3.546 -3.453l-4.891 -.708a1 1 0 0 1 -.62 -.344l-.073 -.097l-.06 -.106l-2.183 -4.424z" stroke-width="0" fill="currentColor"/></svg>
-                                                    </small>
-                                                    <span class="text-gray-700 text-sm ml-2">4.5</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="grid">
-                                            <a href="{{ url('/mau-thiep/'.$template->id.'/edit') }}"
-                                                class="btn bg-rose-500 text-white border-rose-500 disabled:opacity-50 disabled:pointer-events-none hover:text-white hover:bg-rose-600 hover:border-rose-600 active:bg-rose-600 active:border-rose-600 focus:outline-none focus:ring-4 focus:ring-rose-300">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="14" height="14" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>
-                                                <span class="ml-1">Chọn Mẫu</span>
-                                            </a>
-                                        </div>
-                                        <div class="flex justify-start text-center">
-                                            <div class="deals-countdown w-full" data-countdown="2028/12/31 00:00:00"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-@endforeach
-                    </div>
 
-                </div>
-            </div>
-        </section>
 
         <section class="lg:my-14 my-8">
             <div class="container">
@@ -1176,6 +1052,4 @@
                 </div>
             </div>
         </section>
-    
-@include('user.partials.template-scripts')
 @endsection
